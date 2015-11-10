@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  Frismart
+
+  Created by Karl Mounguengui Nguema on 2015-08-19.
+  Copyright (c) 2015 Karl Mounguengui. All rights reserved.
+*/
+"Menu_Login" = "LOGIN";
+"Menu_Home" = "HOME";
+"Menu_Categories" = "CATEGORIES";
+"Menu_Maps" = "MAPS";
+"Menu_Favorites" = "FAVORITES";
+"Menu_Settings" = "SETTINGS";
+"Menu_Logout" = "LOGOUT";
+"HomeScreen_StoresSectionTitle" = "Top Stores";
+"HomeScreen_CategoriesSectionTitle" = "Top Categories";
+"StoreDetailsScreen_RatingSectionTitle" = "Rate this store";
+"StoreDetailsScreen_AlertView_Rating" = "You must be logged in to rate a store";
