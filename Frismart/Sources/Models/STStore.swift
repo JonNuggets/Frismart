@@ -28,6 +28,7 @@ class STStore : STBaseModel {
     var website : String?
     var distance : String?
     var is_deleted: String?
+    var horaire: String?
     
     func getPhotos()->[STPhoto]{
         var photoArray = [STPhoto]()
@@ -38,7 +39,6 @@ class STStore : STBaseModel {
                     photoArray.append(photo)
                 }
             }
-            
         }
         return photoArray
     }
