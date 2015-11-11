@@ -47,4 +47,15 @@ class STHelpers: NSObject {
         }
         return favoriteButton
     }
+    
+    class func getNearestStore() -> STStore {
+        let userLat = AppData.sharedInstance.user?.currentLocation?.coordinate.latitude
+        let lon = AppData.sharedInstance.user?.currentLocation?.coordinate.longitude
+        
+        for store in AppData.sharedInstance.stores! {
+            //let distance = (6371 * acos(cos(rad(1.0))))
+        }
+    
+        return STStore()
+    }
 }

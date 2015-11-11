@@ -16,6 +16,7 @@ class TopStoreView: UIView {
     @IBOutlet var storeDetailsButton: UIButton!
     @IBOutlet var storeAddressLabel: UILabel!
     @IBOutlet var floatRatingView: FloatRatingView!
+    var store: STStore?
     
     override func awakeFromNib() {
         self.storeImageView.image = nil

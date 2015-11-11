@@ -12,6 +12,7 @@ class TopCategoryView: UIView {
     @IBOutlet var categoryLabel: UILabel!
     @IBOutlet var categoryImageView: UIImageView!
     @IBOutlet var storesPerCategoryButton: UIButton!
+    var category: STCategory?
 
     override func awakeFromNib() {
         self.categoryLabel.text = ""
