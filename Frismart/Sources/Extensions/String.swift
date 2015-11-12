@@ -58,4 +58,28 @@ extension String {
         
         return self.stringByReplacingOccurrencesOfString(",", withString: "").stringByReplacingOccurrencesOfString("-", withString: "").stringByReplacingOccurrencesOfString(" ", withString: "")
     }
+    
+    func parseHours()-> Dictionary<String, [Dictionary<String, String>]>{
+    
+        let daysHoursRanges = self.componentsSeparatedByString(";")
+        var daysDictionary: Dictionary<String, [Dictionary<String, String>]> = Dictionary<String, [Dictionary<String, String>]>()
+        
+        for daysHoursRange in daysHoursRanges {
+            
+            if !daysHoursRange.isEmpty {
+                let daysHours = daysHoursRange.componentsSeparatedByString(" ")
+                let daysRange = daysHours[0]
+                let hoursRange = daysHours[1].componentsSeparatedByString(",")
+            
+                var hoursList: [Dictionary<String, String>] = [Dictionary<String, String>]()
+                for hours in hoursRange {
+                    let hour = hours.componentsSeparatedByString("-")
+                    let hoursStartEnd: Dictionary<String, String> = ["start":hour[0], "end":hour[1]]
+                    hoursList.append(hoursStartEnd)
+                }
+                daysDictionary[daysRange] = hoursList
+            }
+        }
+        return daysDictionary
+    }
 }
