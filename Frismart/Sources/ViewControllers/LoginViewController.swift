@@ -83,7 +83,7 @@ class LoginViewController: STBaseViewController, UITextFieldDelegate {
         
         if self.formIsValid() {
             print("Waiting for the login...")
-            STConnectionManager.login("sean78", password: "2034112", onSuccessHandler: onLoginSuccess, onFailureHandler: nil)
+            STConnectionManager.login(self.usernameTextField.text!, password: self.passwordTextField.text!, onSuccessHandler: onLoginSuccess, onFailureHandler: nil)
         }
         else {
             let alertController = UIAlertController(title: "Frismart", message: "Username/Password is empty.", preferredStyle: .Alert)

@@ -20,7 +20,8 @@ class HomeViewController: STBaseViewController {
     @IBOutlet var storesSectionLabel: UILabel!
     @IBOutlet var categoriesSectionLabel: UILabel!
     
-    var currentCategory : STCategory?
+    var currentTopCategoryView: TopCategoryView?
+    var currentTopStoreView: TopStoreView?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +41,7 @@ class HomeViewController: STBaseViewController {
         for (var i = 0; i < AppData.sharedInstance.topStores?.count; i++){
             let topStoreView : TopStoreView = NSBundle.mainBundle().loadNibNamed(kTopStoreViewNibName, owner: self, options: nil)[0] as! TopStoreView
             
+            topStoreView.store = (AppData.sharedInstance.topStores?[i])!
             topStoreView.display((AppData.sharedInstance.topStores?[i])!)
             topStoreView.frame.origin = CGPointMake(topStoreView.frame.width * CGFloat(i) + kTopViewHorizontalPadding * (CGFloat(i) + 1), kTopStoreViewVerticalPadding)
             topStoreView.storeDetailsButton.addTarget(self, action: "displayStoreDetails:", forControlEvents: .TouchUpInside)
@@ -50,14 +52,13 @@ class HomeViewController: STBaseViewController {
         }
     }
     
-    //TO DO : Afficher les différentes catégories offertes par l'application dans l'ecran Home
     private func loadTopCategoriesViews() -> Void{
         
         for (var i = 0; i < AppData.sharedInstance.topCategories?.count; i++){
             let topCategoryView : TopCategoryView = NSBundle.mainBundle().loadNibNamed(kTopCategoryViewNibName, owner: self, options: nil)[0] as! TopCategoryView
     
+            topCategoryView.category = (AppData.sharedInstance.topCategories?[i])!
             topCategoryView.display((AppData.sharedInstance.topCategories?[i])!)
-            
             topCategoryView.frame.origin = CGPointMake(topCategoryView.frame.width * CGFloat(i) + kTopViewHorizontalPadding * (CGFloat(i) + 1), kTopStoreViewVerticalPadding)
             topCategoryView.storesPerCategoryButton.addTarget(self, action: "displayStoresPerCategory:", forControlEvents: .TouchUpInside)
             
@@ -67,15 +68,26 @@ class HomeViewController: STBaseViewController {
         }
     }
 
-    //TO DO : Afficher le detail de l'entreprise sur laquelle on a clique
     func displayStoreDetails(sender: UIButton!) -> Void{
-        let currentTopStoreView : TopStoreView = (sender.superview as? TopStoreView)!
-        print("Afficher le detail de \(currentTopStoreView.storeNameLabel.text)")
+        self.currentTopStoreView  = (sender.superview as? TopStoreView)!
+        performSegueWithIdentifier(kShowTopStoreDetailsSegue, sender: self)
+        print("Afficher le detail de \(currentTopStoreView!.storeNameLabel.text)")
     }
 
     func displayStoresPerCategory(sender: UIButton!) -> Void{
-        let currentTopCategoryView : TopCategoryView = (sender.superview as? TopCategoryView)!
-        print("Afficher le detail de \(currentTopCategoryView.categoryLabel.text)")
+        self.currentTopCategoryView = (sender.superview as? TopCategoryView)!
+        performSegueWithIdentifier(kShowStoresForTopCategorySegue, sender: self)
+        print("Afficher le detail de \(currentTopCategoryView!.categoryLabel.text)")
     }
 
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == kShowTopStoreDetailsSegue {
+            let destinationViewController = segue.destinationViewController as! StoreDetailsViewController
+            destinationViewController.currentStore = self.currentTopStoreView?.store
+        }
+        if segue.identifier == kShowStoresForTopCategorySegue {
+            let destinationViewController = segue.destinationViewController as! StoresPerCategoryViewController
+            destinationViewController.stores = self.currentTopCategoryView?.category?.getStoresPerCategory()
+        }
+    }
 }

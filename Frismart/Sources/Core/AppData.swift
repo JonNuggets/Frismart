@@ -60,13 +60,25 @@ class AppData : NSObject {
         return Static.instance
     }
     
+    override init() {
+        super.init()
+        
+        self.loggedIn = false
+        self.stores = [STStore]()
+        self.categories = [STCategory]()
+        self.topCategories = [STCategory]()
+        self.topStores = [STStore]()
+        self.photos = [STPhoto]()
+        self.user = STUser()
+    }
+    
     func clearPersonnalData() -> Void {
         self.loggedIn = false
-        self.stores = nil
-        self.categories = nil
-        self.topCategories = nil
-        self.topStores = nil
-        self.photos = nil
-        self.user = nil
+        self.stores = [STStore]()
+        self.categories = [STCategory]()
+        self.topCategories = [STCategory]()
+        self.topStores = [STStore]()
+        self.photos = [STPhoto]()
+        self.user = STUser()
     }
 }
