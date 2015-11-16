@@ -10,12 +10,9 @@ import Foundation
 
 extension NSDate {
     func getCurrentDayTimeStringFormat()->String{
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "EEE-HH:mm"
         let date = NSDate()
-        let calendar = NSCalendar.currentCalendar()
-        let components = calendar.components([.Day , .Hour, .Minute], fromDate: date)
-        let day = String(components.day)
-        let hour = String(components.hour)
-        let minutes = String(components.minute)
-        return day + "/" + hour + ":" + minutes
+        return dateFormatter.stringFromDate(date)
     }
 }

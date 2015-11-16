@@ -43,8 +43,11 @@ class InfosMenuCell : UITableViewCell {
     func display() -> Void{
         self.userNameLabel.text = AppData.sharedInstance.user?.full_name
         
-        //  TODO: Recuperer l'etablissement le plus proche
-        self.userNearestStoreLabel.text = "Ministere du Budget"
+        if AppData.sharedInstance.user?.currentLocation != nil {
+            self.userNearestStoreLabel.text = STHelpers.getNearestStore().store_name
+        }
+        
+        
         
         if (AppData.sharedInstance.user?.currentPlacemark != nil){
             let locality = AppData.sharedInstance.user?.currentPlacemark?.locality
