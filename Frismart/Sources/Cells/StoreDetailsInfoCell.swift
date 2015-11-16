@@ -28,8 +28,6 @@ class StoreDetailsInfoCell : UITableViewCell {
         self.storeNameLabel.text = store.store_name
         self.storeNameLabel.sizeToFit()
         
-        
-        
         if store.rating_count == "0" {
             self.storeRateLabel.text = "0"
             self.floatRatingView.rating = 0
@@ -42,8 +40,36 @@ class StoreDetailsInfoCell : UITableViewCell {
         
         self.storeRateLabel.sizeToFit()
         self.storeAddressLabel.text = store.store_address
+    
+        let storeHours = store.horaire?.parseHours()
+        
+        print("\(store.store_name) - \(store.store_id) - \(storeHours)")
+        
+        
+        for days in (storeHours?.keys)! {
+            let daysList = days.componentsSeparatedByString("-")
+            
+            print(daysList)
+            
+            let currentDayTime: String = NSDate().getCurrentDayTimeStringFormat()
+            let currentDayTimeArray: [String] = currentDayTime.componentsSeparatedByString("-")
+            let currentDay: String = currentDayTimeArray[0].stringByReplacingOccurrencesOfString(".", withString: "")
+            let currentTime: [String] = currentDayTimeArray[1].componentsSeparatedByString(":")
+            let currentHour: Int = Int(currentTime[0])!
+            let currentMinutes: Int = Int(currentTime[1])!
+            
+            print("Day: \(currentDay)")
+            print("Hours: \(currentHour)")
+            print("Minutes: \(currentMinutes)")
+            
+            if daysList.count > 1 {
+                print("YES")
+            }
+            else {
+                print("NO")
+            }
+        }
+        
         self.storeHoursImageView?.image = UIImage(named: "StoreDetails_Clock")!.imageWithColor(UIColor.greenColor())
     }
-    
-    
 }
