@@ -24,6 +24,7 @@
 		282C65411B84B9E700DC3C93 /* InfosMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282C65401B84B9E700DC3C93 /* InfosMenuCell.swift */; };
 		282CC7171BAB699300E51441 /* STBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282CC7161BAB699300E51441 /* STBaseModel.swift */; };
 		282CC7191BAB6A2000E51441 /* NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282CC7181BAB6A2000E51441 /* NSObject.swift */; };
+		2832F42E1BF4D0720005CA98 /* NSDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2832F42D1BF4D0720005CA98 /* NSDate.swift */; };
 		283542511BD13C1300834113 /* StoreDetailsContactsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283542501BD13C1300834113 /* StoreDetailsContactsCell.swift */; };
 		28422F071B84BFF000CD7768 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 28422F091B84BFF000CD7768 /* Localizable.strings */; };
 		28422F0C1B84C31300CD7768 /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28422F0B1B84C31300CD7768 /* AppData.swift */; };
@@ -123,6 +124,7 @@
 		282C65401B84B9E700DC3C93 /* InfosMenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfosMenuCell.swift; sourceTree = "<group>"; };
 		282CC7161BAB699300E51441 /* STBaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STBaseModel.swift; sourceTree = "<group>"; };
 		282CC7181BAB6A2000E51441 /* NSObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSObject.swift; sourceTree = "<group>"; };
+		2832F42D1BF4D0720005CA98 /* NSDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDate.swift; sourceTree = "<group>"; };
 		283542501BD13C1300834113 /* StoreDetailsContactsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreDetailsContactsCell.swift; sourceTree = "<group>"; };
 		28422F081B84BFF000CD7768 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		28422F0A1B84C02000CD7768 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -415,6 +417,7 @@
 				282CC7181BAB6A2000E51441 /* NSObject.swift */,
 				286D7AB91BCE5EBB00C468B0 /* UIFont.swift */,
 				28BC51F31BE0C94800628BAB /* Array.swift */,
+				2832F42D1BF4D0720005CA98 /* NSDate.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -740,6 +743,7 @@
 				28E6036F1BA9B93500B28CD4 /* STDataParser.swift in Sources */,
 				284929C31BD08D0B004EC2D5 /* StoresPerCategoryViewController.swift in Sources */,
 				2850D8EC1BBDD5B100E16857 /* StoreDetailsMapCell.swift in Sources */,
+				2832F42E1BF4D0720005CA98 /* NSDate.swift in Sources */,
 				28FA05011BE10741005C7BCE /* MapViewController.swift in Sources */,
 				2850D8EA1BBDD55400E16857 /* StoreDetailsPicturesCell.swift in Sources */,
 				28CACE8A1BA1B64600629AB4 /* SettingsViewController.swift in Sources */,
