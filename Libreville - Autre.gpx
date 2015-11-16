@@ -3,7 +3,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
     xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
  
-  <wpt lat="0.396485 » lon="9.447513 »>
+  <wpt lat="0.396485" lon="9.447513">
     <ele>12.863281</ele>
     <time>2005-05-16T11:49:06Z</time>
     <name>Complexe Omnisports</name>
