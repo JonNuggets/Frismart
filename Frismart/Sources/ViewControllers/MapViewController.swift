@@ -130,6 +130,7 @@ CGSizeMake(categoryIconView.frame.width * CGFloat(((AppData.sharedInstance.categ
     func fitAllMarkers() {
         var bounds = GMSCoordinateBounds()
         
+        
         for marker in self.markersList {
             bounds = bounds.includingCoordinate(marker.position)
         }
@@ -141,7 +142,8 @@ CGSizeMake(categoryIconView.frame.width * CGFloat(((AppData.sharedInstance.categ
     //MARK: CLLocationManager Delegate Methods
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
-        self.mapView.camera = GMSCameraPosition(target: locations.first!.coordinate, zoom: 16, bearing: 0, viewingAngle: 0)
+        let cameraPosition = GMSCameraPosition(target: locations.first!.coordinate, zoom: 16, bearing: 0, viewingAngle: 0)
+        self.mapView.animateWithCameraUpdate(GMSCameraUpdate.setCamera(cameraPosition))
         self.locationManager.stopUpdatingLocation()
     }
 }
