@@ -17,7 +17,7 @@ class STBaseViewController: UIViewController {
         
         
         if (self.isKindOfClass(MapViewController)) {
-            self.setDefaultNavigationController(true, transparent: true)
+            self.setMapsNavigationController()
         }
         else {
             self.setDefaultNavigationController(true, transparent: false)
