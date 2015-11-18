@@ -112,10 +112,8 @@ CGSizeMake(categoryIconView.frame.width * CGFloat(((AppData.sharedInstance.categ
             marker.map = self.mapView
             
             let categoryPin = String(format: "Category_%@Pin", store.getCategory().removePunctuation())
+            
             marker.icon = UIImage(named: categoryPin)?.imageWithColor(UIColor().frismartDefaultBackgroundColor)
-            
-            print("Store: \(store.store_name), Pin: \(categoryPin)")
-            
             marker.title = store.store_name
             self.markersList.append(marker)
             //self.fitAllMarkers()
@@ -124,7 +122,9 @@ CGSizeMake(categoryIconView.frame.width * CGFloat(((AppData.sharedInstance.categ
         }
     }
     
-    
+    func revealCurrentLocation(sender: UIBarButtonItem) {
+        self.locationManager.startUpdatingLocation()
+    }
     
     
     func fitAllMarkers() {
