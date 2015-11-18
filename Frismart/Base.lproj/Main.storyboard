@@ -1100,6 +1100,15 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="OXE-NF-pLL"/>
+                    <connections>
+                        <outlet property="userEmailLabel" destination="WCn-Ir-VBc" id="TlY-OO-xMl"/>
+                        <outlet property="userFullNameLabel" destination="cNy-ud-zFM" id="nJ2-sD-f7m"/>
+                        <outlet property="userImageUpdateButton" destination="b1w-9o-HOJ" id="TYK-8D-mYu"/>
+                        <outlet property="userImageViewLabel" destination="4PQ-54-NIf" id="0CC-6y-Jdb"/>
+                        <outlet property="userLogOutButton" destination="upI-KD-9BE" id="pc7-W1-PVk"/>
+                        <outlet property="userNameLabel" destination="56w-dF-eZr" id="ky7-TN-nlz"/>
+                        <outlet property="userProfileImageView" destination="QfE-oe-TaV" id="syP-EF-VJN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gzo-de-OAf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

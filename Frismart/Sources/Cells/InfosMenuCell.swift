@@ -19,11 +19,7 @@ class InfosMenuCell : UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-
-        self.userImageView.layer.borderWidth = kProfileMenuBorderwidth
-        self.userImageView.layer.masksToBounds = false
-        self.userImageView.layer.borderColor = UIColor().frismartDefaultBackgroundColor.CGColor
-        self.userImageView.layer.cornerRadius = self.userImageView.frame.size.height/2
+        self.userImageView.withRoundCorners(self.userImageView.frame.size.height/2)
         self.userNameLabel.textColor = UIColor().frismartTableViewBackgroundColor
         self.userNearestStoreLabel.textColor = UIColor().frismartTableViewBackgroundColor
         self.userLocationLabel.textColor = UIColor().frismartTableViewBackgroundColor
