@@ -46,7 +46,7 @@ class STHelpers: NSObject {
     
     class func getNearestStore()->STStore {
     
-        var distance: Double = Double(99999999999)
+        var distance: Double = Double(999999)
         var newDistance: Double = Double(0)
         var nearestStore: STStore = STStore()
         

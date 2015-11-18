@@ -99,7 +99,6 @@ CGSizeMake(categoryIconView.frame.width * CGFloat(((AppData.sharedInstance.categ
         }
         else {
             category = (AppData.sharedInstance.categories?[self.categoryIconViewsList.indexOf(categoryIconView)! - 1])!
-            print("categorie : \(category?.category?.removePunctuation())")
             stores = category!.getStoresPerCategory()
         }
         
