@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '3CAF4C0494E9B7BC19854A3A'
-               BlueprintName = 'Pods-Frismart'
+               BlueprintIdentifier = 'D94A1C417A5547FBEE801B5B'
+               BlueprintName = 'PageMenu'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'Pods_Frismart.framework'>
+               BuildableName = 'PageMenu.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

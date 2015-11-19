@@ -74,11 +74,6 @@ class AppData : NSObject {
     
     func clearPersonnalData() -> Void {
         self.loggedIn = false
-        self.stores = [STStore]()
-        self.categories = [STCategory]()
-        self.topCategories = [STCategory]()
-        self.topStores = [STStore]()
-        self.photos = [STPhoto]()
         self.user = STUser()
     }
 }

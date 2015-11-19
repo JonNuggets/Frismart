@@ -16,3 +16,5 @@
 "HomeScreen_CategoriesSectionTitle" = "Top Categories";
 "StoreDetailsScreen_RatingSectionTitle" = "Rate this store";
 "StoreDetailsScreen_AlertView_Rating" = "You must be logged in to rate a store";
+"ProfileScreen_EditImage" = "Edit Photo";
+"ProfileScreen_Logout" = "Log Out";

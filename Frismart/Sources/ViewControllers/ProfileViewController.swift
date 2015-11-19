@@ -20,10 +20,24 @@ class ProfileViewController: STBaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.initializeUI()
+        self.setUserProfileValues()
     }
     
     private func initializeUI()->Void {
-        
+        self.userProfileImageView.withRoundCorners(self.userProfileImageView.frame.size.height/2)
+        self.userImageViewLabel.text = NSLocalizedString("ProfileScreen_EditImage", comment:"")
+        self.userLogOutButton.setTitle(NSLocalizedString("ProfileScreen_Logout", comment:""), forState: .Normal)
+    }
+    
+    private func setUserProfileValues()->Void{
+        self.userNameLabel.text = AppData.sharedInstance.user?.username
+        self.userFullNameLabel.text = AppData.sharedInstance.user?.full_name
+        self.userEmailLabel.text = AppData.sharedInstance.user?.email
+    }
+    
+    @IBAction func clickOnEditPhoto(sender: AnyObject) {
+        print("Take a Picture")
     }
 }

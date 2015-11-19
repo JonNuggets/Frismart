@@ -37,13 +37,16 @@ class InfosMenuCell : UITableViewCell {
     }
     
     func display() -> Void{
-        self.userNameLabel.text = AppData.sharedInstance.user?.full_name
+        let userNames: [String] = (AppData.sharedInstance.user?.full_name?.componentsSeparatedByString(" "))!
+        
+        self.userNameLabel.text = userNames[0] + " "
+        if userNames.count > 1 {
+                self.userNameLabel.text = self.userNameLabel.text! + userNames[1][0]
+        }
         
         if AppData.sharedInstance.user?.currentLocation != nil {
             self.userNearestStoreLabel.text = STHelpers.getNearestStore().store_name
         }
-        
-        
         
         if (AppData.sharedInstance.user?.currentPlacemark != nil){
             let locality = AppData.sharedInstance.user?.currentPlacemark?.locality

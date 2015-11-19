@@ -16,3 +16,5 @@
 "HomeScreen_CategoriesSectionTitle" = "Catégories à la une";
 "StoreDetailsScreen_RatingSectionTitle" = "Donner une note";
 "StoreDetailsScreen_AlertView_Rating" = "Vous devez vous connecter pour noter un établissement";
+"ProfileScreen_EditImage" = "Modifier";
+"ProfileScreen_Logout" = "Déconnexion";

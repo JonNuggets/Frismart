@@ -84,8 +84,10 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods-Frismart/PageMenu.framework"
   install_framework "Pods-Frismart/SwiftyJSON.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods-Frismart/PageMenu.framework"
   install_framework "Pods-Frismart/SwiftyJSON.framework"
 fi

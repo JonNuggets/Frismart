@@ -59,7 +59,7 @@ class STConnectionManager : NSObject {
                     
                     print("login_hash : \(AppData.sharedInstance.user?.login_hash)")
                     
-                    if AppData.sharedInstance.user != nil {
+                    if AppData.sharedInstance.user?.login_hash != nil {
                         if onSuccessHandler != nil {
                             onSuccessHandler?()
                         }

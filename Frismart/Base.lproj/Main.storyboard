@@ -1054,6 +1054,9 @@
                                     <constraint firstAttribute="width" constant="154" id="IMj-5k-gch"/>
                                     <constraint firstAttribute="height" constant="179" id="Rgg-SO-XOd"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="clickOnEditPhoto:" destination="U19-O8-q6O" eventType="touchUpInside" id="kFs-XY-LIK"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>
