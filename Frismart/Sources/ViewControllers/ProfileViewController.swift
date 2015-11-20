@@ -40,4 +40,8 @@ class ProfileViewController: STBaseViewController {
     @IBAction func clickOnEditPhoto(sender: AnyObject) {
         print("Take a Picture")
     }
+    
+    @IBAction func clickOnLogOut(sender: AnyObject) {
+        print("Log Out")
+    }
 }

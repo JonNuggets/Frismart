@@ -20,7 +20,12 @@ class STBaseViewController: UIViewController {
             self.setMapsNavigationController()
         }
         else {
-            self.setDefaultNavigationController(true, transparent: false)
+            if (self.isKindOfClass(LoginViewController)) {
+                self.setDefaultNavigationController(true, transparent: true)
+            }
+            else {
+                self.setDefaultNavigationController(true, transparent: false)
+            }
         }
     }
 }

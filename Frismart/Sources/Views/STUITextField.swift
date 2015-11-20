@@ -15,10 +15,6 @@ let kUITEXTFIELD_DEFAULT_PADDING_SIZE       = CGFloat(20.0)
 class STUITextField: UITextField {
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
-        self.layer.borderWidth = kUITEXTFIELD_BORDER_SIZE_NORMAL
-        self.layer.borderColor = UIColor().frismartDefaultBackgroundColor.CGColor
-        self.textColor = UIColor().frismartDefaultBackgroundColor
-        //self.font = UIFont().aldoTextFieldFont
         self.paddingLeft()
     }
     
@@ -27,23 +23,5 @@ class STUITextField: UITextField {
         paddingView.frame = CGRect(x: 0, y: 0, width: kUITEXTFIELD_DEFAULT_PADDING_SIZE, height: kUITEXTFIELD_DEFAULT_PADDING_SIZE)
         self.leftViewMode = UITextFieldViewMode.Always
         self.leftView = paddingView
-    }
-    
-    func beginEditing() {
-        self.layer.borderWidth = kUITEXTFIELD_BORDER_SIZE_HIGHLIGHTED
-        
-        // Ensures that the font for bullets in secureTextEntry stays the same
-        if( self.secureTextEntry ) {
-            //	self.font = UIFont().aldoSecureTextFieldFont
-        }
-    }
-    
-    func endEditing() {
-        self.layer.borderWidth = kUITEXTFIELD_BORDER_SIZE_NORMAL
-        
-        // Ensures that the font for bullets in secureTextEntry stays the same
-        if( self.secureTextEntry ) {
-            //self.font = UIFont().aldoSecureTextFieldFont
-        }
     }
 }

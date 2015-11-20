@@ -4,11 +4,6 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>PageMenu.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-Frismart.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,17 +17,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>21C461B0CAD90DE64B07A5D212C5F829</key>
+		<key>99A6D667E8428E075DBDA1662A9729DF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2DECC8F6FDD36AEC53FF0B6B1EE3F528</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>DA71C0D6DE8960E16E3AA3ABB1F7A93F</key>
+		<key>9FE96312865F645D2345BB89A8E07E00</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -12,9 +12,25 @@
 "Menu_Favorites" = "FAVORIS";
 "Menu_Settings" = "PARAMETRES";
 "Menu_Logout" = "DÉCONNEXION";
+
 "HomeScreen_StoresSectionTitle" = "Entreprises à la une";
 "HomeScreen_CategoriesSectionTitle" = "Catégories à la une";
+
 "StoreDetailsScreen_RatingSectionTitle" = "Donner une note";
 "StoreDetailsScreen_AlertView_Rating" = "Vous devez vous connecter pour noter un établissement";
+
 "ProfileScreen_EditImage" = "Modifier";
 "ProfileScreen_Logout" = "Déconnexion";
+
+"LoginPage_UsernamePlaceholder" = "Identifiant";
+"LoginPage_PasswordPlaceholder" = "Mot de passe";
+"LoginPage_LoginButtonTitle" = "Se connecter";
+"LoginPage_ForgetPasswordButtonTitle" = "Mot de passe oublié?";
+
+"RegisterPage_EmailPlaceholder" = "Email";
+"RegisterPage_FullnamePlaceholder" = "Prénom & Nom";
+"RegisterPage_UsernamePlaceholder" = "Identifiant";
+"RegisterPage_PasswordPlaceholder" = "Mot de passe";
+
+"LoginScreen_SignInPageTitle" = "Connexion";
+"LoginScreen_SignUpPageTitle" = "S'enregistrer";

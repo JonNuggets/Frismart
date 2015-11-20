@@ -58,6 +58,8 @@
 		286D7AB71BCE592200C468B0 /* Exo2-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 286D7AA51BCE592200C468B0 /* Exo2-Thin.ttf */; };
 		286D7AB81BCE592200C468B0 /* Exo2-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 286D7AA61BCE592200C468B0 /* Exo2-ThinItalic.ttf */; };
 		286D7ABA1BCE5EBB00C468B0 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286D7AB91BCE5EBB00C468B0 /* UIFont.swift */; };
+		287CA1F91BFE715C00FCA8B4 /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287CA1F81BFE715C00FCA8B4 /* LoginPageViewController.swift */; };
+		287CA1FC1BFF133700FCA8B4 /* CAPSPageMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287CA1FB1BFF133700FCA8B4 /* CAPSPageMenu.swift */; };
 		287F0FCB1BB47EBA0061B81C /* STCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287F0FCA1BB47EBA0061B81C /* STCategory.swift */; };
 		2883BF6B1B872715004EAFEE /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2883BF681B872649004EAFEE /* iAd.framework */; };
 		28954E9B1B971983002BC100 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 28954E9A1B971983002BC100 /* Podfile */; };
@@ -81,6 +83,9 @@
 		28D569831B8A2C6C002F7C75 /* TopStoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D569821B8A2C6C002F7C75 /* TopStoreView.swift */; };
 		28D569851B8A5A6D002F7C75 /* ImageCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D569841B8A5A6D002F7C75 /* ImageCacheManager.swift */; };
 		28D569871B8A5B00002F7C75 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D569861B8A5B00002F7C75 /* String.swift */; };
+		28D740DA1BFF4ABA00CFAF34 /* LoginPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28D740D91BFF4ABA00CFAF34 /* LoginPageViewController.xib */; };
+		28D740DC1BFF506200CFAF34 /* RegisterPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28D740DB1BFF506200CFAF34 /* RegisterPageViewController.xib */; };
+		28D740DE1BFF586600CFAF34 /* RegisterPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D740DD1BFF586600CFAF34 /* RegisterPageViewController.swift */; };
 		28E6036F1BA9B93500B28CD4 /* STDataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E6036E1BA9B93500B28CD4 /* STDataParser.swift */; };
 		28E603711BA9C40100B28CD4 /* Float.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E603701BA9C40100B28CD4 /* Float.swift */; };
 		28E603751BAA107000B28CD4 /* STHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E603741BAA107000B28CD4 /* STHelpers.swift */; };
@@ -88,7 +93,7 @@
 		28FB32EF1BA1796E00B5E991 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FB32EE1BA1796E00B5E991 /* CategoriesViewController.swift */; };
 		28FB32F11BA179C700B5E991 /* STBaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FB32F01BA179C700B5E991 /* STBaseTableViewController.swift */; };
 		28FB32F31BA17EC800B5E991 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FB32F21BA17EC800B5E991 /* CategoryCell.swift */; };
-		B90D67E3CF9C818256BDC9CF /* Pods_Frismart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C8270A81EE0870C1A28A630 /* Pods_Frismart.framework */; };
+		B90D67E3CF9C818256BDC9CF /* Pods_Frismart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C8270A81EE0870C1A28A630 /* Pods_Frismart.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -160,6 +165,8 @@
 		286D7AA51BCE592200C468B0 /* Exo2-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo2-Thin.ttf"; sourceTree = "<group>"; };
 		286D7AA61BCE592200C468B0 /* Exo2-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo2-ThinItalic.ttf"; sourceTree = "<group>"; };
 		286D7AB91BCE5EBB00C468B0 /* UIFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
+		287CA1F81BFE715C00FCA8B4 /* LoginPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; };
+		287CA1FB1BFF133700FCA8B4 /* CAPSPageMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAPSPageMenu.swift; sourceTree = "<group>"; };
 		287F0FCA1BB47EBA0061B81C /* STCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STCategory.swift; sourceTree = "<group>"; };
 		2883BF681B872649004EAFEE /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		28954E9A1B971983002BC100 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -183,6 +190,9 @@
 		28D569821B8A2C6C002F7C75 /* TopStoreView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopStoreView.swift; sourceTree = "<group>"; };
 		28D569841B8A5A6D002F7C75 /* ImageCacheManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCacheManager.swift; sourceTree = "<group>"; };
 		28D569861B8A5B00002F7C75 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		28D740D91BFF4ABA00CFAF34 /* LoginPageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginPageViewController.xib; sourceTree = "<group>"; };
+		28D740DB1BFF506200CFAF34 /* RegisterPageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterPageViewController.xib; sourceTree = "<group>"; };
+		28D740DD1BFF586600CFAF34 /* RegisterPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterPageViewController.swift; sourceTree = "<group>"; };
 		28E6036E1BA9B93500B28CD4 /* STDataParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STDataParser.swift; sourceTree = "<group>"; };
 		28E603701BA9C40100B28CD4 /* Float.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Float.swift; sourceTree = "<group>"; };
 		28E603741BAA107000B28CD4 /* STHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STHelpers.swift; sourceTree = "<group>"; };
@@ -281,6 +291,7 @@
 		282C64F41B84796100DC3C93 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				287CA1FA1BFF133700FCA8B4 /* PageMenu */,
 				284929BD1BCFF59F004EC2D5 /* FloatRatingView */,
 				282C65371B848D0800DC3C93 /* Frismart-Bridging-Header.h */,
 				282C65351B848CDE00DC3C93 /* SWRevealViewController */,
@@ -291,6 +302,7 @@
 		282C64F51B84797000DC3C93 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				28D740D81BFF4ABA00CFAF34 /* ViewControllers */,
 				282C64F61B84797000DC3C93 /* Firebase */,
 				282C64F71B84797000DC3C93 /* Font */,
 				282C650D1B84797000DC3C93 /* Images */,
@@ -469,6 +481,7 @@
 				28FB32EE1BA1796E00B5E991 /* CategoriesViewController.swift */,
 				28CACE871BA1B5EC00629AB4 /* FavoritesViewController.swift */,
 				28CCE5761B84CDAB004D5F1D /* HomeViewController.swift */,
+				287CA1F81BFE715C00FCA8B4 /* LoginPageViewController.swift */,
 				28699C8F1B910F44003D8234 /* LoginViewController.swift */,
 				28FA05001BE10741005C7BCE /* MapViewController.swift */,
 				282C653E1B84A37A00DC3C93 /* MenuViewController.swift */,
@@ -478,6 +491,7 @@
 				28CCE57A1B84CF2B004D5F1D /* STBaseViewController.swift */,
 				2862E2D61BBC9A2300FFA11B /* StoreDetailsViewController.swift */,
 				284929C21BD08D0B004EC2D5 /* StoresPerCategoryViewController.swift */,
+				28D740DD1BFF586600CFAF34 /* RegisterPageViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -511,12 +525,29 @@
 			path = FloatRatingView;
 			sourceTree = "<group>";
 		};
+		287CA1FA1BFF133700FCA8B4 /* PageMenu */ = {
+			isa = PBXGroup;
+			children = (
+				287CA1FB1BFF133700FCA8B4 /* CAPSPageMenu.swift */,
+			);
+			path = PageMenu;
+			sourceTree = "<group>";
+		};
 		2883BF6A1B8726C6004EAFEE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				2883BF681B872649004EAFEE /* iAd.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		28D740D81BFF4ABA00CFAF34 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				28D740D91BFF4ABA00CFAF34 /* LoginPageViewController.xib */,
+				28D740DB1BFF506200CFAF34 /* RegisterPageViewController.xib */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		44593EF34CAD218FE68AE9DB /* Frameworks */ = {
@@ -637,11 +668,13 @@
 				286D7AB11BCE592200C468B0 /* Exo2-Light.ttf in Resources */,
 				286D7AB51BCE592200C468B0 /* Exo2-Regular.ttf in Resources */,
 				286D7AAD1BCE592200C468B0 /* Exo2-SemiBoldItalic.ttf in Resources */,
+				28D740DC1BFF506200CFAF34 /* RegisterPageViewController.xib in Resources */,
 				286D7AAC1BCE592200C468B0 /* Exo2-ExtraBoldItalic.ttf in Resources */,
 				28422F071B84BFF000CD7768 /* Localizable.strings in Resources */,
 				286D7AAF1BCE592200C468B0 /* Exo2-ExtraLightItalic.ttf in Resources */,
 				282C64DA1B84731D00DC3C93 /* Images.xcassets in Resources */,
 				28954E9B1B971983002BC100 /* Podfile in Resources */,
+				28D740DA1BFF4ABA00CFAF34 /* LoginPageViewController.xib in Resources */,
 				286D7AB01BCE592200C468B0 /* Exo2-Italic.ttf in Resources */,
 				28D5697D1B8A209B002F7C75 /* TopStoreView.xib in Resources */,
 				286D7AA91BCE592200C468B0 /* Exo2-Bold.ttf in Resources */,
@@ -723,6 +756,7 @@
 				282C653F1B84A37A00DC3C93 /* MenuViewController.swift in Sources */,
 				28BC51F41BE0C94800628BAB /* Array.swift in Sources */,
 				28002FE91B86007A0077A200 /* UIImage.swift in Sources */,
+				287CA1FC1BFF133700FCA8B4 /* CAPSPageMenu.swift in Sources */,
 				2810AC611BD6B11200620779 /* StoreDetailsRatingCell.swift in Sources */,
 				280D7BCA1BB2F94900644BE6 /* STUITextField.swift in Sources */,
 				28FB32F11BA179C700B5E991 /* STBaseTableViewController.swift in Sources */,
@@ -732,6 +766,7 @@
 				28CACE881BA1B5EC00629AB4 /* FavoritesViewController.swift in Sources */,
 				28422F0C1B84C31300CD7768 /* AppData.swift in Sources */,
 				284C67281BFCF3D6001C4CA0 /* UIImageView.swift in Sources */,
+				287CA1F91BFE715C00FCA8B4 /* LoginPageViewController.swift in Sources */,
 				289DE5741BA8C1240079CC04 /* STPhoto.swift in Sources */,
 				28CCE5791B84CEB6004D5F1D /* UIViewController.swift in Sources */,
 				28699C921B91169A003D8234 /* ProfileViewController.swift in Sources */,
@@ -762,6 +797,7 @@
 				28FB32F31BA17EC800B5E991 /* CategoryCell.swift in Sources */,
 				289DE56E1BA8B9130079CC04 /* STUser.swift in Sources */,
 				28E603711BA9C40100B28CD4 /* Float.swift in Sources */,
+				28D740DE1BFF586600CFAF34 /* RegisterPageViewController.swift in Sources */,
 				289D24571BE2BB4900574BF9 /* UILabel.swift in Sources */,
 				28D569871B8A5B00002F7C75 /* String.swift in Sources */,
 				282C65391B848D0900DC3C93 /* SWRevealViewController.m in Sources */,
