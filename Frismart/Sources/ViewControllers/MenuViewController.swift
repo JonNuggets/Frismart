@@ -66,10 +66,9 @@ class MenuViewController : UITableViewController, CLLocationManagerDelegate{
             }
         }
         
+        //TO DO: Remove this part
         if (indexPath.row == STMenuScreen.MenuScreen_Logout.rawValue) {
-            if (!AppData.sharedInstance.loggedIn) {
                 return kZeroHeightForRow
-            }
         }
 
         return kDefaultHeightForRow
