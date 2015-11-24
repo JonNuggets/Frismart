@@ -17,12 +17,11 @@ class LoginViewController: STBaseViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         self.initializeUI()
     }
     
     private func initializeUI()->Void {
-        //        self.logoImageView.image = UIImage(named: "Logo")?.imageWithColor(UIColor().frismartTableViewBackgroundColor)
         var controllerArray : [UIViewController] = []
         
         let loginPageController : LoginPageViewController = LoginPageViewController(nibName: "LoginPageViewController", bundle: nil)

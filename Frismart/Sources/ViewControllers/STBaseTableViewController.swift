@@ -20,7 +20,7 @@ class STBaseTableViewController: UITableViewController {
             self.setNavigationControllerWithBack(true)
         }
         else {
-            self.setDefaultNavigationController(true, transparent: false)
+            self.setDefaultNavigationController(true, transparent: false, withSearch: true)
         }
     }
 }

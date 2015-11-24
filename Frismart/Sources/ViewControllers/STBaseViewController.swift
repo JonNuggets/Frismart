@@ -21,10 +21,10 @@ class STBaseViewController: UIViewController {
         }
         else {
             if (self.isKindOfClass(LoginViewController)) {
-                self.setDefaultNavigationController(true, transparent: true)
+                self.setDefaultNavigationController(false, transparent: true, withSearch: false)
             }
             else {
-                self.setDefaultNavigationController(true, transparent: false)
+                self.setDefaultNavigationController(true, transparent: false, withSearch: true)
             }
         }
     }

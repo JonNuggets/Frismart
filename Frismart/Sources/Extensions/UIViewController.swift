@@ -37,7 +37,7 @@ extension UIViewController {
         })
     }
     
-    func setDefaultNavigationController(withIcon: Bool, transparent: Bool)-> Void{
+    func setDefaultNavigationController(withIcon: Bool, transparent: Bool, withSearch: Bool)-> Void{
         
         if transparent{
             self.setNavigationControllerTransparent()
@@ -53,9 +53,11 @@ extension UIViewController {
             self.navigationItem.titleView = logoImageView
         }
         
-        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
-        let searchButton  = UIBarButtonItem(image: UIImage(named: "NavBar_Search"), style: UIBarButtonItemStyle.Plain, target: self, action: "revealSearch:")
-        self.navigationItem.rightBarButtonItem = searchButton
+        if withSearch {
+            self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+            let searchButton  = UIBarButtonItem(image: UIImage(named: "NavBar_Search"), style: UIBarButtonItemStyle.Plain, target: self, action: "revealSearch:")
+            self.navigationItem.rightBarButtonItem = searchButton
+        }
         
         if self.revealViewController() != nil {
             let menuButton  = UIBarButtonItem(image: UIImage(named: "NavBar_HamburgerMenuButtonImage")?.imageWithColor(UIColor.whiteColor()), style: UIBarButtonItemStyle.Plain, target: self.revealViewController(), action: "revealToggle:")
