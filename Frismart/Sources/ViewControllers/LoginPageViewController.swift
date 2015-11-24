@@ -64,6 +64,7 @@ class LoginPageViewController: UIViewController, UITextFieldDelegate {
         
         if self.formIsValid() {
             print("Waiting for the login...")
+            self.startActivityIndicatorAnimation()
             STConnectionManager.login(self.usernameTextField.text!, password: self.passwordTextField.text!, onSuccessHandler: onLoginSuccess, onFailureHandler: nil)
         }
         else {
@@ -82,6 +83,7 @@ class LoginPageViewController: UIViewController, UITextFieldDelegate {
     func onLoginSuccess() -> Void {
         print("Logged in...")
         AppData.sharedInstance.loggedIn = true
+        self.stopActivityIndicatorAnimation()
     }
     
     func onLoginFailure(error: NSError, message: String) -> Void {

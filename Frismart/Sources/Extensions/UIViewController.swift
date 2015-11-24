@@ -13,6 +13,30 @@ let kRevealWithPercentage : CGFloat = 0.85
 
 extension UIViewController {
     
+    // MARK: STActivityIndicator methods
+    
+    func startActivityIndicatorAnimation () -> Void {
+        if !AppData.sharedInstance.activityIndicatorView!.isAnimating() {
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                
+                // make sure activity view is on top of all views
+                UIApplication.sharedApplication().keyWindow?.addSubview(AppData.sharedInstance.activityIndicatorView!)
+                UIApplication.sharedApplication().keyWindow?.bringSubviewToFront(AppData.sharedInstance.activityIndicatorView!)
+                
+                AppData.sharedInstance.activityIndicatorView!.superview?.userInteractionEnabled = false
+                AppData.sharedInstance.activityIndicatorView!.startAnimation()
+            })
+        }
+    }
+    
+    func stopActivityIndicatorAnimation () -> Void {
+        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            AppData.sharedInstance.activityIndicatorView!.superview?.sendSubviewToBack(AppData.sharedInstance.activityIndicatorView!)
+            AppData.sharedInstance.activityIndicatorView!.superview?.userInteractionEnabled = true
+            AppData.sharedInstance.activityIndicatorView!.stopAnimating()
+        })
+    }
+    
     func setDefaultNavigationController(withIcon: Bool, transparent: Bool)-> Void{
         
         if transparent{

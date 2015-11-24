@@ -27,7 +27,7 @@ let kGetStoresPerCategorySegue              :String = "getStoresPerCategorySegue
 let kGetStoreDetailsSegue                   :String = "getStoreDetailsSegue"
 let kShowStoresForTopCategorySegue          :String = "showStoresForTopCategorySegue"
 let kShowTopStoreDetailsSegue               :String = "showTopStoreDetailsSegue"
-
+let kShowFavoriteStoreSegue                 :String = "showFavoriteStoreSegue"
 
 let kTopCategoryViewNibName                 :String = "TopCategoryView"
 let kTopStoreViewNibName                    :String = "TopStoreView"
@@ -52,6 +52,7 @@ class AppData : NSObject {
     var photos: [STPhoto]?
     var user: STUser?
     var weather: Int?
+    var activityIndicatorView: STActivityIndicatorView?
 
     class var sharedInstance : AppData {
         struct Static {

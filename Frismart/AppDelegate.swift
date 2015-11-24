@@ -16,8 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var semaphore: dispatch_semaphore_t?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        
         self.semaphore = dispatch_semaphore_create(0)
+        
+        AppData.sharedInstance.activityIndicatorView = STActivityIndicatorView(frame: UIScreen.mainScreen().bounds)
+        
         STConnectionManager.getData(onGetDataSuccess, onFailureHandler: onGetDataFailure)
         dispatch_semaphore_wait(self.semaphore!, DISPATCH_TIME_FOREVER)
         

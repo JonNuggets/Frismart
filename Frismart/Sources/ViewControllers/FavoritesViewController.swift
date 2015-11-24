@@ -40,7 +40,7 @@ class FavoritesViewController : STBaseTableViewController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         self.selectedStore  = AppData.sharedInstance.favoriteStores[indexPath.row]
-        performSegueWithIdentifier("", sender: self)
+        performSegueWithIdentifier(kShowFavoriteStoreSegue, sender: self)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

@@ -275,7 +275,7 @@
                                             <color key="textColor" red="0.12156862745098039" green="0.5490196078431373" blue="0.72156862745098038" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q9K-1w-zqF">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="5.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q9K-1w-zqF">
                                             <rect key="frame" x="8" y="41" width="54" height="33"/>
                                             <animations/>
                                             <constraints>
@@ -325,7 +325,7 @@
                                                 <constraint firstAttribute="height" constant="1" id="dIQ-t6-T1j"/>
                                             </constraints>
                                         </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cOC-w8-7yt" customClass="FloatRatingView" customModule="Frismart" customModuleProvider="target">
+                                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cOC-w8-7yt" customClass="FloatRatingView" customModule="Frismart" customModuleProvider="target">
                                             <rect key="frame" x="63" y="45" width="80" height="18"/>
                                             <animations/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -732,7 +732,7 @@
                                             <color key="textColor" red="0.1215686275" green="0.54901960780000003" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D14-no-S9H">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="5.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D14-no-S9H">
                                             <rect key="frame" x="32" y="28" width="38" height="33"/>
                                             <animations/>
                                             <constraints>
@@ -743,7 +743,7 @@
                                             <color key="textColor" red="0.98431372549999996" green="0.68235294120000001" blue="0.090196078430000007" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7RB-a1-Neu" customClass="FloatRatingView" customModule="Frismart" customModuleProvider="target">
+                                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7RB-a1-Neu" customClass="FloatRatingView" customModule="Frismart" customModuleProvider="target">
                                             <rect key="frame" x="74" y="36" width="58" height="11"/>
                                             <animations/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1434,7 +1434,7 @@
                                             <color key="textColor" red="0.1215686275" green="0.54901960780000003" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r5e-l1-nOi">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="5.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r5e-l1-nOi">
                                             <rect key="frame" x="32" y="28" width="38" height="33"/>
                                             <animations/>
                                             <constraints>
@@ -1445,7 +1445,7 @@
                                             <color key="textColor" red="0.98431372549999996" green="0.68235294120000001" blue="0.090196078430000007" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0bH-Uz-rSm" customClass="FloatRatingView" customModule="Frismart" customModuleProvider="target">
+                                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0bH-Uz-rSm" customClass="FloatRatingView" customModule="Frismart" customModuleProvider="target">
                                             <rect key="frame" x="74" y="36" width="58" height="11"/>
                                             <animations/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1537,6 +1537,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="eSP-FW-FgU"/>
+                    <connections>
+                        <segue destination="AWC-O5-SMn" kind="show" identifier="showFavoriteStoreSegue" id="5tN-JN-gmK"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jzm-52-7O0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1662,8 +1665,8 @@
         <image name="StoreDetails_Website" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="HgH-sj-ZHL"/>
+        <segue reference="5tN-JN-gmK"/>
         <segue reference="W6B-qq-0w0"/>
-        <segue reference="qtZ-6u-apP"/>
-        <segue reference="w0C-I1-jeZ"/>
     </inferredMetricsTieBreakers>
 </document>

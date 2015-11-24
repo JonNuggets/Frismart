@@ -25,7 +25,7 @@ class HomeViewController: STBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         self.initializeUI()
     }
 
