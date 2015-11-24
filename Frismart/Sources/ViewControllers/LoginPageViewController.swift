@@ -84,6 +84,18 @@ class LoginPageViewController: UIViewController, UITextFieldDelegate {
         print("Logged in...")
         AppData.sharedInstance.loggedIn = true
         self.stopActivityIndicatorAnimation()
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let profileViewController = storyboard.instantiateViewControllerWithIdentifier("ProfileViewController")
+        
+        
+        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            self.navigationController?.pushViewController(profileViewController, animated: true)
+        })
+        
+        
+        
+    
     }
     
     func onLoginFailure(error: NSError, message: String) -> Void {

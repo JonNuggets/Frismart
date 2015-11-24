@@ -37,6 +37,10 @@ class ProfileViewController: STBaseViewController {
         self.userEmailLabel.text = AppData.sharedInstance.user?.email
     }
     
+    func updateProfile(sender:UIButton){
+        print("Send Profile Update")
+    }
+    
     @IBAction func clickOnEditPhoto(sender: AnyObject) {
         print("Take a Picture")
     }

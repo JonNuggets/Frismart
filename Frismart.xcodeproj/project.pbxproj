@@ -12,6 +12,7 @@
 		2810AC611BD6B11200620779 /* StoreDetailsRatingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2810AC601BD6B11200620779 /* StoreDetailsRatingCell.swift */; };
 		281286091BD108270042E3C5 /* StoreDetailsThumbView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 281286081BD108270042E3C5 /* StoreDetailsThumbView.xib */; };
 		2812860B1BD109F30042E3C5 /* StoreDetailsThumbView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2812860A1BD109F30042E3C5 /* StoreDetailsThumbView.swift */; };
+		282979D71C04DCB5003F2F55 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282979D61C04DCB5003F2F55 /* SearchViewController.swift */; };
 		282C64D31B84731D00DC3C93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282C64D21B84731D00DC3C93 /* AppDelegate.swift */; };
 		282C64D81B84731D00DC3C93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 282C64D61B84731D00DC3C93 /* Main.storyboard */; };
 		282C64DA1B84731D00DC3C93 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 282C64D91B84731D00DC3C93 /* Images.xcassets */; };
@@ -140,6 +141,7 @@
 		2810AC601BD6B11200620779 /* StoreDetailsRatingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreDetailsRatingCell.swift; sourceTree = "<group>"; };
 		281286081BD108270042E3C5 /* StoreDetailsThumbView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StoreDetailsThumbView.xib; sourceTree = "<group>"; };
 		2812860A1BD109F30042E3C5 /* StoreDetailsThumbView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreDetailsThumbView.swift; sourceTree = "<group>"; };
+		282979D61C04DCB5003F2F55 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		282C64CD1B84731D00DC3C93 /* Frismart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Frismart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		282C64D11B84731D00DC3C93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		282C64D21B84731D00DC3C93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -3744,6 +3746,7 @@
 				2862E2D61BBC9A2300FFA11B /* StoreDetailsViewController.swift */,
 				284929C21BD08D0B004EC2D5 /* StoresPerCategoryViewController.swift */,
 				28D740DD1BFF586600CFAF34 /* RegisterPageViewController.swift */,
+				282979D61C04DCB5003F2F55 /* SearchViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -8320,6 +8323,7 @@
 				282C64D31B84731D00DC3C93 /* AppDelegate.swift in Sources */,
 				289DE5701BA8B9F10079CC04 /* STStatus.swift in Sources */,
 				28D569831B8A2C6C002F7C75 /* TopStoreView.swift in Sources */,
+				282979D71C04DCB5003F2F55 /* SearchViewController.swift in Sources */,
 				2812860B1BD109F30042E3C5 /* StoreDetailsThumbView.swift in Sources */,
 				28D569851B8A5A6D002F7C75 /* ImageCacheManager.swift in Sources */,
 				28E603751BAA107000B28CD4 /* STHelpers.swift in Sources */,

@@ -24,7 +24,12 @@ class STBaseViewController: UIViewController {
                 self.setDefaultNavigationController(false, transparent: true, withSearch: false)
             }
             else {
-                self.setDefaultNavigationController(true, transparent: false, withSearch: true)
+                if (self.isKindOfClass(ProfileViewController)) {
+                    self.setProfileNavigationController()
+                }
+                else {
+                    self.setDefaultNavigationController(true, transparent: false, withSearch: true)
+                }
             }
         }
     }

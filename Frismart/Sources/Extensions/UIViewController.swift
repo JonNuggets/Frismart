@@ -101,8 +101,32 @@ extension UIViewController {
     
     }
     
+    func setProfileNavigationController()-> Void{
+        self.setNavigationControllerTransparent()
+        
+        let logoImage = UIImage(named: "LogoIcon")
+        let logoImageView = UIImageView(image: logoImage?.imageWithColor(UIColor().frismartDefaultBackgroundColor))
+        self.navigationItem.titleView = logoImageView
+        
+        self.navigationController?.navigationBar.tintColor = UIColor().frismartDefaultBackgroundColor
+        let updateProfile  = UIBarButtonItem(image: UIImage(named: "NavBar_Checkmark"), style: UIBarButtonItemStyle.Plain, target: self, action: "updateProfile:")
+        self.navigationItem.rightBarButtonItem = updateProfile
+        
+        if self.revealViewController() != nil {
+            let menuButton  = UIBarButtonItem(image: UIImage(named: "NavBar_HamburgerMenuButtonImage")?.imageWithColor(UIColor().frismartDefaultBackgroundColor), style: UIBarButtonItemStyle.Plain, target: self.revealViewController(), action: "revealToggle:")
+            self.revealViewController().rearViewRevealWidth = self.view.bounds.width * kRevealWithPercentage
+            self.navigationItem.leftBarButtonItems = [menuButton]
+        }
+    }
+    
+    
     func revealSearch(sender: UIBarButtonItem) {
-        print("Go to the Search Screen")
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let searchViewController = storyboard.instantiateViewControllerWithIdentifier("SearchViewController")
+        
+        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            self.navigationController?.pushViewController(searchViewController, animated: true)
+        })
     }
     
     func setNavigationControllerTransparent()->Void{

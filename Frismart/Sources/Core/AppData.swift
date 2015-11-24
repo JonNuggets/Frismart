@@ -28,6 +28,7 @@ let kGetStoreDetailsSegue                   :String = "getStoreDetailsSegue"
 let kShowStoresForTopCategorySegue          :String = "showStoresForTopCategorySegue"
 let kShowTopStoreDetailsSegue               :String = "showTopStoreDetailsSegue"
 let kShowFavoriteStoreSegue                 :String = "showFavoriteStoreSegue"
+let kFlipToProfileSegue                     :String = "flipToProfileSegue"
 
 let kTopCategoryViewNibName                 :String = "TopCategoryView"
 let kTopStoreViewNibName                    :String = "TopStoreView"
