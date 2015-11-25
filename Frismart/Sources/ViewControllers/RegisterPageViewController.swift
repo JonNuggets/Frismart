@@ -56,7 +56,15 @@ class RegisterPageViewController: UIViewController, UITextFieldDelegate {
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
-        self.clickOnLogin([])
+        return true
+    }
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        super.touchesBegan(touches, withEvent: event);
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldEndEditing(textField: UITextField)-> Bool {
         return true
     }
     

@@ -47,7 +47,7 @@ class STStore : STBaseModel {
         
         for category in AppData.sharedInstance.categories! {
             if self.category_id == category.category_id {
-                return category.category!
+                return category.category_name!
             }
         }
         return ""

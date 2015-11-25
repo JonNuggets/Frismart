@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ProfileViewController: STBaseViewController {
+class ProfileViewController: STBaseViewController, UIImagePickerControllerDelegate {
     
     @IBOutlet var userProfileImageView: UIImageView!
     @IBOutlet var userImageViewLabel: UILabel!

@@ -5,8 +5,8 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
     <customFonts key="customFonts">
-        <mutableArray key="Exo2-SemiBold.ttf">
-            <string>Exo2-SemiBold</string>
+        <mutableArray key="Exo2-Regular.ttf">
+            <string>Exo2-Regular</string>
         </mutableArray>
     </customFonts>
     <objects>
@@ -99,7 +99,7 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="dHA-S3-YHS"/>
                     </constraints>
-                    <fontDescription key="fontDescription" name="Exo2-SemiBold" family="Exo 2" pointSize="18"/>
+                    <fontDescription key="fontDescription" name="Exo2-Regular" family="Exo 2" pointSize="18"/>
                     <state key="normal" title="S'enregistrer">
                         <color key="titleColor" red="0.1215686275" green="0.54901960780000003" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
                     </state>

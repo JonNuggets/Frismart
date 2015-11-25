@@ -58,6 +58,7 @@ class STDataParser : NSObject {
     }
 
     class func parseCategoriesResponse(data: JSON) -> Void {
+        
         let categoriesJSON = data["categories"].array!
         var categoriesArray = [STCategory]()
         var topCategoriesArray = [STCategory]()
@@ -70,8 +71,8 @@ class STDataParser : NSObject {
                 topCategoriesArray.append(category)
             }
         }
-        categoriesArray.sortInPlace({ $0.category < $1.category })
-        topCategoriesArray.sortInPlace({ $0.category < $1.category })
+        categoriesArray.sortInPlace({ $0.category_name < $1.category_name })
+        topCategoriesArray.sortInPlace({ $0.category_name < $1.category_name })
         
         AppData.sharedInstance.categories = categoriesArray
         AppData.sharedInstance.topCategories = topCategoriesArray

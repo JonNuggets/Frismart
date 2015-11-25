@@ -1368,10 +1368,10 @@
             </objects>
             <point key="canvasLocation" x="1221" y="1985"/>
         </scene>
-        <!--Settings View Controller-->
+        <!--Search View Controller-->
         <scene sceneID="gEC-mf-4Nh">
             <objects>
-                <viewController id="VpZ-zJ-bLh" customClass="SettingsViewController" customModule="Frismart" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SearchViewController" id="VpZ-zJ-bLh" customClass="SearchViewController" customModule="Frismart" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Zy3-Of-qNV"/>
                         <viewControllerLayoutGuide type="bottom" id="o18-h7-ydY"/>
@@ -1379,25 +1379,8 @@
                     <view key="view" contentMode="scaleToFill" id="HeR-UH-zjN">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings View Controller" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IaD-s4-i75">
-                                <rect key="frame" x="204" y="289" width="192" height="21"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="OTH-cp-GDP"/>
-                                    <constraint firstAttribute="width" constant="192" id="tMI-aK-OAb"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="centerX" secondItem="IaD-s4-i75" secondAttribute="centerX" id="ZFV-G8-C1h"/>
-                            <constraint firstAttribute="centerY" secondItem="IaD-s4-i75" secondAttribute="centerY" id="aNN-2o-oZe"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="6p4-aW-Ecp"/>
                 </viewController>
@@ -1596,7 +1579,7 @@
         <!--Navigation Controller-->
         <scene sceneID="QpE-QS-I6C">
             <objects>
-                <navigationController storyboardIdentifier="SettingsNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="iO0-ES-4aa" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="SearchNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="iO0-ES-4aa" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="UEb-hy-hzt">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

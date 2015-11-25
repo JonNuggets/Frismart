@@ -8,11 +8,15 @@
 
 import Foundation
 
+let kLOAD_VIEW_KEYBOARD_SHOW_Y_OFFSET   = CGFloat(-5.0)
+let kKEYBOARD_VIEW_HIDDEN_Y_OFFSET      = CGFloat(0.0)
+
 class LoginPageViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var passwordTextField: STUITextField!
     @IBOutlet var usernameTextField: STUITextField!
     @IBOutlet var loginButton: UIButton!
     @IBOutlet var forgotPasswordButton: UIButton!
+    var activeTextField: STUITextField?
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -26,6 +30,16 @@ class LoginPageViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         
         self.initializeUI()
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name:UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name:UIKeyboardWillHideNotification, object: nil)
+    }
+    
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+
+        self.view.endEditing(true)
     }
     
     
@@ -44,11 +58,54 @@ class LoginPageViewController: UIViewController, UITextFieldDelegate {
         self.forgotPasswordButton.setTitle(NSLocalizedString("LoginPage_ForgetPasswordButtonTitle", comment:""), forState: .Normal)
     }
     
-    
     func textFieldShouldReturn(textField: UITextField) -> Bool {
+        
         textField.resignFirstResponder()
-        self.clickOnLogin([])
+        //self.clickOnLogin([])
         return true
+    }
+    
+    func textFieldDidBeginEditing(textField: UITextField)
+    {
+        self.activeTextField = textField as? STUITextField
+    }
+    
+    func textFieldDidEndEditing(textField: UITextField)
+    {
+        self.activeTextField = nil
+    }
+    
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        super.touchesBegan(touches, withEvent: event);
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldEndEditing(textField: UITextField)-> Bool {
+        return true
+    }
+    
+    //
+    func keyboardWillShow(notification: NSNotification) {
+        if let userInfo = notification.userInfo {
+            let animationDuration: NSTimeInterval = (userInfo[UIKeyboardAnimationDurationUserInfoKey] as! NSNumber).doubleValue
+            
+            var newFrame:CGRect = self.view.frame
+            
+            if self.activeTextField == self.passwordTextField {
+                newFrame.origin.y = kLOAD_VIEW_KEYBOARD_SHOW_Y_OFFSET
+            }
+    
+            UIView.animateWithDuration(animationDuration, delay: 0, options: UIViewAnimationOptions.CurveLinear, animations: {
+                self.view.frame = newFrame
+                }, completion: nil)
+        }
+    }
+    
+    func keyboardWillHide(sender: NSNotification) {
+        print("YES")
+        
+        self.view.frame.origin.y = kKEYBOARD_VIEW_HIDDEN_Y_OFFSET
     }
     
     //MARK: Private Methods

@@ -41,10 +41,9 @@ class StoreDetailsInfoCell : UITableViewCell {
         self.storeRateLabel.sizeToFit()
         self.storeAddressLabel.text = store.store_address
     
+        print("\(store.store_name) - \(store.store_id)" )
+        
         let storeHours = store.horaire?.parseHours()
-        
-        print("\(store.store_name) - \(store.store_id) - \(storeHours)")
-        
         
         for days in (storeHours?.keys)! {
             let daysList = days.componentsSeparatedByString("-")

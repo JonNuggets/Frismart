@@ -10,7 +10,7 @@ import Foundation
 
 class STCategory: STBaseModel {
     var category_id: String?
-    var category: String?
+    var category_name: String?
     var category_desc: String?
     var feat: String?
     var keywords: String?
