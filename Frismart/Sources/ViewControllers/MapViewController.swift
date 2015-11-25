@@ -27,6 +27,14 @@ class MapViewController: STBaseViewController, GMSMapViewDelegate, CLLocationMan
         self.initializeUI()
     }
 
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.locationManager.startUpdatingLocation()
+    }
+    
+    
     private func initializeUI()->Void {
         self.loadCategoriesViews()
         self.loadMarkersOnMap(self.currentCategoryIconView)
