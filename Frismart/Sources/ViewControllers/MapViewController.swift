@@ -91,6 +91,19 @@ CGSizeMake(categoryIconView.frame.width * CGFloat(((AppData.sharedInstance.categ
                 return
             }
             
+            self.currentCategoryIconView.categoryIconButton.selected = false
+            self.currentCategoryIconView.categoryIconBackgroundView.backgroundColor = UIColor.clearColor()
+            self.currentCategoryIconView.categoryIconImageView.image = self.currentCategoryIconView.categoryIconImageView.image?.imageWithColor(UIColor.whiteColor())
+            self.currentCategoryIconView.categoryIconButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+            
+            if self.currentCategoryIconView.categoryIconImageView.image == nil {
+                self.currentCategoryIconView.categoryIconButton.setTitle("Tout", forState: .Normal)
+            }
+    
+            categoryIconView.categoryIconButton.selected = true
+            categoryIconView.categoryIconBackgroundView.backgroundColor = UIColor.whiteColor()
+            categoryIconView.categoryIconImageView.image = categoryIconView.categoryIconImageView.image?.imageWithColor(UIColor().frismartDefaultBackgroundColor)
+
             self.loadMarkersOnMap(categoryIconView)
         }
         self.mapView.delegate = self
