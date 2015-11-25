@@ -16,11 +16,9 @@ enum STMenuScreen : Int {
     case MenuScreen_Categories      = 2
     case MenuScreen_Maps            = 3
     case MenuScreen_Favorites       = 4
-    case MenuScreen_Settings        = 5
-    case MenuScreen_Logout          = 6
     
     static var count: Int {
-        return STMenuScreen.MenuScreen_Logout.rawValue+1
+        return STMenuScreen.MenuScreen_Favorites.rawValue+1
     }
 }
 
@@ -52,11 +50,7 @@ class MenuViewController : UITableViewController, CLLocationManagerDelegate{
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        if (AppData.sharedInstance.loggedIn) {
-            return STMenuScreen.count
-        }
-        return STMenuScreen.count - 1
+        return STMenuScreen.count
     }
 
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
@@ -65,12 +59,7 @@ class MenuViewController : UITableViewController, CLLocationManagerDelegate{
                 return kLoggedHeightForRow
             }
         }
-        
-        //TO DO: Remove this part
-        if (indexPath.row == STMenuScreen.MenuScreen_Logout.rawValue) {
-                return kZeroHeightForRow
-        }
-
+    
         return kDefaultHeightForRow
     }
     
@@ -144,25 +133,6 @@ class MenuViewController : UITableViewController, CLLocationManagerDelegate{
             self.revealViewController().pushFrontViewController(favoritesNavigationController, animated: true)
         }
         
-        if (indexPath.row == STMenuScreen.MenuScreen_Settings.rawValue) {
-            let settingsNavigationController = self.storyboard?.instantiateViewControllerWithIdentifier("SettingsNavigationController") as? UINavigationController
-            self.revealViewController().pushFrontViewController(settingsNavigationController, animated: true)
-        }
-        
-        if (indexPath.row == STMenuScreen.MenuScreen_Logout.rawValue) {
-            AppData.sharedInstance.clearPersonnalData()
-            dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                UIView.transitionWithView(tableView,
-                    duration:0.35,
-                    options:.TransitionCrossDissolve,
-                    animations:
-                    { () -> Void in
-                        self.locationManager.stopUpdatingLocation()
-                        self.tableView.reloadData()
-                    },
-                    completion: nil);
-            })
-        }
     }
     
     //MARK : CoreLocation Delegate Methods

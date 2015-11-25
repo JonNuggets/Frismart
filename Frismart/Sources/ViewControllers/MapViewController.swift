@@ -141,7 +141,7 @@ CGSizeMake(categoryIconView.frame.width * CGFloat(((AppData.sharedInstance.categ
     //MARK: CLLocationManager Delegate Methods
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
-        let cameraPosition = GMSCameraPosition(target: locations.first!.coordinate, zoom: 16, bearing: 0, viewingAngle: 0)
+        let cameraPosition = GMSCameraPosition(target: locations.last!.coordinate, zoom: 16, bearing: 0, viewingAngle: 0)
         self.mapView.animateWithCameraUpdate(GMSCameraUpdate.setCamera(cameraPosition))
         self.locationManager.stopUpdatingLocation()
     }
