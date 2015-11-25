@@ -228,7 +228,7 @@ class StoreDetailsViewController : STBaseTableViewController, GMSMapViewDelegate
     
     //MARK : Action Buttons Methods
     func callStore(sender:UIButton!){
-        let callString: String = String(format: "tel://%@", (self.currentStore?.phone_no)!)
+        let callString: String = String(format: "tel://%@", (self.currentStore?.phone_no?.removePunctuation())!)
         UIApplication.sharedApplication().openURL(NSURL(string: callString)!)
     }
     
