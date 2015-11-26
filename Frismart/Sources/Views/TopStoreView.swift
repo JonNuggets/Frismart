@@ -33,17 +33,16 @@ class TopStoreView: UIView {
         self.storeNameLabel.text = store.store_name
         
         if store.rating_count == "0" {
-            self.storeRateLabel.text = "0"
+            self.storeRateLabel.text = "0.0"
             self.floatRatingView.rating = 0
         }
         else {
             let ratingValue : Float = Float( Float(store.rating_total!)! / Float(store.rating_count!)! )
+            self.floatRatingView.rating = ratingValue
             self.storeRateLabel.text = String(ratingValue)
         }
         
-        
         self.storeAddressLabel.text = store.store_address
-        self.floatRatingView.rating = (store.rating_total!).floatValue
         
         let photoArray = store.getPhotos()
         if photoArray.count > 0 {

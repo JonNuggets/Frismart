@@ -12,6 +12,9 @@
 		2810AC611BD6B11200620779 /* StoreDetailsRatingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2810AC601BD6B11200620779 /* StoreDetailsRatingCell.swift */; };
 		281286091BD108270042E3C5 /* StoreDetailsThumbView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 281286081BD108270042E3C5 /* StoreDetailsThumbView.xib */; };
 		2812860B1BD109F30042E3C5 /* StoreDetailsThumbView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2812860A1BD109F30042E3C5 /* StoreDetailsThumbView.swift */; };
+		2822C0621C067EE700763105 /* StoreDetailsMarkerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2822C0611C067EE700763105 /* StoreDetailsMarkerView.xib */; };
+		2822C0641C06851A00763105 /* StoreDetailsMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2822C0631C06851A00763105 /* StoreDetailsMarkerView.swift */; };
+		2822C0661C06892F00763105 /* STPlaceMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2822C0651C06892F00763105 /* STPlaceMarker.swift */; };
 		282979D71C04DCB5003F2F55 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282979D61C04DCB5003F2F55 /* SearchViewController.swift */; };
 		282C64D31B84731D00DC3C93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282C64D21B84731D00DC3C93 /* AppDelegate.swift */; };
 		282C64D81B84731D00DC3C93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 282C64D61B84731D00DC3C93 /* Main.storyboard */; };
@@ -141,6 +144,9 @@
 		2810AC601BD6B11200620779 /* StoreDetailsRatingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreDetailsRatingCell.swift; sourceTree = "<group>"; };
 		281286081BD108270042E3C5 /* StoreDetailsThumbView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StoreDetailsThumbView.xib; sourceTree = "<group>"; };
 		2812860A1BD109F30042E3C5 /* StoreDetailsThumbView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreDetailsThumbView.swift; sourceTree = "<group>"; };
+		2822C0611C067EE700763105 /* StoreDetailsMarkerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StoreDetailsMarkerView.xib; sourceTree = "<group>"; };
+		2822C0631C06851A00763105 /* StoreDetailsMarkerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreDetailsMarkerView.swift; sourceTree = "<group>"; };
+		2822C0651C06892F00763105 /* STPlaceMarker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STPlaceMarker.swift; sourceTree = "<group>"; };
 		282979D61C04DCB5003F2F55 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		282C64CD1B84731D00DC3C93 /* Frismart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Frismart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		282C64D11B84731D00DC3C93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -3627,6 +3633,7 @@
 				281286081BD108270042E3C5 /* StoreDetailsThumbView.xib */,
 				28C981931BE380C700C509E1 /* CategoryIconView.xib */,
 				28F72AD51C03A59000494149 /* STActivityIndicatorView.xib */,
+				2822C0611C067EE700763105 /* StoreDetailsMarkerView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -3725,6 +3732,7 @@
 		282C652D1B8479BE00DC3C93 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				2822C0651C06892F00763105 /* STPlaceMarker.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -3760,6 +3768,7 @@
 				2812860A1BD109F30042E3C5 /* StoreDetailsThumbView.swift */,
 				28C981951BE3859500C509E1 /* CategoryIconView.swift */,
 				28F75E101C03B4E100494149 /* STActivityIndicatorView.swift */,
+				2822C0631C06851A00763105 /* StoreDetailsMarkerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -8186,6 +8195,7 @@
 				28F7517C1C03A5D300494149 /* ActivityIndicator_15.png in Resources */,
 				286D7AAA1BCE592200C468B0 /* Exo2-BoldItalic.ttf in Resources */,
 				28F751791C03A5D300494149 /* ActivityIndicator_12.png in Resources */,
+				2822C0621C067EE700763105 /* StoreDetailsMarkerView.xib in Resources */,
 				28F751891C03A5D300494149 /* ActivityIndicator_4.png in Resources */,
 				28F7517A1C03A5D300494149 /* ActivityIndicator_13.png in Resources */,
 				286D7AB81BCE592200C468B0 /* Exo2-ThinItalic.ttf in Resources */,
@@ -8341,7 +8351,9 @@
 				286D7ABA1BCE5EBB00C468B0 /* UIFont.swift in Sources */,
 				287F0FCB1BB47EBA0061B81C /* STCategory.swift in Sources */,
 				28699C901B910F44003D8234 /* LoginViewController.swift in Sources */,
+				2822C0641C06851A00763105 /* StoreDetailsMarkerView.swift in Sources */,
 				289DE5761BA8C1740079CC04 /* STStoreCategory.swift in Sources */,
+				2822C0661C06892F00763105 /* STPlaceMarker.swift in Sources */,
 				2862E2D51BBC925300FFA11B /* StoreDetailsInfoCell.swift in Sources */,
 				28C981961BE3859500C509E1 /* CategoryIconView.swift in Sources */,
 				28FB32F31BA17EC800B5E991 /* CategoryCell.swift in Sources */,

@@ -22,6 +22,7 @@ class MapViewController: STBaseViewController, GMSMapViewDelegate, CLLocationMan
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.mapView.delegate = self
         self.locationManager.delegate = self
         STHelpers.initializeLocationManager(self.locationManager)
         self.initializeUI()
@@ -106,7 +107,7 @@ CGSizeMake(categoryIconView.frame.width * CGFloat(((AppData.sharedInstance.categ
 
             self.loadMarkersOnMap(categoryIconView)
         }
-        self.mapView.delegate = self
+        //self.mapView.delegate = self
     }
     
     func loadMarkersOnMap(categoryIconView: CategoryIconView) {
@@ -127,14 +128,15 @@ CGSizeMake(categoryIconView.frame.width * CGFloat(((AppData.sharedInstance.categ
             let target : CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: (store.lat)!.doubleValue, longitude: (store.lon)!.doubleValue)
             let camera = GMSCameraPosition(target: target, zoom: 15, bearing: 0, viewingAngle: 0)
             
-            let marker = GMSMarker()
+            let marker = STPlaceMarker(store: store)
             marker.position = camera.target
             marker.map = self.mapView
             
-            let categoryPin = String(format: "Category_%@Pin", store.getCategory().removePunctuation())
+//            let categoryPin = String(format: "Category_%@Pin", store.getCategory().removePunctuation())
+//            
+//            marker.icon = UIImage(named: categoryPin)?.imageWithColor(UIColor().frismartDefaultBackgroundColor)
             
-            marker.icon = UIImage(named: categoryPin)?.imageWithColor(UIColor().frismartDefaultBackgroundColor)
-            marker.title = store.store_name
+            //marker.title = store.store_name
             self.markersList.append(marker)
             //self.fitAllMarkers()
             
@@ -165,5 +167,32 @@ CGSizeMake(categoryIconView.frame.width * CGFloat(((AppData.sharedInstance.categ
         let cameraPosition = GMSCameraPosition(target: locations.last!.coordinate, zoom: 16, bearing: 0, viewingAngle: 0)
         self.mapView.animateWithCameraUpdate(GMSCameraUpdate.setCamera(cameraPosition))
         self.locationManager.stopUpdatingLocation()
+    }
+    
+    //MARK: GMSMapView Delegate Methods
+    func mapView(mapView: GMSMapView!, markerInfoContents marker: GMSMarker!) -> UIView! {
+        let placeMarker = marker as! STPlaceMarker
+        
+        let storeDetailsMarkerView : StoreDetailsMarkerView = NSBundle.mainBundle().loadNibNamed("StoreDetailsMarkerView", owner: self, options: nil)[0] as! StoreDetailsMarkerView
+        
+        storeDetailsMarkerView.display(placeMarker.store)
+        
+        return storeDetailsMarkerView
+    }
+    
+    
+    func mapView(mapView: GMSMapView!, markerInfoWindow marker: GMSMarker!) -> UIView! {
+        let placeMarker = marker as! STPlaceMarker
+        
+        let storeDetailsMarkerView : StoreDetailsMarkerView = NSBundle.mainBundle().loadNibNamed("StoreDetailsMarkerView", owner: self, options: nil)[0] as! StoreDetailsMarkerView
+        
+        storeDetailsMarkerView.display(placeMarker.store)
+        
+        return storeDetailsMarkerView
+    }
+    
+    func mapView(mapView: GMSMapView!, didTapMarker marker: GMSMarker!) -> Bool {
+        
+        return false
     }
 }

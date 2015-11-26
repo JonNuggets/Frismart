@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Exo2-Regular.ttf">
+            <string>Exo2-Regular</string>
+        </mutableArray>
+        <mutableArray key="Exo2-Thin.ttf">
+            <string>Exo2-Thin</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="StoreDetailsMarkerView" customModule="Frismart" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="70"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EBp-ob-t9w">
+                    <rect key="frame" x="8" y="8" width="284" height="21"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="Slu-RX-V1b"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Exo2-Regular" family="Exo 2" pointSize="18"/>
+                    <color key="textColor" red="0.1215686275" green="0.54901960780000003" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qrr-AE-417" customClass="FloatRatingView" customModule="Frismart" customModuleProvider="target">
+                    <rect key="frame" x="8" y="50" width="69" height="14"/>
+                    <animations/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="14" id="eWL-VF-RQC"/>
+                        <constraint firstAttribute="width" constant="69" id="epJ-GZ-8Qh"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="image" keyPath="emptyImage" value="StoreDetails_ReviewStar_Unchecked"/>
+                        <userDefinedRuntimeAttribute type="image" keyPath="fullImage" value="StoreDetails_ReviewStar_Checked"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="minRating">
+                            <integer key="value" value="0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="maxRating">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="editable" value="NO"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="floatRatings" value="YES"/>
+                        <userDefinedRuntimeAttribute type="size" keyPath="minImageSize">
+                            <size key="value" width="0.0" height="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B85-pJ-YAq">
+                    <rect key="frame" x="8" y="29" width="284" height="21"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="S6v-Ss-r95"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Exo2-Thin" family="Exo 2" pointSize="14"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="qrr-AE-417" firstAttribute="top" secondItem="B85-pJ-YAq" secondAttribute="bottom" id="9rg-ML-Ae8"/>
+                <constraint firstItem="qrr-AE-417" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="Hcz-LY-EBt"/>
+                <constraint firstAttribute="bottom" secondItem="qrr-AE-417" secondAttribute="bottom" constant="6" id="Hda-qu-hvC"/>
+                <constraint firstItem="B85-pJ-YAq" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="Jzf-bQ-jVc"/>
+                <constraint firstItem="EBp-ob-t9w" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="KLV-cn-RfX"/>
+                <constraint firstAttribute="trailing" secondItem="EBp-ob-t9w" secondAttribute="trailing" constant="8" id="VMi-Qc-cqt"/>
+                <constraint firstItem="EBp-ob-t9w" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="kJo-M4-9fr"/>
+                <constraint firstAttribute="trailing" secondItem="B85-pJ-YAq" secondAttribute="trailing" constant="8" id="xWW-Ea-yw8"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="floatRatingView" destination="qrr-AE-417" id="jgl-a9-qne"/>
+                <outlet property="storeCategoryLabel" destination="B85-pJ-YAq" id="anX-0A-yza"/>
+                <outlet property="storeNameLabel" destination="EBp-ob-t9w" id="qMG-0H-DpH"/>
+            </connections>
+            <point key="canvasLocation" x="177" y="-59"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="StoreDetails_ReviewStar_Checked" width="25" height="25"/>
+        <image name="StoreDetails_ReviewStar_Unchecked" width="25" height="25"/>
+    </resources>
+</document>
