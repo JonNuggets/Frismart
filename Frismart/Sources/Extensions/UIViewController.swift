@@ -44,9 +44,11 @@ extension UIViewController {
         }
         else {
             self.navigationController?.navigationBar.barTintColor = UIColor().frismartDefaultBackgroundColor
+            self.navigationController?.view.backgroundColor = UIColor().frismartDefaultBackgroundColor
+            self.navigationController?.navigationBar.translucent = false
+            self.navigationController?.navigationBar.backgroundColor = UIColor().frismartDefaultBackgroundColor
         }
-        
-        
+    
         if withIcon {
             let logoImage = UIImage(named: "LogoIcon")
             let logoImageView = UIImageView(image: logoImage)
@@ -117,6 +119,15 @@ extension UIViewController {
             self.revealViewController().rearViewRevealWidth = self.view.bounds.width * kRevealWithPercentage
             self.navigationItem.leftBarButtonItems = [menuButton]
         }
+    }
+    
+    func setSearchNavigationController()-> Void{
+        
+        self.setNavigationControllerTransparent()
+        
+        let logoImage = UIImage(named: "LogoIcon")
+        let logoImageView = UIImageView(image: logoImage)
+        self.navigationItem.titleView = logoImageView
     }
     
     

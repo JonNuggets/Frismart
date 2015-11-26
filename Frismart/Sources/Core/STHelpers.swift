@@ -75,4 +75,27 @@ class STHelpers: NSObject {
             default: return -1
         }
     }
+
+    class func searchStoresByKeyWord(text: String)->[STStore] {
+        var stores = [STStore]()
+        
+        for category in AppData.sharedInstance.categories! {
+            if category.category_name!.lowercaseString.rangeOfString(text.lowercaseString) != nil {
+                stores.appendContentsOf(category.getStoresPerCategory())
+            }
+        }
+        
+        for store in AppData.sharedInstance.stores! {
+            if store.store_name!.lowercaseString.rangeOfString(text.lowercaseString) != nil {
+                if !stores.contains(store) {
+                    stores.append(store)
+                }
+            }
+        }
+        
+        return stores
+    }
+    
+    
+    
 }

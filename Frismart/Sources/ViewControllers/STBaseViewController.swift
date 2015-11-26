@@ -12,8 +12,9 @@ import iAd
 class STBaseViewController: UIViewController {
     
     // MARK: UIViewcontroller Life cycle
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         
         
         if (self.isKindOfClass(MapViewController)) {
@@ -28,7 +29,12 @@ class STBaseViewController: UIViewController {
                     self.setProfileNavigationController()
                 }
                 else {
-                    self.setDefaultNavigationController(true, transparent: false, withSearch: true)
+                    if (self.isKindOfClass(SearchViewController)) {
+                        self.setSearchNavigationController()
+                    }
+                    else {
+                        self.setDefaultNavigationController(true, transparent: false, withSearch: true)
+                    }
                 }
             }
         }

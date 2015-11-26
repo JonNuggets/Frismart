@@ -353,6 +353,8 @@ class StoreDetailsViewController : STBaseTableViewController, GMSMapViewDelegate
     func floatRatingView(ratingView: FloatRatingView, didUpdate rating: Float) {
         if AppData.sharedInstance.loggedIn == true {
             self.floatRatingView?.editable = false
+            print("Note: \(String(self.floatRatingView?.rating))")
+            
             STConnectionManager.postRating(String(self.floatRatingView?.rating), store: self.currentStore!, onSuccessHandler: self.onPostRatingSuccess, onFailureHandler: self.onPostRatingFailure)
         }
         else {
