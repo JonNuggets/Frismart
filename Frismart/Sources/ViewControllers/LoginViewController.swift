@@ -105,7 +105,6 @@ class LoginViewController: STBaseViewController, UITextFieldDelegate {
     }
 
     func keyboardWillHide(sender: NSNotification) {
-        print("YES")
 
         self.view.frame.origin.y = kKEYBOARD_VIEW_HIDDEN_Y_OFFSET
     }
