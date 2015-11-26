@@ -41,11 +41,12 @@
                     <color key="textColor" red="0.1215686275" green="0.54901960780000003" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="4.5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RYz-LF-PH6">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4.5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RYz-LF-PH6">
                     <rect key="frame" x="16" y="285" width="60" height="35.5"/>
                     <animations/>
                     <constraints>
                         <constraint firstAttribute="width" relation="lessThanOrEqual" constant="60" id="Lu8-jQ-ulT"/>
+                        <constraint firstAttribute="width" constant="60" id="jc3-st-QXv"/>
                         <constraint firstAttribute="height" constant="35.5" id="lWa-OE-krQ"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="Exo2-Light" family="Exo 2" pointSize="40"/>
@@ -71,8 +72,8 @@
                         <constraint firstAttribute="height" constant="25" id="rHl-MB-opR"/>
                     </constraints>
                 </imageView>
-                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nOS-N5-vbZ" customClass="FloatRatingView" customModule="Frismart" customModuleProvider="target">
-                    <rect key="frame" x="73.5" y="291" width="80" height="16"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nOS-N5-vbZ" customClass="FloatRatingView" customModule="Frismart" customModuleProvider="target">
+                    <rect key="frame" x="76" y="291" width="80" height="16"/>
                     <animations/>
                     <constraints>
                         <constraint firstAttribute="height" relation="lessThanOrEqual" constant="16" id="4Ps-a5-e0b"/>
@@ -110,7 +111,7 @@
                 <constraint firstAttribute="bottom" secondItem="iM0-XA-86g" secondAttribute="bottom" constant="6" id="Be9-KE-GeH"/>
                 <constraint firstItem="4Fl-SA-LBW" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="DyP-Zq-6gz"/>
                 <constraint firstAttribute="trailing" secondItem="d3i-aT-LdB" secondAttribute="trailing" constant="1" id="GZ7-Km-Wc4"/>
-                <constraint firstItem="nOS-N5-vbZ" firstAttribute="leading" secondItem="RYz-LF-PH6" secondAttribute="trailing" constant="-2.5" id="LHN-XR-kka"/>
+                <constraint firstItem="nOS-N5-vbZ" firstAttribute="leading" secondItem="RYz-LF-PH6" secondAttribute="trailing" id="LHN-XR-kka"/>
                 <constraint firstItem="4Fl-SA-LBW" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="LOO-Xn-gkc"/>
                 <constraint firstAttribute="bottom" secondItem="4Fl-SA-LBW" secondAttribute="bottom" id="LnF-dq-Hfl"/>
                 <constraint firstAttribute="bottom" secondItem="4cc-Xo-Ho3" secondAttribute="bottom" constant="6" id="Ov0-6U-aWJ"/>

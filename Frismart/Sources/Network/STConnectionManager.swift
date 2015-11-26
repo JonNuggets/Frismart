@@ -22,6 +22,7 @@ let kPOST_RATING_URL                    = "rest/post_rating.php"
 let kWEATHER_URL                        = "http://api.openweathermap.org/data/2.5/weather?q=%@,%@&appid=%@"
 let kOPEN_WEATHER_MAP_APPID             = "9a9acabf3ab23a9c69117a55c819667a"
 let kUserCredentialsSetting             = "username=%@&password=%@"
+let kUserRegisterSetting                = "email=%@&full_name=%@&username=%@&password=%@"
 let kUserRating                         = "store_id=%@&user_id=%@&login_hash=%@&rating=%@"
 
 class STConnectionManager : NSObject {
@@ -60,6 +61,39 @@ class STConnectionManager : NSObject {
                     print("login_hash : \(AppData.sharedInstance.user?.login_hash)")
                     
                     if AppData.sharedInstance.user?.login_hash != nil {
+                        if onSuccessHandler != nil {
+                            onSuccessHandler?()
+                        }
+                    }
+                }
+            }
+        }
+        task.resume()
+    }
+    
+    class func register(email: String, fullname: String, username: String, password: String, onSuccessHandler: (()->())? = nil, onFailureHandler: (NSError -> ())? = nil)-> Void {
+        let registerURL: String = kBASE_URL+kREGISTER_URL
+        
+        let request = NSMutableURLRequest(URL: NSURL(string: registerURL)!)
+        request.HTTPMethod = "POST"
+        
+        let bodyString : String = String(format: kUserRegisterSetting, email, fullname,username, password)
+        let data : NSData = (bodyString).dataUsingEncoding(NSUTF8StringEncoding)!;
+        
+        request.HTTPBody = data;
+        request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+        
+        let session = NSURLSession.sharedSession()
+        
+        let task = session.dataTaskWithRequest(request){data, response, error -> Void in
+            if error != nil {
+            }
+            else{
+                if data != nil {
+                    let loginResponse : JSON? = JSON(data: data!, options: NSJSONReadingOptions.MutableContainers, error: nil)
+                    let status = loginResponse?["status"].string
+                    
+                    if status == "success" {
                         if onSuccessHandler != nil {
                             onSuccessHandler?()
                         }

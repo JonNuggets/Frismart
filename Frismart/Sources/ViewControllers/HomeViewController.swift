@@ -26,6 +26,11 @@ class HomeViewController: STBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
         self.initializeUI()
     }
 

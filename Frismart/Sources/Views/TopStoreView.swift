@@ -49,6 +49,19 @@ class TopStoreView: UIView {
             ImageCacheManager.loadImageViewForUrl(photoArray[0].photo_url, placeHolderImage: nil, imageView: self.storeImageView)
         }
         
-        self.favoriteImageView?.image = UIImage(named: "StoreDetails_Like_Unchecked")!.imageWithColor(UIColor.redColor())
+        var favoriteFound = false
+        
+        for (var index = 0; index < AppData.sharedInstance.favoriteStores.count; index++) {
+            if let favoriteItem:STStore = AppData.sharedInstance.favoriteStores[index] {
+                if favoriteItem.store_id == store.store_id {
+                    self.favoriteImageView?.image = UIImage(named: "StoreDetails_Like_Checked")!.imageWithColor(UIColor.redColor())
+                    favoriteFound = true
+                }
+            }
+        }
+        
+        if favoriteFound == false {
+            self.favoriteImageView?.image = UIImage(named: "StoreDetails_Like_Unchecked")!.imageWithColor(UIColor.redColor())
+        }
     }
 }
