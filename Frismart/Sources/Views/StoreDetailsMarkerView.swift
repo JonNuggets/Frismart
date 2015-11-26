@@ -19,6 +19,8 @@ class StoreDetailsMarkerView: UIView {
         self.storeCategoryLabel.text = ""
         self.floatRatingView.editable = false
         self.floatRatingView.floatRatings = true
+        self.layer.borderWidth = 1.0
+        self.layer.borderColor = UIColor().frismartDefaultBackgroundColor.CGColor
     }
     
     func display(store: STStore)->Void{
