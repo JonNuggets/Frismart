@@ -8,9 +8,6 @@
 
 import Foundation
 
-let kLOAD_VIEW_KEYBOARD_SHOW_Y_OFFSET   = CGFloat(-5.0)
-let kKEYBOARD_VIEW_HIDDEN_Y_OFFSET      = CGFloat(0.0)
-
 class LoginPageViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var passwordTextField: STUITextField!
     @IBOutlet var usernameTextField: STUITextField!
@@ -30,9 +27,6 @@ class LoginPageViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         
         self.initializeUI()
-        
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name:UIKeyboardWillShowNotification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name:UIKeyboardWillHideNotification, object: nil)
     }
     
     
@@ -41,8 +35,7 @@ class LoginPageViewController: UIViewController, UITextFieldDelegate {
 
         self.view.endEditing(true)
     }
-    
-    
+
     private func initializeUI()->Void {
         self.usernameTextField.secureTextEntry = false
         self.usernameTextField.delegate = self
@@ -74,8 +67,7 @@ class LoginPageViewController: UIViewController, UITextFieldDelegate {
     {
         self.activeTextField = nil
     }
-    
-    
+
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         super.touchesBegan(touches, withEvent: event);
         self.view.endEditing(true)
@@ -85,29 +77,6 @@ class LoginPageViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
-    //
-    func keyboardWillShow(notification: NSNotification) {
-        if let userInfo = notification.userInfo {
-            let animationDuration: NSTimeInterval = (userInfo[UIKeyboardAnimationDurationUserInfoKey] as! NSNumber).doubleValue
-            
-            var newFrame:CGRect = self.view.frame
-            
-            if self.activeTextField == self.passwordTextField {
-                newFrame.origin.y = kLOAD_VIEW_KEYBOARD_SHOW_Y_OFFSET
-            }
-    
-            UIView.animateWithDuration(animationDuration, delay: 0, options: UIViewAnimationOptions.CurveLinear, animations: {
-                self.view.frame = newFrame
-                }, completion: nil)
-        }
-    }
-    
-    func keyboardWillHide(sender: NSNotification) {
-        print("YES")
-        
-        self.view.frame.origin.y = kKEYBOARD_VIEW_HIDDEN_Y_OFFSET
-    }
-    
     //MARK: Private Methods
     private func formIsValid() -> Bool {
         if self.usernameTextField.text!.isEmpty || self.passwordTextField.text!.isEmpty {
@@ -115,7 +84,6 @@ class LoginPageViewController: UIViewController, UITextFieldDelegate {
         }
         return true
     }
-    
     
     @IBAction func clickOnLogin(sender: AnyObject) {
         
