@@ -14,8 +14,9 @@ class RegisterPageViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var usernameTextField: STUITextField!
     @IBOutlet var emailTextField: STUITextField!
     @IBOutlet var fullnameTextField: STUITextField!
-    
     @IBOutlet var registerButton: UIButton!
+
+    var activeTextField: STUITextField?
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -30,7 +31,6 @@ class RegisterPageViewController: UIViewController, UITextFieldDelegate {
         
         self.initializeUI()
     }
-    
     
     private func initializeUI()->Void {
         self.usernameTextField.delegate = self
@@ -53,7 +53,6 @@ class RegisterPageViewController: UIViewController, UITextFieldDelegate {
         self.registerButton.setTitle(NSLocalizedString("LoginPage_LoginButtonTitle", comment:""), forState: .Normal)
     }
     
-    
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
@@ -66,6 +65,16 @@ class RegisterPageViewController: UIViewController, UITextFieldDelegate {
     
     func textFieldShouldEndEditing(textField: UITextField)-> Bool {
         return true
+    }
+
+    func textFieldDidBeginEditing(textField: UITextField)
+    {
+        self.activeTextField = textField as? STUITextField
+    }
+
+    func textFieldDidEndEditing(textField: UITextField)
+    {
+        self.activeTextField = nil
     }
     
     //MARK: Private Methods
