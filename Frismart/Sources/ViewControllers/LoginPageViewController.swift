@@ -85,6 +85,11 @@ class LoginPageViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
+    private func clearTextFields()->Void{
+        self.usernameTextField.text = ""
+        self.passwordTextField.text = ""
+    }
+    
     @IBAction func clickOnLogin(sender: AnyObject) {
         
         if self.formIsValid() {
@@ -106,7 +111,6 @@ class LoginPageViewController: UIViewController, UITextFieldDelegate {
     }
     
     func onLoginSuccess() -> Void {
-        print("Logged in...")
         AppData.sharedInstance.loggedIn = true
         self.stopActivityIndicatorAnimation()
         
@@ -122,10 +126,14 @@ class LoginPageViewController: UIViewController, UITextFieldDelegate {
     func onLoginFailure(error: NSError) -> Void {
         self.stopActivityIndicatorAnimation()
         
-        let alertController = UIAlertController(title: "Frismart", message: error.domain, preferredStyle: .Alert)
-        let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
-        alertController.addAction(defaultAction)
-        
-        presentViewController(alertController, animated: true, completion: nil)
+        dispatch_async(dispatch_get_main_queue(), {
+            let alertController = UIAlertController(title: "Frismart", message: NSLocalizedString("Error_FrismartLoginfailed", comment: ""), preferredStyle: .Alert)
+            let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+            alertController.addAction(defaultAction)
+            
+            self.clearTextFields()
+            
+            self.presentViewController(alertController, animated: true, completion: nil)
+        })
     }
 }

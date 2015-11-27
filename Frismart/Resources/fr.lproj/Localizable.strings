@@ -7,7 +7,8 @@
 */
 
 "Error_EmptyFields" = "Tous les champs sont obligatoires";
-"Error_SendInfoFailed" = "Une erreur est survenue lors de l'envoi. Veuillez réessayer plus tard";
+"Error_RegisterFailed" = "Une erreur est survenue lors de l'inscription. Veuillez réessayer plus tard";
+"Error_FrismartLoginfailed" = "Identifiant/Mot de passe invalide(s) ou votre accès a été révoqué. Veuillez réessayer plus tard";
 
 "Menu_Login" = "CONNEXION";
 "Menu_Home" = "ACCUEIL";
@@ -35,6 +36,7 @@
 "RegisterPage_FullnamePlaceholder" = "Prénom & Nom";
 "RegisterPage_UsernamePlaceholder" = "Identifiant";
 "RegisterPage_PasswordPlaceholder" = "Mot de passe";
+"RegisterPage_RegisterButtonTitle" = "S'inscrire";
 "RegisterPage_RegisterSuccess" = "Veuillez vérifier votre email pour compléter l'inscription";
 
 "LoginScreen_SignInPageTitle" = "Connexion";

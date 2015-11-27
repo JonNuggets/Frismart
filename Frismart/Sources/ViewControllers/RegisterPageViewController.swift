@@ -50,9 +50,10 @@ class RegisterPageViewController: UIViewController, UITextFieldDelegate {
         self.fullnameTextField.text = ""
         self.fullnameTextField.placeholder = NSLocalizedString("RegisterPage_FullnamePlaceholder", comment:"")
                 
-        self.registerButton.setTitle(NSLocalizedString("LoginPage_LoginButtonTitle", comment:""), forState: .Normal)
+        self.registerButton.setTitle(NSLocalizedString("RegisterPage_RegisterButtonTitle", comment:""), forState: .Normal)
     }
     
+    //MARK: TextField Delegate
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
@@ -85,13 +86,19 @@ class RegisterPageViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
+    private func clearTextFields()->Void{
+        self.emailTextField.text = ""
+        self.fullnameTextField.text = ""
+        self.usernameTextField.text = ""
+        self.passwordTextField.text = ""
+    }
     
+    //MARK: Register Button
     @IBAction func clickOnRegister(sender: AnyObject) {
         
         if self.formIsValid() {
-            print("Waiting for the register...")
             self.startActivityIndicatorAnimation()
-            STConnectionManager.register(self.emailTextField.text!, fullname: self.fullnameTextField.text!, username: self.usernameTextField.text!, password: self.passwordTextField.text!, onSuccessHandler:onRegisterSuccess, onFailureHandler: nil)
+            STConnectionManager.register(self.emailTextField.text!, fullname: self.fullnameTextField.text!, username: self.usernameTextField.text!, password: self.passwordTextField.text!, onSuccessHandler:onRegisterSuccess, onFailureHandler: onRegisterFailure)
         }
         else {
             let alertController = UIAlertController(title: "Frismart", message: NSLocalizedString("Error_EmptyFields", comment: ""), preferredStyle: .Alert)
@@ -102,10 +109,11 @@ class RegisterPageViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    //MARK: Closure functions
     func onRegisterSuccess() -> Void {
-        print("Registered...")
-        AppData.sharedInstance.loggedIn = true
         self.stopActivityIndicatorAnimation()
+        
+        AppData.sharedInstance.loggedIn = true
         
         let alertController = UIAlertController(title: "Frismart", message: NSLocalizedString("RegisterPage_RegisterSuccess", comment: ""), preferredStyle: .Alert)
         let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
@@ -114,13 +122,18 @@ class RegisterPageViewController: UIViewController, UITextFieldDelegate {
         presentViewController(alertController, animated: true, completion: nil)
     }
     
-    func onRegisterFailure(error: NSError, message: String) -> Void {
-        let alertController = UIAlertController(title: "Frismart", message: NSLocalizedString("Error_SendInfoFailed", comment: ""), preferredStyle: .Alert)
-        let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
-        alertController.addAction(defaultAction)
-        
-        presentViewController(alertController, animated: true, completion: nil)
-        
+    func onRegisterFailure(error: NSError) -> Void {
         self.stopActivityIndicatorAnimation()
+        
+        dispatch_async(dispatch_get_main_queue(), {
+            let alertController = UIAlertController(title: "Frismart", message: NSLocalizedString("Error_RegisterFailed", comment: ""), preferredStyle: .Alert)
+            let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+            alertController.addAction(defaultAction)
+            
+            self.clearTextFields()
+            
+            self.presentViewController(alertController, animated: true, completion: nil)
+        })
+        
     }
 }

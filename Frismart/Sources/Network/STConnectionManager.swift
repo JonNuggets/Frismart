@@ -97,15 +97,24 @@ class STConnectionManager : NSObject {
         
         let task = session.dataTaskWithRequest(request){data, response, error -> Void in
             if error != nil {
+                if onFailureHandler != nil {
+                    onFailureHandler?(error!)
+                }
             }
             else{
                 if data != nil {
-                    let loginResponse : JSON? = JSON(data: data!, options: NSJSONReadingOptions.MutableContainers, error: nil)
-                    let status = loginResponse?["status"].string
+                    let registerResponse : JSON? = JSON(data: data!, options: NSJSONReadingOptions.MutableContainers, error: nil)
+                    let responseStatus = STResponseStatus(dictionary: (registerResponse?["status"])!.dictionaryObject)
                     
-                    if status == "success" {
+                    if responseStatus.status_code == "-1" {
                         if onSuccessHandler != nil {
                             onSuccessHandler?()
+                        }
+                    }
+                    else {
+                        if onFailureHandler != nil {
+                            let responseError = NSError(domain: responseStatus.status_text!, code: Int(responseStatus.status_code!)!, userInfo: [:])
+                            onFailureHandler?(responseError)
                         }
                     }
                 }
