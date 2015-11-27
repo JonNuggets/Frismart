@@ -353,6 +353,8 @@ class StoreDetailsViewController : STBaseTableViewController, GMSMapViewDelegate
     func floatRatingView(ratingView: FloatRatingView, didUpdate rating: Float) {
         if AppData.sharedInstance.loggedIn == true {
             self.floatRatingView?.editable = false
+            
+            self.startActivityIndicatorAnimation()
             STConnectionManager.postRating(String(self.floatRatingView?.rating), store: self.currentStore!, onSuccessHandler: self.onPostRatingSuccess, onFailureHandler: self.onPostRatingFailure)
         }
         else {
@@ -376,11 +378,13 @@ class StoreDetailsViewController : STBaseTableViewController, GMSMapViewDelegate
         
         dispatch_async(dispatch_get_main_queue(), { () -> Void in
             self.tableView.reloadData()
+            self.stopActivityIndicatorAnimation()
         })
         self.floatRatingView?.editable = true
     }
     
     func onPostRatingFailure(error: NSError) {
         self.floatRatingView?.editable = true
+        self.stopActivityIndicatorAnimation()
     }
 }

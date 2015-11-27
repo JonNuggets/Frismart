@@ -11,8 +11,9 @@ import Foundation
 class STBaseTableViewController: UITableViewController {
     
     // MARK: UIViewcontroller Life cycle
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
         
         // Appeler les fonctions dans l'extension
         

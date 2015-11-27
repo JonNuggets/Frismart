@@ -7,6 +7,10 @@
     <customFonts key="customFonts">
         <mutableArray key="Exo2-Regular.ttf">
             <string>Exo2-Regular</string>
+            <string>Exo2-Regular</string>
+            <string>Exo2-Regular</string>
+            <string>Exo2-Regular</string>
+            <string>Exo2-Regular</string>
         </mutableArray>
     </customFonts>
     <objects>
@@ -31,7 +35,7 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="QhL-5z-gr6"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <fontDescription key="fontDescription" name="Exo2-Regular" family="Exo 2" pointSize="18"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iml-Uo-tMA">
@@ -48,7 +52,7 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="ALF-oJ-Hyk"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <fontDescription key="fontDescription" name="Exo2-Regular" family="Exo 2" pointSize="18"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="deU-dq-SHq">
@@ -65,7 +69,7 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="TEG-Ra-q9N"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <fontDescription key="fontDescription" name="Exo2-Regular" family="Exo 2" pointSize="18"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zVg-m7-JVF">
@@ -82,7 +86,7 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="KEb-WK-eRA"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <fontDescription key="fontDescription" name="Exo2-Regular" family="Exo 2" pointSize="18"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pJM-B8-P5b">
