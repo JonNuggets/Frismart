@@ -2,7 +2,6 @@
 TODO:
 ----------------------------------------
 
-[] 2. LoginViewController : gestion de la création de compte Frismart. Verifier si l’API Call fonctionne correctement. Mettre une alerte pour signifier a l’utilisateur qu’il doit consulter sa boite email et activer son compte pour pouvoir se connecter
 [-] 3. ProfileViewController : Gérer la mise a jour de la photo.
 [-] 4. HomeViewController : L’affichage de topStore dans cet écran pose problème. Trouver un moyen de le régler.
 [] 7. StoresPerCategoryViewController & StoreDetailsViewController : Affichage l’heure en fonction des horaires parsées
@@ -21,3 +20,4 @@ DONE:
 [x] 6. MapViewController : Ajouter les vue de detail du store au clic. Gérer la couleur des boutons lorsqu’ils sont sélectionnés
 [x] 1. LoginViewController : gestion du clavier. Surélever l’écran pour que les 2 champs soient visibles.
 Ranger le clavier si on tape hors des champs.
+[x] 2. LoginViewController : gestion de la création de compte Frismart. Verifier si l’API Call fonctionne correctement. Mettre une alerte pour signifier a l’utilisateur qu’il doit consulter sa boite email et activer son compte pour pouvoir se connecter
