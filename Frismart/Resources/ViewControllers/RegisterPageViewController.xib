@@ -107,6 +107,9 @@
                     <state key="normal" title="S'enregistrer">
                         <color key="titleColor" red="0.1215686275" green="0.54901960780000003" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
+                    <connections>
+                        <action selector="clickOnRegister:" destination="-1" eventType="touchUpInside" id="Yhe-rC-mzx"/>
+                    </connections>
                 </button>
             </subviews>
             <animations/>

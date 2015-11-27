@@ -90,10 +90,10 @@ class LoginPageViewController: UIViewController, UITextFieldDelegate {
         if self.formIsValid() {
             print("Waiting for the login...")
             self.startActivityIndicatorAnimation()
-            STConnectionManager.login(self.usernameTextField.text!, password: self.passwordTextField.text!, onSuccessHandler: onLoginSuccess, onFailureHandler: nil)
+            STConnectionManager.login(self.usernameTextField.text!, password: self.passwordTextField.text!, onSuccessHandler: onLoginSuccess, onFailureHandler: onLoginFailure)
         }
         else {
-            let alertController = UIAlertController(title: "Frismart", message: "Username/Password is empty.", preferredStyle: .Alert)
+            let alertController = UIAlertController(title: "Frismart", message: NSLocalizedString("Error_EmptyFields", comment: ""), preferredStyle: .Alert)
             let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
             alertController.addAction(defaultAction)
             
@@ -117,13 +117,15 @@ class LoginPageViewController: UIViewController, UITextFieldDelegate {
         dispatch_async(dispatch_get_main_queue(), { () -> Void in
             self.navigationController?.pushViewController(profileViewController, animated: true)
         })
-        
-        
-        
-    
     }
     
-    func onLoginFailure(error: NSError, message: String) -> Void {
-        //TO DO
+    func onLoginFailure(error: NSError) -> Void {
+        self.stopActivityIndicatorAnimation()
+        
+        let alertController = UIAlertController(title: "Frismart", message: error.domain, preferredStyle: .Alert)
+        let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+        alertController.addAction(defaultAction)
+        
+        presentViewController(alertController, animated: true, completion: nil)
     }
 }

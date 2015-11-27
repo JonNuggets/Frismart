@@ -86,14 +86,15 @@ class RegisterPageViewController: UIViewController, UITextFieldDelegate {
     }
     
     
-    @IBAction func clickOnLogin(sender: AnyObject) {
+    @IBAction func clickOnRegister(sender: AnyObject) {
         
         if self.formIsValid() {
             print("Waiting for the register...")
-            //STConnectionManager.login(self.usernameTextField.text!, password: self.passwordTextField.text!, onSuccessHandler: onLoginSuccess, onFailureHandler: nil)
+            self.startActivityIndicatorAnimation()
+            STConnectionManager.register(self.emailTextField.text!, fullname: self.fullnameTextField.text!, username: self.usernameTextField.text!, password: self.passwordTextField.text!, onSuccessHandler:onRegisterSuccess, onFailureHandler: nil)
         }
         else {
-            let alertController = UIAlertController(title: "Frismart", message: "All the fields are required.", preferredStyle: .Alert)
+            let alertController = UIAlertController(title: "Frismart", message: NSLocalizedString("Error_EmptyFields", comment: ""), preferredStyle: .Alert)
             let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
             alertController.addAction(defaultAction)
             
@@ -101,12 +102,25 @@ class RegisterPageViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    func onLoginSuccess() -> Void {
-        print("Logged in...")
+    func onRegisterSuccess() -> Void {
+        print("Registered...")
         AppData.sharedInstance.loggedIn = true
+        self.stopActivityIndicatorAnimation()
+        
+        let alertController = UIAlertController(title: "Frismart", message: NSLocalizedString("RegisterPage_RegisterSuccess", comment: ""), preferredStyle: .Alert)
+        let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+        alertController.addAction(defaultAction)
+        
+        presentViewController(alertController, animated: true, completion: nil)
     }
     
-    func onLoginFailure(error: NSError, message: String) -> Void {
-        //TO DO
+    func onRegisterFailure(error: NSError, message: String) -> Void {
+        let alertController = UIAlertController(title: "Frismart", message: NSLocalizedString("Error_SendInfoFailed", comment: ""), preferredStyle: .Alert)
+        let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+        alertController.addAction(defaultAction)
+        
+        presentViewController(alertController, animated: true, completion: nil)
+        
+        self.stopActivityIndicatorAnimation()
     }
 }
