@@ -85,15 +85,20 @@ class LoginPageViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
+    private func clearTextFields()->Void{
+        self.usernameTextField.text = ""
+        self.passwordTextField.text = ""
+    }
+    
     @IBAction func clickOnLogin(sender: AnyObject) {
         
         if self.formIsValid() {
             print("Waiting for the login...")
             self.startActivityIndicatorAnimation()
-            STConnectionManager.login(self.usernameTextField.text!, password: self.passwordTextField.text!, onSuccessHandler: onLoginSuccess, onFailureHandler: nil)
+            STConnectionManager.login(self.usernameTextField.text!, password: self.passwordTextField.text!, onSuccessHandler: onLoginSuccess, onFailureHandler: onLoginFailure)
         }
         else {
-            let alertController = UIAlertController(title: "Frismart", message: "Username/Password is empty.", preferredStyle: .Alert)
+            let alertController = UIAlertController(title: "Frismart", message: NSLocalizedString("Error_EmptyFields", comment: ""), preferredStyle: .Alert)
             let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
             alertController.addAction(defaultAction)
             
@@ -106,7 +111,6 @@ class LoginPageViewController: UIViewController, UITextFieldDelegate {
     }
     
     func onLoginSuccess() -> Void {
-        print("Logged in...")
         AppData.sharedInstance.loggedIn = true
         self.stopActivityIndicatorAnimation()
         
@@ -117,13 +121,19 @@ class LoginPageViewController: UIViewController, UITextFieldDelegate {
         dispatch_async(dispatch_get_main_queue(), { () -> Void in
             self.navigationController?.pushViewController(profileViewController, animated: true)
         })
-        
-        
-        
-    
     }
     
-    func onLoginFailure(error: NSError, message: String) -> Void {
-        //TO DO
+    func onLoginFailure(error: NSError) -> Void {
+        self.stopActivityIndicatorAnimation()
+        
+        dispatch_async(dispatch_get_main_queue(), {
+            let alertController = UIAlertController(title: "Frismart", message: NSLocalizedString("Error_FrismartLoginfailed", comment: ""), preferredStyle: .Alert)
+            let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+            alertController.addAction(defaultAction)
+            
+            self.clearTextFields()
+            
+            self.presentViewController(alertController, animated: true, completion: nil)
+        })
     }
 }
