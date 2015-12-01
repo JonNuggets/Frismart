@@ -43,32 +43,62 @@ class StoreDetailsInfoCell : UITableViewCell {
     
         print("\(store.store_name) - \(store.store_id)" )
         
+        var isOpen = false
         let storeHours = store.horaire?.parseHours()
+        let currentDate = NSDate().getCurrentDateWithFormat("EEE HH:mm")
         
+        
+        
+        let calendar: NSCalendar = NSCalendar.currentCalendar()
+        let currentDayComponent: NSDateComponents = calendar.components(.Weekday, fromDate: currentDate)
+        
+        
+        let currentWeekDay = (currentDayComponent.weekday <= 7 && currentDayComponent.weekday != 0) ? currentDayComponent.weekday - 1 : 1
+
         for days in (storeHours?.keys)! {
             let daysList = days.componentsSeparatedByString("-")
-            
-            print(daysList)
-            
-            let currentDayTime: String = NSDate().getCurrentDayTimeStringFormat()
-            let currentDayTimeArray: [String] = currentDayTime.componentsSeparatedByString("-")
-            let currentDay: String = currentDayTimeArray[0].stringByReplacingOccurrencesOfString(".", withString: "")
-            let currentTime: [String] = currentDayTimeArray[1].componentsSeparatedByString(":")
-            let currentHour: Int = Int(currentTime[0])!
-            let currentMinutes: Int = Int(currentTime[1])!
-            
-            print("Day: \(currentDay)")
-            print("Hours: \(currentHour)")
-            print("Minutes: \(currentMinutes)")
-            
+
             if daysList.count > 1 {
-                print("YES")
-            }
-            else {
-                print("NO")
+                for day in daysList {
+                    let dateStartString : String = String(format: "%@ %@", day, storeHours![days]![0]["start"]!)
+                    let dateEndString : String = String(format: "%@ %@", day, storeHours![days]![0]["end"]!)
+                    
+                    let dateStart = NSDate().stringToDate(dateStartString)
+                    let dateEnd = NSDate().stringToDate(dateEndString)
+                    
+                    let startDay = STHelpers.getWeekDay(daysList[0])
+                    let endDay = STHelpers.getWeekDay(daysList[1])
+                    
+                    if dateEnd.compare(dateStart) == .OrderedDescending {
+                        
+                        if (startDay <= currentWeekDay &&  currentWeekDay <= endDay){
+                            
+                            if (dateEnd.compareHours(currentDate) == .OrderedDescending)
+                                && (dateStart.compareHours(currentDate) == .OrderedAscending){
+                                    isOpen = true
+                                    break
+                            }
+                        }
+                    }
+                    else {
+                        if (startDay <= currentWeekDay &&  currentWeekDay <= (endDay + 1)){
+                            
+                            if (dateEnd.compareHours(currentDate) == .OrderedAscending)
+                                && (dateStart.compareHours(currentDate) == .OrderedAscending){
+                                    isOpen = true
+                                    break
+                            }
+                        }
+                    }
+                }
             }
         }
         
-        self.storeHoursImageView?.image = UIImage(named: "StoreDetails_Clock")!.imageWithColor(UIColor.greenColor())
+        if isOpen {
+            self.storeHoursImageView?.image = UIImage(named: "StoreDetails_Clock")!.imageWithColor(UIColor.greenColor())
+        }
+        else {
+            self.storeHoursImageView?.image = UIImage(named: "StoreDetails_Clock")!.imageWithColor(UIColor.redColor())
+        }
     }
 }

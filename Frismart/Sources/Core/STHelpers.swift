@@ -64,14 +64,14 @@ class STHelpers: NSObject {
     }
     
     class func getWeekDay(weekDay: String)->Int {
-        switch weekDay {
-            case "lun": return 0
-            case "mar": return 1
-            case "mer": return 2
-            case "jeu": return 3
+        switch weekDay.lowercaseString {
+            case "lun": return 1
+            case "mar": return 2
+            case "mer": return 3
+            case "jeu": return 4
             case "ven": return 4
-            case "sam": return 5
-            case "dim": return 6
+            case "sam": return 6
+            case "dim": return 7
             default: return -1
         }
     }

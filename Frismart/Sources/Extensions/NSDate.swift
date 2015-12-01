@@ -9,10 +9,27 @@
 import Foundation
 
 extension NSDate {
-    func getCurrentDayTimeStringFormat()->String{
+    func getCurrentDateWithFormat(format: String)->NSDate{
         let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "EEE-HH:mm"
-        let date = NSDate()
-        return dateFormatter.stringFromDate(date)
+        dateFormatter.dateFormat = format
+        let currentDate = NSDate()
+
+        return dateFormatter.dateFromString(dateFormatter.stringFromDate(currentDate))!
+    }
+    
+    func compareHours(date: NSDate)-> NSComparisonResult {
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "HH:mm"
+        
+        let selfToCompare = dateFormatter.dateFromString(dateFormatter.stringFromDate(self))
+        let dateToCompare = dateFormatter.dateFromString(dateFormatter.stringFromDate(date))
+        
+        return (selfToCompare?.compare(dateToCompare!))!
+    }
+    
+    func stringToDate(dateString: String)->NSDate{
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "EEE HH:mm"
+        return dateFormatter.dateFromString(dateString)!
     }
 }
