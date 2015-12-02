@@ -29,6 +29,9 @@ extension NSDate {
     
     func stringToDate(dateString: String)->NSDate{
         let dateFormatter = NSDateFormatter()
+        let locale = NSLocale(localeIdentifier: "fr_FR")
+
+        dateFormatter.locale = locale
         dateFormatter.dateFormat = "EEE HH:mm"
         return dateFormatter.dateFromString(dateString)!
     }
