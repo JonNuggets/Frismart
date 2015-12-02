@@ -63,7 +63,7 @@ class STConnectionManager : NSObject {
                     let responseStatus = STResponseStatus(dictionary: (loginResponse?["status"])!.dictionaryObject)
                     
                     
-                    if responseStatus.status_code == "-1" {
+                    if responseStatus.status_code == kFrismartErrorAPICode {
                         AppData.sharedInstance.user = STUser(dictionary: (loginResponse?["user_info"])!.dictionaryObject)
                         if onSuccessHandler != nil {
                             onSuccessHandler?()
@@ -106,7 +106,7 @@ class STConnectionManager : NSObject {
                     let registerResponse : JSON? = JSON(data: data!, options: NSJSONReadingOptions.MutableContainers, error: nil)
                     let responseStatus = STResponseStatus(dictionary: (registerResponse?["status"])!.dictionaryObject)
                     
-                    if responseStatus.status_code == "-1" {
+                    if responseStatus.status_code == kFrismartErrorAPICode {
                         if onSuccessHandler != nil {
                             onSuccessHandler?()
                         }

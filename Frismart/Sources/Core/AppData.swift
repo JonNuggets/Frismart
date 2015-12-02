@@ -42,6 +42,9 @@ let kTWITTER_CONSUMER_SECRET            :String = "Hf1ems23OtoK52rcHbVW46s8oTmoP
 // Google Maps
 let kGOOGLEMAPS_API_KEY                 :String = "AIzaSyDChwhL4PpNedghpiEZlD_k6HQfup_PLc4"
 
+// Frismart Error Code
+let kFrismartErrorAPICode               :String = "-1"
+
 class AppData : NSObject {
     
     var loggedIn: Bool = false
