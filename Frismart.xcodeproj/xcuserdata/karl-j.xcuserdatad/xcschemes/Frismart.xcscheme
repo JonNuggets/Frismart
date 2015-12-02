@@ -114,6 +114,7 @@
    </AnalyzeAction>
    <ArchiveAction
       buildConfiguration = "Release"
+      customArchiveName = "Frismart"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>
