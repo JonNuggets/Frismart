@@ -46,6 +46,10 @@ class ProfileViewController: STBaseViewController, UIImagePickerControllerDelega
     }
     
     @IBAction func clickOnLogOut(sender: AnyObject) {
-        print("Log Out")
+        AppData.sharedInstance.clearPersonnalData()
+
+        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            self.navigationController?.popToRootViewControllerAnimated(true)
+        })
     }
 }

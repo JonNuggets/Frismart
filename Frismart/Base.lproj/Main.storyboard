@@ -848,7 +848,7 @@
         <!--Login View Controller-->
         <scene sceneID="Yvi-xe-uEx">
             <objects>
-                <viewController id="60P-Ye-wmC" customClass="LoginViewController" customModule="Frismart" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="60P-Ye-wmC" customClass="LoginViewController" customModule="Frismart" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qMB-WW-xn2"/>
                         <viewControllerLayoutGuide type="bottom" id="qaw-Ah-XCH"/>
