@@ -11,9 +11,11 @@ import Foundation
 extension NSDate {
     func getCurrentDateWithFormat(format: String)->NSDate{
         let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = format
         let currentDate = NSDate()
-
+        
+        dateFormatter.timeZone = NSTimeZone.localTimeZone()
+        dateFormatter.dateFormat = format
+    
         return dateFormatter.dateFromString(dateFormatter.stringFromDate(currentDate))!
     }
     
