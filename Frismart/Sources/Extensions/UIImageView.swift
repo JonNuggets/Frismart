@@ -14,5 +14,6 @@ extension UIImageView {
         self.layer.masksToBounds = false
         self.layer.borderColor = UIColor().frismartDefaultBackgroundColor.CGColor
         self.layer.cornerRadius = radius
+        self.clipsToBounds = true
     }
 }

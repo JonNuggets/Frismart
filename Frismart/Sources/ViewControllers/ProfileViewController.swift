@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ProfileViewController: STBaseViewController, UIImagePickerControllerDelegate {
+class ProfileViewController: STBaseViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     @IBOutlet var userProfileImageView: UIImageView!
     @IBOutlet var userImageViewLabel: UILabel!
@@ -17,6 +17,7 @@ class ProfileViewController: STBaseViewController, UIImagePickerControllerDelega
     @IBOutlet var userFullNameLabel: UILabel!
     @IBOutlet var userEmailLabel: UILabel!
     @IBOutlet var userLogOutButton: UIButton!
+    var imagePicker: UIImagePickerController = UIImagePickerController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +30,7 @@ class ProfileViewController: STBaseViewController, UIImagePickerControllerDelega
         self.userProfileImageView.withRoundCorners(self.userProfileImageView.frame.size.height/2)
         self.userImageViewLabel.text = NSLocalizedString("ProfileScreen_EditImage", comment:"")
         self.userLogOutButton.setTitle(NSLocalizedString("ProfileScreen_Logout", comment:""), forState: .Normal)
+        self.userProfileImageView.image = AppData.sharedInstance.user?.profileImageView?.image
     }
     
     private func setUserProfileValues()->Void{
@@ -38,11 +40,27 @@ class ProfileViewController: STBaseViewController, UIImagePickerControllerDelega
     }
     
     func updateProfile(sender:UIButton){
-        print("Send Profile Update")
+        AppData.sharedInstance.user?.profileImageView = UIImageView()
+        AppData.sharedInstance.user?.profileImageView?.image = self.userProfileImageView.image
     }
     
     @IBAction func clickOnEditPhoto(sender: AnyObject) {
-        print("Take a Picture")
+        
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.SavedPhotosAlbum){
+            
+            self.imagePicker.delegate = self
+            self.imagePicker.sourceType = UIImagePickerControllerSourceType.SavedPhotosAlbum;
+            self.imagePicker.allowsEditing = false
+            
+            self.presentViewController(imagePicker, animated: true, completion: nil)
+        }
+    }
+    
+    func imagePickerController(picker: UIImagePickerController!, didFinishPickingImage image: UIImage!, editingInfo: NSDictionary!){
+        self.dismissViewControllerAnimated(true, completion: { () -> Void in
+            
+        })
+        self.userProfileImageView.image = image
     }
     
     @IBAction func clickOnLogOut(sender: AnyObject) {

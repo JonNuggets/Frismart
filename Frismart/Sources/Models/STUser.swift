@@ -21,4 +21,5 @@ class STUser : STBaseModel{
     var email       : String?
     var currentPlacemark: CLPlacemark?
     var currentLocation: CLLocation?
+    var profileImageView : UIImageView?
 }
