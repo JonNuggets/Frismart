@@ -37,6 +37,9 @@ class InfosMenuCell : UITableViewCell {
     }
     
     func display() -> Void{
+        
+        self.userImageView.image = AppData.sharedInstance.user?.profileImageView?.image
+        
         let userNames: [String] = (AppData.sharedInstance.user?.full_name?.componentsSeparatedByString(" "))!
         
         self.userNameLabel.text = userNames[0] + " "

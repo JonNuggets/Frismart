@@ -9,7 +9,6 @@ TODO:
 [] 11. StoreDetailsViewController : Quand on presse l'horloge on doit faire apparaitre les horaires du magazin
 [] 13. SearchViewController : Ajouter le champ pour la ville
 [] 14. CategoriesViewController : Utiliser un UICollectionView avec les icones de catégories
-[] 15. MenuViewController : Mise a jour de la photo de profil dans le menu.
 
 ----------------------------------------
 DONE:
@@ -23,3 +22,4 @@ Ranger le clavier si on tape hors des champs.
 [x] 12. RegisterPageViewController : Gestion de l'enregistrement d'un nouvel utilisateur
 [x] 15. RegisterPageViewController : Faire le Log Out
 [x] 3. ProfileViewController : Gérer la mise a jour de la photo.
+[x] 16. MenuViewController : Mise a jour de la photo de profil dans le menu.
