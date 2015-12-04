@@ -41,18 +41,11 @@ class StoreDetailsInfoCell : UITableViewCell {
         self.storeRateLabel.sizeToFit()
         self.storeAddressLabel.text = store.store_address
     
-        print("\(store.store_name) - \(store.store_id)" )
-        
         var isOpen = false
         let storeHours = store.horaire?.parseHours()
         let currentDate = NSDate().getCurrentDateWithFormat("EEE HH:mm")
-        
-        
-        
         let calendar: NSCalendar = NSCalendar.currentCalendar()
         let currentDayComponent: NSDateComponents = calendar.components(.Weekday, fromDate: currentDate)
-        
-        
         let currentWeekDay = (currentDayComponent.weekday <= 7 && currentDayComponent.weekday != 0) ? currentDayComponent.weekday - 1 : 1
 
         for days in (storeHours?.keys)! {
