@@ -10,7 +10,6 @@ TODO:
 [] 11. StoreDetailsViewController : Quand on presse l'horloge on doit faire apparaitre les horaires du magazin
 [] 13. SearchViewController : Ajouter le champ pour la ville
 [] 14. CategoriesViewController : Utiliser un UICollectionView avec les icones de catégories
-[] 15. RegisterPageViewController : Faire le Log Out
 
 ----------------------------------------
 DONE:
@@ -22,3 +21,4 @@ Ranger le clavier si on tape hors des champs.
 [x] 2. LoginViewController : gestion de la création de compte Frismart. Verifier si l’API Call fonctionne correctement. Mettre une alerte pour signifier a l’utilisateur qu’il doit consulter sa boite email et activer son compte pour pouvoir se connecter
 [x] 7. StoresPerCategoryViewController & StoreDetailsViewController : Affichage l’heure en fonction des horaires parsées
 [x] 12. RegisterPageViewController : Gestion de l'enregistrement d'un nouvel utilisateur
+[x] 15. RegisterPageViewController : Faire le Log Out
