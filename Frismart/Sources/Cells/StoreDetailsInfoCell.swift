@@ -43,7 +43,7 @@ class StoreDetailsInfoCell : UITableViewCell {
     
         var isOpen = false
         let storeHours = store.horaire?.parseHours()
-        let currentDate = NSDate().getCurrentDateWithFormat("EEE HH:mm")
+        let currentDate = NSDate()
         let calendar: NSCalendar = NSCalendar.currentCalendar()
         let currentDayComponent: NSDateComponents = calendar.components(.Weekday, fromDate: currentDate)
         let currentWeekDay = (currentDayComponent.weekday <= 7 && currentDayComponent.weekday != 0) ? currentDayComponent.weekday - 1 : 1
