@@ -49,7 +49,7 @@ extension NSDate {
             }
         }
     }
-    
+
     func stringToDate(dateString: String)->NSDate{
         let dateFormatter = NSDateFormatter()
         let locale = NSLocale(localeIdentifier: "fr_FR")
@@ -59,13 +59,4 @@ extension NSDate {
  
         return dateFormatter.dateFromString(dateString)!
     }
-    
-
-    private func toLocalTime()-> NSDate{
-        let timeZone = NSTimeZone.localTimeZone()
-        let seconds = timeZone.secondsFromGMT
-        
-        return self.dateByAddingTimeInterval(Double(seconds))
-    }
-
 }
