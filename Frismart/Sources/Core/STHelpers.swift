@@ -63,6 +63,22 @@ class STHelpers: NSObject {
         return nearestStore
     }
     
+    class func sortByDistance(stores: [STStore])->[STStore]{
+        var distancesFromLocation = [String:Double]()
+        
+        if AppData.sharedInstance.loggedIn == true {
+            
+            for store in stores {
+                let storeLocation: CLLocation = CLLocation(latitude: (store.lat?.doubleValue)!, longitude: (store.lon?.doubleValue)!)
+                let distanceFromLocation = AppData.sharedInstance.user?.currentLocation?.distanceFromLocation(storeLocation)
+                distancesFromLocation[store.store_id!] = distanceFromLocation
+            }
+        }
+        print(distancesFromLocation)
+        
+        return [STStore]()
+    }
+    
     class func getWeekDay(weekDay: String)->Int {
         switch weekDay.lowercaseString {
             case "lun": return 1
@@ -93,9 +109,10 @@ class STHelpers: NSObject {
             }
         }
         
+        if AppData.sharedInstance.loggedIn == true  && AppData.sharedInstance.user?.currentLocation != nil{
+            STHelpers.sortByDistance(stores)
+        }
+        
         return stores
     }
-    
-    
-    
 }
