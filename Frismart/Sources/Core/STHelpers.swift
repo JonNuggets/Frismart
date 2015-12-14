@@ -85,7 +85,7 @@ class STHelpers: NSObject {
             case "mar": return 2
             case "mer": return 3
             case "jeu": return 4
-            case "ven": return 4
+            case "ven": return 5
             case "sam": return 6
             case "dim": return 7
             default: return -1
@@ -109,9 +109,11 @@ class STHelpers: NSObject {
             }
         }
         
-        if AppData.sharedInstance.loggedIn == true  && AppData.sharedInstance.user?.currentLocation != nil{
-            STHelpers.sortByDistance(stores)
-        }
+        STHelpers.sortByDistance(stores)
+        
+//        if AppData.sharedInstance.loggedIn == true  && AppData.sharedInstance.user?.currentLocation != nil{
+//            STHelpers.sortByDistance(stores)
+//        }
         
         return stores
     }
