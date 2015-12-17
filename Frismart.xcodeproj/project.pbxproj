@@ -126,7 +126,7 @@
 		28FB32EF1BA1796E00B5E991 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FB32EE1BA1796E00B5E991 /* CategoriesViewController.swift */; };
 		28FB32F11BA179C700B5E991 /* STBaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FB32F01BA179C700B5E991 /* STBaseTableViewController.swift */; };
 		28FB32F31BA17EC800B5E991 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FB32F21BA17EC800B5E991 /* CategoryCell.swift */; };
-		B90D67E3CF9C818256BDC9CF /* Pods_Frismart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C8270A81EE0870C1A28A630 /* Pods_Frismart.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		B90D67E3CF9C818256BDC9CF /* Pods_Frismart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C8270A81EE0870C1A28A630 /* Pods_Frismart.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -8439,7 +8439,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Laurain Essono (F63Y52NKL4)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Laurain Essono (F63Y52NKL4)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -8463,7 +8464,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
-				PROVISIONING_PROFILE = com.be4u.Frismart;
+				PROVISIONING_PROFILE = "2db96138-84ba-4d86-8868-787959614ae5";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -8486,7 +8487,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Laurain Essono (G38ZVUE6V9)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Laurain Essono (G38ZVUE6V9)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -8501,7 +8503,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = com.be4u.Frismart;
+				PROVISIONING_PROFILE = "1435bdf1-b6ba-430e-8037-3157d74e46a2";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};

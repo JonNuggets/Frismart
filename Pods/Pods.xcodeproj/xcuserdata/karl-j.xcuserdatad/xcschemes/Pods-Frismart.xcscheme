@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '0111420A85FDAD315E0E2A81'
+               BlueprintIdentifier = '741DEFF1AE84F03D5FE24172'
                BlueprintName = 'Pods-Frismart'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Pods_Frismart.framework'>
