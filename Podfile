@@ -4,7 +4,7 @@ inhibit_all_warnings!
 use_frameworks!
 
 def import_pods
-    pod 'SwiftyJSON', '~> 2.3.2'
+    pod 'SwiftyJSON', '2.3.2'
     pod 'GoogleMaps', '~> 1.11.1'
 end
 
