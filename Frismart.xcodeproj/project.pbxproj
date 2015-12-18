@@ -126,7 +126,7 @@
 		28FB32EF1BA1796E00B5E991 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FB32EE1BA1796E00B5E991 /* CategoriesViewController.swift */; };
 		28FB32F11BA179C700B5E991 /* STBaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FB32F01BA179C700B5E991 /* STBaseTableViewController.swift */; };
 		28FB32F31BA17EC800B5E991 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FB32F21BA17EC800B5E991 /* CategoryCell.swift */; };
-		B90D67E3CF9C818256BDC9CF /* Pods_Frismart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C8270A81EE0870C1A28A630 /* Pods_Frismart.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		B90D67E3CF9C818256BDC9CF /* Pods_Frismart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C8270A81EE0870C1A28A630 /* Pods_Frismart.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -8464,7 +8464,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
-				PROVISIONING_PROFILE = "2db96138-84ba-4d86-8868-787959614ae5";
+				PROVISIONING_PROFILE = "d6ca2ec8-dd89-40bd-8c96-ca3c8eeff1ea";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};

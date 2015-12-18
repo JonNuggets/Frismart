@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		10A00F97E2AF26B0D750D7CD23AC71BA /* Pods-Frismart-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D810E9C1F2462A4A7B276EB2D8B99E95 /* Pods-Frismart-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		28A6C0CDC126E3E6E45904A3E1673E8A /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = A694219428A0D2A9F12572807A116D6C /* SwiftyJSON.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		2F7DD8F1A28EA0956110BF96B2F0E83F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
-		47E5D8C73E3F03CBE22BA939FCBDEBD6 /* SwiftyJSON-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 48A456AC48644BBD4BFA04C021D921F0 /* SwiftyJSON-dummy.m */; };
 		619ACAC0069A1EA3A7F878FE18280BE5 /* Pods-Frismart-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 104748AC0B1F4D74E7864A3AA59CC850 /* Pods-Frismart-dummy.m */; };
 		759E0612EA15FBB29D81BD4489A8B889 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
-		A388EE26572EBE7CF0E6D9970C20CCD7 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = A694219428A0D2A9F12572807A116D6C /* SwiftyJSON.swift */; };
+		AB3873DFD8A9DC5E8A69A22BB3D28086 /* SwiftyJSON-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 48A456AC48644BBD4BFA04C021D921F0 /* SwiftyJSON-dummy.m */; };
 		F11A6706836AAFAA75ED4CFA4FA4D429 /* SwiftyJSON-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 336FACD7A5DDB6B2B0AF556217C9D395 /* SwiftyJSON-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -235,7 +235,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F5D82138E52D3C52233D08ECD88ABE71 /* Build configuration list for PBXNativeTarget "SwiftyJSON" */;
 			buildPhases = (
-				55A2EF3E2E66364DC1CE8F06F7DA76D2 /* Sources */,
+				789E4929113403A7C1854803E267B02F /* Sources */,
 				6F08FC84E841B5F6D3D7B56325A8ED84 /* Frameworks */,
 				BCCF58079E7521DEEA7B0B6946A3D64C /* Headers */,
 			);
@@ -276,12 +276,12 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		55A2EF3E2E66364DC1CE8F06F7DA76D2 /* Sources */ = {
+		789E4929113403A7C1854803E267B02F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				47E5D8C73E3F03CBE22BA939FCBDEBD6 /* SwiftyJSON-dummy.m in Sources */,
-				A388EE26572EBE7CF0E6D9970C20CCD7 /* SwiftyJSON.swift in Sources */,
+				AB3873DFD8A9DC5E8A69A22BB3D28086 /* SwiftyJSON-dummy.m in Sources */,
+				28A6C0CDC126E3E6E45904A3E1673E8A /* SwiftyJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
