@@ -10,11 +10,8 @@ import Foundation
 import SwiftyJSON
 
 let kTopViewHorizontalPadding  :CGFloat = 34.0
-let kTopStoreViewVerticalPadding    :CGFloat = 8.0
-
 
 class HomeViewController: STBaseViewController {
-    
     @IBOutlet var topStoresScrollView: UIScrollView!
     @IBOutlet var topCategoriesScrollView: UIScrollView!
     @IBOutlet var storesSectionLabel: UILabel!
@@ -25,12 +22,7 @@ class HomeViewController: STBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-    }
-    
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        
+
         self.initializeUI()
     }
 
@@ -42,35 +34,49 @@ class HomeViewController: STBaseViewController {
     }
     
     private func loadTopStoresViews()-> Void{
-        
+        var totalWidthSize: CGFloat = 0
+        let screenSize: CGRect = UIScreen.mainScreen().bounds
+
         for (var i = 0; i < AppData.sharedInstance.topStores?.count; i++){
             let topStoreView : TopStoreView = NSBundle.mainBundle().loadNibNamed(kTopStoreViewNibName, owner: self, options: nil)[0] as! TopStoreView
             
             topStoreView.store = (AppData.sharedInstance.topStores?[i])!
             topStoreView.display((AppData.sharedInstance.topStores?[i])!)
-            topStoreView.frame.origin = CGPointMake(topStoreView.frame.width * CGFloat(i) + kTopViewHorizontalPadding * (CGFloat(i) + 1), kTopStoreViewVerticalPadding)
+            
+            topStoreView.frame.origin = CGPointMake(((screenSize.width+(kTopViewHorizontalPadding/2)) * CGFloat(i))+(kTopViewHorizontalPadding/2),0)
+            topStoreView.frame.size = CGSizeMake(screenSize.width-kTopViewHorizontalPadding, self.topStoresScrollView.frame.height)
+
             topStoreView.storeDetailsButton.addTarget(self, action: "displayStoreDetails:", forControlEvents: .TouchUpInside)
 
-            self.topStoresScrollView.contentSize = CGSizeMake(topStoreView.frame.width * CGFloat((AppData.sharedInstance.topStores?.count)!) + kTopViewHorizontalPadding * (CGFloat((AppData.sharedInstance.topStores?.count)! + 1)), self.topStoresScrollView.frame.size.height)
-            
+            totalWidthSize = topStoreView.frame.origin.x + topStoreView.frame.width
+
             self.topStoresScrollView.addSubview(topStoreView)
         }
+
+        self.topStoresScrollView.contentSize = CGSizeMake(totalWidthSize+(kTopViewHorizontalPadding/2), 1)
     }
     
     private func loadTopCategoriesViews() -> Void{
-        
+        var totalWidthSize: CGFloat = 0
+        let screenSize: CGRect = UIScreen.mainScreen().bounds
+
         for (var i = 0; i < AppData.sharedInstance.topCategories?.count; i++){
             let topCategoryView : TopCategoryView = NSBundle.mainBundle().loadNibNamed(kTopCategoryViewNibName, owner: self, options: nil)[0] as! TopCategoryView
-    
+
             topCategoryView.category = (AppData.sharedInstance.topCategories?[i])!
             topCategoryView.display((AppData.sharedInstance.topCategories?[i])!)
-            topCategoryView.frame.origin = CGPointMake(topCategoryView.frame.width * CGFloat(i) + kTopViewHorizontalPadding * (CGFloat(i) + 1), kTopStoreViewVerticalPadding)
+
+            topCategoryView.frame.origin = CGPointMake(screenSize.width * CGFloat(i), 0)
+            topCategoryView.frame.size = CGSizeMake(screenSize.width, self.topCategoriesScrollView.frame.height)
+
             topCategoryView.storesPerCategoryButton.addTarget(self, action: "displayStoresPerCategory:", forControlEvents: .TouchUpInside)
-            
-            self.topCategoriesScrollView.contentSize = CGSizeMake(topCategoryView.frame.width * CGFloat((AppData.sharedInstance.topCategories?.count)!) + kTopViewHorizontalPadding * (CGFloat((AppData.sharedInstance.topCategories?.count)! + 1)), self.topCategoriesScrollView.frame.size.height)
-            
+
+            totalWidthSize = topCategoryView.frame.origin.x + topCategoryView.frame.width
+
             self.topCategoriesScrollView.addSubview(topCategoryView)
         }
+
+        self.topCategoriesScrollView.contentSize = CGSizeMake(totalWidthSize, 1)
     }
 
     func displayStoreDetails(sender: UIButton!) -> Void{
