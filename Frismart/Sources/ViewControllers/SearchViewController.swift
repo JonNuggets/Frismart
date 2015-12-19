@@ -34,7 +34,6 @@ class SearchViewController : STBaseViewController, UITableViewDelegate, UITextFi
         return true
     }
     
-    
     private func searchStores(textToSearch: String){
         self.searchResults = [STStore]()
         self.searchResults = STHelpers.searchStoresByKeyWord(textToSearch)
@@ -66,5 +65,4 @@ class SearchViewController : STBaseViewController, UITableViewDelegate, UITextFi
         let storeInfoCell : StoreDetailsInfoCell = cell as! StoreDetailsInfoCell
         storeInfoCell.display(self.searchResults[indexPath.row])
     }
-    
 }
