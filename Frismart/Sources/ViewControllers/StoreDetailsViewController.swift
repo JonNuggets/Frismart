@@ -18,7 +18,6 @@ let kStoreDetailsRateCellHeight                         :CGFloat = CGFloat(130)
 
 let kLaunchPlansWithItinerary   :String = "http://maps.apple.com/?saddr=%@,%@&daddr=%@,%@"
 
-
 enum STStoreDetailsScreen : Int {
     case ShowDescriptionIndex   = 0
     case FullDescriptionIndex   = 1

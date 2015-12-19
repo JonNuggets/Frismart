@@ -96,7 +96,7 @@ class HomeViewController: STBaseViewController {
             let destinationViewController = segue.destinationViewController as! StoreDetailsViewController
             destinationViewController.currentStore = self.currentTopStoreView?.store
         }
-        if segue.identifier == kShowStoresForTopCategorySegue {
+        else if segue.identifier == kShowStoresForTopCategorySegue {
             let destinationViewController = segue.destinationViewController as! StoresPerCategoryViewController
             destinationViewController.stores = self.currentTopCategoryView?.category?.getStoresPerCategory()
         }
