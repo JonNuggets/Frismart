@@ -71,6 +71,9 @@ extension UIViewController {
     func setNavigationControllerWithBack(withIcon: Bool)-> Void{
         
         self.navigationController?.navigationBar.barTintColor = UIColor().frismartDefaultBackgroundColor
+        self.navigationController?.view.backgroundColor = UIColor().frismartDefaultBackgroundColor
+        self.navigationController?.navigationBar.translucent = false        
+        self.navigationController?.navigationBar.backgroundColor = UIColor().frismartDefaultBackgroundColor
         
         if withIcon {
             let logoImage = UIImage(named: "LogoIcon")

@@ -12,10 +12,7 @@ extension UIColor {
     // AppColors
     var frismartDefaultBackgroundColor: UIColor { return UIColor(red:5.0/255.0, green:129.0/255.0, blue:181.0/255.0, alpha:0.8) }
     
-    
     var frismartNavBackgroundColor: UIColor { return UIColor(red:5.0/255.0, green:129.0/255.0, blue:181.0/255.0, alpha:1.0) }
-    
-    
     
     var frismartDisabledBackgroundColor: UIColor { return UIColor(red:5.0/255.0, green:129.0/255.0, blue:181.0/255.0, alpha:0.3) }
     
