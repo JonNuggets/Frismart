@@ -102,11 +102,23 @@
                                 </constraints>
                             </view>
                             <scrollView autoresizesSubviews="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OIi-WT-ifZ">
-                                <rect key="frame" x="0.0" y="129" width="600" height="270"/>
+                                <rect key="frame" x="0.0" y="121" width="600" height="270"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="270" id="geo-Iw-DVP"/>
                                 </constraints>
                             </scrollView>
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FcU-AX-n1l">
+                                <rect key="frame" x="0.0" y="392" width="600" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="fw5-rI-Fn7"/>
+                                </constraints>
+                            </view>
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Chy-Di-hut">
+                                <rect key="frame" x="0.0" y="578" width="600" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="9a1-hn-3Lp"/>
+                                </constraints>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Catégories à la une" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="brR-Wm-vNU">
                                 <rect key="frame" x="167" y="412" width="266" height="26"/>
                                 <constraints>
@@ -126,33 +138,41 @@
                                 </constraints>
                             </view>
                             <scrollView autoresizesSubviews="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DpD-J1-4Up">
-                                <rect key="frame" x="0.0" y="469" width="600" height="122"/>
+                                <rect key="frame" x="0.0" y="456" width="600" height="122"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="DpD-J1-4Up" firstAttribute="top" secondItem="xaJ-5G-ZP4" secondAttribute="bottom" constant="20" id="0MX-7X-Ewi"/>
+                            <constraint firstItem="DpD-J1-4Up" firstAttribute="top" secondItem="xaJ-5G-ZP4" secondAttribute="bottom" constant="7" id="0MX-7X-Ewi"/>
                             <constraint firstItem="4BM-qh-MgN" firstAttribute="top" secondItem="xsV-BO-Jpa" secondAttribute="bottom" constant="16" id="3ta-Yo-Wxe"/>
                             <constraint firstItem="xaJ-5G-ZP4" firstAttribute="top" secondItem="brR-Wm-vNU" secondAttribute="bottom" constant="7" id="4bW-of-Hb1"/>
+                            <constraint firstItem="Chy-Di-hut" firstAttribute="top" secondItem="DpD-J1-4Up" secondAttribute="bottom" id="E17-V6-eVg"/>
                             <constraint firstAttribute="trailing" secondItem="DpD-J1-4Up" secondAttribute="trailing" id="Fud-IG-pOd"/>
+                            <constraint firstAttribute="trailing" secondItem="Chy-Di-hut" secondAttribute="trailing" id="H5f-Xz-d1Y"/>
                             <constraint firstItem="UOm-uA-Xxh" firstAttribute="centerX" secondItem="NdE-h7-n6Y" secondAttribute="centerX" id="Kh2-mA-k3q"/>
                             <constraint firstItem="OIi-WT-ifZ" firstAttribute="leading" secondItem="NdE-h7-n6Y" secondAttribute="leading" id="Kp9-HI-HXL"/>
                             <constraint firstItem="4BM-qh-MgN" firstAttribute="centerX" secondItem="NdE-h7-n6Y" secondAttribute="centerX" id="LMf-u0-Rmw"/>
-                            <constraint firstItem="Tne-4q-LqO" firstAttribute="top" secondItem="DpD-J1-4Up" secondAttribute="bottom" constant="9" id="Nkd-MQ-tqa"/>
+                            <constraint firstItem="Tne-4q-LqO" firstAttribute="top" secondItem="DpD-J1-4Up" secondAttribute="bottom" constant="22" id="Nkd-MQ-tqa"/>
+                            <constraint firstItem="Chy-Di-hut" firstAttribute="leading" secondItem="NdE-h7-n6Y" secondAttribute="leading" id="O2a-CX-pT7"/>
                             <constraint firstItem="xaJ-5G-ZP4" firstAttribute="centerX" secondItem="NdE-h7-n6Y" secondAttribute="centerX" id="Pht-ZX-iiX"/>
-                            <constraint firstItem="brR-Wm-vNU" firstAttribute="top" secondItem="OIi-WT-ifZ" secondAttribute="bottom" constant="13" id="Sq9-0h-nad"/>
-                            <constraint firstItem="OIi-WT-ifZ" firstAttribute="top" secondItem="UOm-uA-Xxh" secondAttribute="bottom" constant="11" id="gkM-fu-AsH"/>
+                            <constraint firstItem="brR-Wm-vNU" firstAttribute="top" secondItem="OIi-WT-ifZ" secondAttribute="bottom" constant="21" id="Sq9-0h-nad"/>
+                            <constraint firstItem="FcU-AX-n1l" firstAttribute="top" secondItem="OIi-WT-ifZ" secondAttribute="bottom" constant="1" id="Xlp-kE-9Xb"/>
+                            <constraint firstItem="OIi-WT-ifZ" firstAttribute="top" secondItem="UOm-uA-Xxh" secondAttribute="bottom" constant="3" id="gkM-fu-AsH"/>
                             <constraint firstItem="brR-Wm-vNU" firstAttribute="centerX" secondItem="NdE-h7-n6Y" secondAttribute="centerX" id="h6A-bm-tPY"/>
                             <constraint firstAttribute="trailing" secondItem="OIi-WT-ifZ" secondAttribute="trailing" id="hKV-ai-MmX"/>
                             <constraint firstItem="UOm-uA-Xxh" firstAttribute="top" secondItem="4BM-qh-MgN" secondAttribute="bottom" constant="8" id="mNu-Qu-liQ"/>
                             <constraint firstItem="DpD-J1-4Up" firstAttribute="leading" secondItem="NdE-h7-n6Y" secondAttribute="leading" id="nZH-xc-9fw"/>
+                            <constraint firstItem="FcU-AX-n1l" firstAttribute="leading" secondItem="NdE-h7-n6Y" secondAttribute="leading" id="tLW-sm-FWe"/>
+                            <constraint firstAttribute="trailing" secondItem="FcU-AX-n1l" secondAttribute="trailing" id="vf0-Ai-4XO"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="XvP-NN-QGK"/>
                     <connections>
                         <outlet property="categoriesSectionLabel" destination="brR-Wm-vNU" id="mXV-RZ-SkJ"/>
                         <outlet property="storesSectionLabel" destination="4BM-qh-MgN" id="sta-o8-6ah"/>
+                        <outlet property="topCategoriesPageControlPlaceholderView" destination="Chy-Di-hut" id="lDD-oZ-Rap"/>
                         <outlet property="topCategoriesScrollView" destination="DpD-J1-4Up" id="WXr-4H-WEv"/>
+                        <outlet property="topStoresPageControlPlaceholderView" destination="FcU-AX-n1l" id="ZRg-h7-akE"/>
                         <outlet property="topStoresScrollView" destination="OIi-WT-ifZ" id="VFp-d8-uA0"/>
                         <segue destination="Z1e-hA-m5l" kind="show" identifier="showStoresForTopCategorySegue" id="HgH-sj-ZHL"/>
                         <segue destination="AWC-O5-SMn" kind="show" identifier="showTopStoreDetailsSegue" id="qtZ-6u-apP"/>

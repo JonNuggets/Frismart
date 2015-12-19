@@ -7,77 +7,122 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		10A00F97E2AF26B0D750D7CD23AC71BA /* Pods-Frismart-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D810E9C1F2462A4A7B276EB2D8B99E95 /* Pods-Frismart-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		28A6C0CDC126E3E6E45904A3E1673E8A /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = A694219428A0D2A9F12572807A116D6C /* SwiftyJSON.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		2F7DD8F1A28EA0956110BF96B2F0E83F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
-		619ACAC0069A1EA3A7F878FE18280BE5 /* Pods-Frismart-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 104748AC0B1F4D74E7864A3AA59CC850 /* Pods-Frismart-dummy.m */; };
-		759E0612EA15FBB29D81BD4489A8B889 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
-		AB3873DFD8A9DC5E8A69A22BB3D28086 /* SwiftyJSON-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 48A456AC48644BBD4BFA04C021D921F0 /* SwiftyJSON-dummy.m */; };
-		F11A6706836AAFAA75ED4CFA4FA4D429 /* SwiftyJSON-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 336FACD7A5DDB6B2B0AF556217C9D395 /* SwiftyJSON-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1AC6752FBCDAF2DB41104BEBBAF26626 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		4246516CC1FC8E5285DFAD2C0364D2D6 /* Pods-Frismart-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 104748AC0B1F4D74E7864A3AA59CC850 /* Pods-Frismart-dummy.m */; };
+		511916575B20CD7D6F401A1170A910C3 /* SwiftyJSON-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 242CEA5A8C59F77C5FCA0A7A09429C5D /* SwiftyJSON-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		58F775AFA5C3FA94C4250EA0568BC869 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		59DB4DB6F46CD0817770D9C642B6175B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		60FACBE60265148E96A233A7931D67B2 /* SwiftyJSON-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D906BD08A7C0A53F57C8D378744FB6B9 /* SwiftyJSON-dummy.m */; };
+		6DA839205C2082DA250BBFE310CD0E8D /* SMPageControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E534BAC5899B86563C09AFA92CBC1C5 /* SMPageControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		76A9947BA311862DA09651C75BF8F5CC /* SMPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A2BF1E8B8D33F9394F8DF423A9E0224 /* SMPageControl.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		9D3A5460C503B0CC025AD8BE39F18923 /* SMPageControl-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 772FCD69C485D0F51C11717DE30CE90B /* SMPageControl-dummy.m */; };
+		D0889794FDCF9C43D8CE7255F27F15E6 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DBFD4F3CF1E4F52CBC4726BD70CCD2 /* SwiftyJSON.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		D79684318671FA7ADC40A1E54449D861 /* Pods-Frismart-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D810E9C1F2462A4A7B276EB2D8B99E95 /* Pods-Frismart-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E13CEC82BD6D53C38682F21CC3900DD7 /* SMPageControl-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 814407167FE9AF964AD9145697478EEA /* SMPageControl-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		D57B5F89CF2779EE60E00C5D5F9B63A2 /* PBXContainerItemProxy */ = {
+		09B5C73738C4D07C15734803D2F401A9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 9FE96312865F645D2345BB89A8E07E00;
+			remoteGlobalIDString = 3CFC2A36AA993A8199F399C4C042D8E6;
+			remoteInfo = SMPageControl;
+		};
+		DFA2459A8E77CD7869E826EE98D0981F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EBB0DE76ED5C722CC1176EB5B09B4ABD;
 			remoteInfo = SwiftyJSON;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		06073CD89BB851EFF585DAED784696E6 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = Frameworks/GoogleMaps.framework; sourceTree = "<group>"; };
 		08B165EE4C6A6EDEF58A835182F83F82 /* Pods-Frismart.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Frismart.modulemap"; sourceTree = "<group>"; };
 		0E84ABE4CF2FF5E4F2571C45BB677AFE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		104748AC0B1F4D74E7864A3AA59CC850 /* Pods-Frismart-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Frismart-dummy.m"; sourceTree = "<group>"; };
 		15DFBE834DD43DD05ECC51E1A0091547 /* Pods-Frismart-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Frismart-frameworks.sh"; sourceTree = "<group>"; };
-		198DEB5AA6FBFA3B26737D1506E0B11B /* Pods_Frismart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Frismart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2229A92E11A260BAAAB104F8D7035B64 /* Pods-Frismart-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Frismart-acknowledgements.markdown"; sourceTree = "<group>"; };
-		336FACD7A5DDB6B2B0AF556217C9D395 /* SwiftyJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-umbrella.h"; sourceTree = "<group>"; };
+		242CEA5A8C59F77C5FCA0A7A09429C5D /* SwiftyJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-umbrella.h"; sourceTree = "<group>"; };
+		3238BF0AFCB7AF6D1967B263E676BD82 /* SMPageControl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SMPageControl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		39AC1370F96581063A4CDAFB062316D8 /* SwiftyJSON.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyJSON.xcconfig; sourceTree = "<group>"; };
 		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		437E0F52C9B216845442D07A86EBD54B /* Pods-Frismart-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Frismart-acknowledgements.plist"; sourceTree = "<group>"; };
-		48A456AC48644BBD4BFA04C021D921F0 /* SwiftyJSON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyJSON-dummy.m"; sourceTree = "<group>"; };
-		4B4EA5F89557613B869084AA580065B5 /* GoogleMaps.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = Frameworks/GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
-		631B4DD9A19919E769BDECE26ECDFA0A /* SwiftyJSON.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyJSON.xcconfig; sourceTree = "<group>"; };
+		4E534BAC5899B86563C09AFA92CBC1C5 /* SMPageControl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SMPageControl.h; sourceTree = "<group>"; };
+		61B3A4D49EDCDAA9CD9544A5D10C09A6 /* SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SwiftyJSON.modulemap; sourceTree = "<group>"; };
 		669822181593D4E2D62F52461750E694 /* Pods-Frismart-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Frismart-resources.sh"; sourceTree = "<group>"; };
-		7EF5234796FAC5C54BD47F33945822DE /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		772FCD69C485D0F51C11717DE30CE90B /* SMPageControl-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SMPageControl-dummy.m"; sourceTree = "<group>"; };
+		814407167FE9AF964AD9145697478EEA /* SMPageControl-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SMPageControl-umbrella.h"; sourceTree = "<group>"; };
+		82DBFD4F3CF1E4F52CBC4726BD70CCD2 /* SwiftyJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Source/SwiftyJSON.swift; sourceTree = "<group>"; };
+		8A2BF1E8B8D33F9394F8DF423A9E0224 /* SMPageControl.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SMPageControl.m; sourceTree = "<group>"; };
 		8D04D0715B54EF997472CDE43C6D8E32 /* Pods-Frismart.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Frismart.debug.xcconfig"; sourceTree = "<group>"; };
-		A5AA13978CEC0BAA3909A86025258401 /* SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-prefix.pch"; sourceTree = "<group>"; };
-		A694219428A0D2A9F12572807A116D6C /* SwiftyJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Source/SwiftyJSON.swift; sourceTree = "<group>"; };
-		AA28CDEC0F9954BFEF163D466A2DBD7D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92DF5A4B847BE4EF5381E4504307C6F7 /* SMPageControl.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SMPageControl.modulemap; sourceTree = "<group>"; };
+		A058925FD63F968AACE51033CEA4101A /* SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-prefix.pch"; sourceTree = "<group>"; };
+		A9F6B24DAE1D16A687FC5F2A5CD8AF52 /* GoogleMaps.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = Frameworks/GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
 		AA713FC7EED6F76DD6D4A92EB5D2EE63 /* Pods-Frismart.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Frismart.release.xcconfig"; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		D5FDBB710BEF164B09970D8E1F22FFE3 /* SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SwiftyJSON.modulemap; sourceTree = "<group>"; };
+		BD9B4E782222522E65C10FB5AE7857EA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF7E6EFD7D6D3BB7BD8E6348BE5D60E0 /* SMPageControl.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SMPageControl.xcconfig; sourceTree = "<group>"; };
+		D6D04586B8EE71EA759DCB04C5277CF5 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D810E9C1F2462A4A7B276EB2D8B99E95 /* Pods-Frismart-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Frismart-umbrella.h"; sourceTree = "<group>"; };
+		D906BD08A7C0A53F57C8D378744FB6B9 /* SwiftyJSON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyJSON-dummy.m"; sourceTree = "<group>"; };
+		DB5601A11BEA4CF2D1984C68B91F3D34 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5367895EB77D0FAD6F01E9C5E793067 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = Frameworks/GoogleMaps.framework; sourceTree = "<group>"; };
+		EF7813971456C37F40BDB04CF3BD8D96 /* SMPageControl-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SMPageControl-prefix.pch"; sourceTree = "<group>"; };
+		F360CECD50C4D50E2A4B81CACC9AE158 /* Pods_Frismart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Frismart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		6F08FC84E841B5F6D3D7B56325A8ED84 /* Frameworks */ = {
+		57F9514AEA4EEA8B3AB82DA9301A6F4C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				759E0612EA15FBB29D81BD4489A8B889 /* Foundation.framework in Frameworks */,
+				58F775AFA5C3FA94C4250EA0568BC869 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		93B9B9F337E8043CF897A265117E6AC3 /* Frameworks */ = {
+		DF015005102A07617291470862052B92 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F7DD8F1A28EA0956110BF96B2F0E83F /* Foundation.framework in Frameworks */,
+				59DB4DB6F46CD0817770D9C642B6175B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E26F285731266BE9F07E3D55A8C2D68E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AC6752FBCDAF2DB41104BEBBAF26626 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		357FDA5924D1456FDCB292994AA75812 /* Frameworks */ = {
+		33DB5F2001B7B059696C2CBFD9E43560 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				06073CD89BB851EFF585DAED784696E6 /* GoogleMaps.framework */,
+				BD9B4E782222522E65C10FB5AE7857EA /* Info.plist */,
+				61B3A4D49EDCDAA9CD9544A5D10C09A6 /* SwiftyJSON.modulemap */,
+				39AC1370F96581063A4CDAFB062316D8 /* SwiftyJSON.xcconfig */,
+				D906BD08A7C0A53F57C8D378744FB6B9 /* SwiftyJSON-dummy.m */,
+				A058925FD63F968AACE51033CEA4101A /* SwiftyJSON-prefix.pch */,
+				242CEA5A8C59F77C5FCA0A7A09429C5D /* SwiftyJSON-umbrella.h */,
 			);
-			name = Frameworks;
+			name = "Support Files";
+			path = "../Target Support Files/SwiftyJSON";
+			sourceTree = "<group>";
+		};
+		43EE3FD4F680AB0B89D5498BC392D29C /* SMPageControl */ = {
+			isa = PBXGroup;
+			children = (
+				4E534BAC5899B86563C09AFA92CBC1C5 /* SMPageControl.h */,
+				8A2BF1E8B8D33F9394F8DF423A9E0224 /* SMPageControl.m */,
+				88EB13E6ECAAF44A512232F6F2A3308E /* Support Files */,
+			);
+			path = SMPageControl;
 			sourceTree = "<group>";
 		};
 		4E30B537E7C48AB86534BFE489BB0878 /* Pods-Frismart */ = {
@@ -98,27 +143,14 @@
 			path = "Target Support Files/Pods-Frismart";
 			sourceTree = "<group>";
 		};
-		5732767885B2BCAB221B798B25BFD824 /* Pods */ = {
+		77633E9154D55DCD19E27A8F86DBFFBF /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				D1BF9D4C93B6EDFE5F6F8B67095949EC /* GoogleMaps */,
-				85C21327B0793C6CC31030E3B6E21319 /* SwiftyJSON */,
+				9A2B87817BB12013346D42DD2630F287 /* GoogleMaps */,
+				43EE3FD4F680AB0B89D5498BC392D29C /* SMPageControl */,
+				C22E91629DC43A584965D63F25519A3F /* SwiftyJSON */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		76DB70F4542998970BD62A8C68C3FD97 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				AA28CDEC0F9954BFEF163D466A2DBD7D /* Info.plist */,
-				D5FDBB710BEF164B09970D8E1F22FFE3 /* SwiftyJSON.modulemap */,
-				631B4DD9A19919E769BDECE26ECDFA0A /* SwiftyJSON.xcconfig */,
-				48A456AC48644BBD4BFA04C021D921F0 /* SwiftyJSON-dummy.m */,
-				A5AA13978CEC0BAA3909A86025258401 /* SwiftyJSON-prefix.pch */,
-				336FACD7A5DDB6B2B0AF556217C9D395 /* SwiftyJSON-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/SwiftyJSON";
 			sourceTree = "<group>";
 		};
 		78DD73257E1288042761CFC19A1424B3 /* Targets Support Files */ = {
@@ -129,33 +161,46 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		7D1F975BE270325BB09BD84B71B755E5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A9F6B24DAE1D16A687FC5F2A5CD8AF52 /* GoogleMaps.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				5732767885B2BCAB221B798B25BFD824 /* Pods */,
-				88FD330AF932BE3BD76B014E63107055 /* Products */,
+				77633E9154D55DCD19E27A8F86DBFFBF /* Pods */,
+				E07F02B25C74ED20F0C8685F4324F2D8 /* Products */,
 				78DD73257E1288042761CFC19A1424B3 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		85C21327B0793C6CC31030E3B6E21319 /* SwiftyJSON */ = {
+		88EB13E6ECAAF44A512232F6F2A3308E /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				A694219428A0D2A9F12572807A116D6C /* SwiftyJSON.swift */,
-				76DB70F4542998970BD62A8C68C3FD97 /* Support Files */,
+				DB5601A11BEA4CF2D1984C68B91F3D34 /* Info.plist */,
+				92DF5A4B847BE4EF5381E4504307C6F7 /* SMPageControl.modulemap */,
+				CF7E6EFD7D6D3BB7BD8E6348BE5D60E0 /* SMPageControl.xcconfig */,
+				772FCD69C485D0F51C11717DE30CE90B /* SMPageControl-dummy.m */,
+				EF7813971456C37F40BDB04CF3BD8D96 /* SMPageControl-prefix.pch */,
+				814407167FE9AF964AD9145697478EEA /* SMPageControl-umbrella.h */,
 			);
-			path = SwiftyJSON;
+			name = "Support Files";
+			path = "../Target Support Files/SMPageControl";
 			sourceTree = "<group>";
 		};
-		88FD330AF932BE3BD76B014E63107055 /* Products */ = {
+		9A2B87817BB12013346D42DD2630F287 /* GoogleMaps */ = {
 			isa = PBXGroup;
 			children = (
-				198DEB5AA6FBFA3B26737D1506E0B11B /* Pods_Frismart.framework */,
-				7EF5234796FAC5C54BD47F33945822DE /* SwiftyJSON.framework */,
+				C2328D4EB70A6FF17B19059F2A9FF7DD /* Frameworks */,
+				7D1F975BE270325BB09BD84B71B755E5 /* Resources */,
 			);
-			name = Products;
+			path = GoogleMaps;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -174,70 +219,107 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		D1BF9D4C93B6EDFE5F6F8B67095949EC /* GoogleMaps */ = {
+		C22E91629DC43A584965D63F25519A3F /* SwiftyJSON */ = {
 			isa = PBXGroup;
 			children = (
-				357FDA5924D1456FDCB292994AA75812 /* Frameworks */,
-				F23409187593E82161E9C99ADCE9A968 /* Resources */,
+				82DBFD4F3CF1E4F52CBC4726BD70CCD2 /* SwiftyJSON.swift */,
+				33DB5F2001B7B059696C2CBFD9E43560 /* Support Files */,
 			);
-			path = GoogleMaps;
+			path = SwiftyJSON;
 			sourceTree = "<group>";
 		};
-		F23409187593E82161E9C99ADCE9A968 /* Resources */ = {
+		C2328D4EB70A6FF17B19059F2A9FF7DD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4B4EA5F89557613B869084AA580065B5 /* GoogleMaps.bundle */,
+				E5367895EB77D0FAD6F01E9C5E793067 /* GoogleMaps.framework */,
 			);
-			name = Resources;
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E07F02B25C74ED20F0C8685F4324F2D8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F360CECD50C4D50E2A4B81CACC9AE158 /* Pods_Frismart.framework */,
+				3238BF0AFCB7AF6D1967B263E676BD82 /* SMPageControl.framework */,
+				D6D04586B8EE71EA759DCB04C5277CF5 /* SwiftyJSON.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		8AD6C28B9DF4F488314678016DC3AEEB /* Headers */ = {
+		1F706C0C27623B88D1C179120D39767B /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				10A00F97E2AF26B0D750D7CD23AC71BA /* Pods-Frismart-umbrella.h in Headers */,
+				D79684318671FA7ADC40A1E54449D861 /* Pods-Frismart-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BCCF58079E7521DEEA7B0B6946A3D64C /* Headers */ = {
+		42F026B4D4ED8F387071DC91CCA2DF1A /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F11A6706836AAFAA75ED4CFA4FA4D429 /* SwiftyJSON-umbrella.h in Headers */,
+				511916575B20CD7D6F401A1170A910C3 /* SwiftyJSON-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9FBCEC6F06E2FC4B2A1389A0CCC07B3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E13CEC82BD6D53C38682F21CC3900DD7 /* SMPageControl-umbrella.h in Headers */,
+				6DA839205C2082DA250BBFE310CD0E8D /* SMPageControl.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		99A6D667E8428E075DBDA1662A9729DF /* Pods-Frismart */ = {
+		2FD9B6C5097DFB9364CA81553255555C /* Pods-Frismart */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E166374CF04FBB7E38AD1949FDAFED47 /* Build configuration list for PBXNativeTarget "Pods-Frismart" */;
+			buildConfigurationList = 5542BF773D42D98F08462024ADEE58DE /* Build configuration list for PBXNativeTarget "Pods-Frismart" */;
 			buildPhases = (
-				7DC445BACBC48C1E4C46C04A68AB47A0 /* Sources */,
-				93B9B9F337E8043CF897A265117E6AC3 /* Frameworks */,
-				8AD6C28B9DF4F488314678016DC3AEEB /* Headers */,
+				29A0165D1DE1EAC827498B096B44A9C2 /* Sources */,
+				E26F285731266BE9F07E3D55A8C2D68E /* Frameworks */,
+				1F706C0C27623B88D1C179120D39767B /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				7A954E58A8CC4022DD55850A0CB389FA /* PBXTargetDependency */,
+				C3A748A50BE6800BD23379BB9C30F7ED /* PBXTargetDependency */,
+				72CF5436008A8AA220E3B8A3D069803F /* PBXTargetDependency */,
 			);
 			name = "Pods-Frismart";
 			productName = "Pods-Frismart";
-			productReference = 198DEB5AA6FBFA3B26737D1506E0B11B /* Pods_Frismart.framework */;
+			productReference = F360CECD50C4D50E2A4B81CACC9AE158 /* Pods_Frismart.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		9FE96312865F645D2345BB89A8E07E00 /* SwiftyJSON */ = {
+		3CFC2A36AA993A8199F399C4C042D8E6 /* SMPageControl */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F5D82138E52D3C52233D08ECD88ABE71 /* Build configuration list for PBXNativeTarget "SwiftyJSON" */;
+			buildConfigurationList = 90ECD4C5193BF168A03309BC29202301 /* Build configuration list for PBXNativeTarget "SMPageControl" */;
 			buildPhases = (
-				789E4929113403A7C1854803E267B02F /* Sources */,
-				6F08FC84E841B5F6D3D7B56325A8ED84 /* Frameworks */,
-				BCCF58079E7521DEEA7B0B6946A3D64C /* Headers */,
+				6B3C511AAE812D15E82D9EE456068DBE /* Sources */,
+				DF015005102A07617291470862052B92 /* Frameworks */,
+				A9FBCEC6F06E2FC4B2A1389A0CCC07B3 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SMPageControl;
+			productName = SMPageControl;
+			productReference = 3238BF0AFCB7AF6D1967B263E676BD82 /* SMPageControl.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		EBB0DE76ED5C722CC1176EB5B09B4ABD /* SwiftyJSON */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FABFB4BA23BCCE60C7E3049607927CFA /* Build configuration list for PBXNativeTarget "SwiftyJSON" */;
+			buildPhases = (
+				AB4A6F384173BAD9BB84E187564FDCC6 /* Sources */,
+				57F9514AEA4EEA8B3AB82DA9301A6F4C /* Frameworks */,
+				42F026B4D4ED8F387071DC91CCA2DF1A /* Headers */,
 			);
 			buildRules = (
 			);
@@ -245,7 +327,7 @@
 			);
 			name = SwiftyJSON;
 			productName = SwiftyJSON;
-			productReference = 7EF5234796FAC5C54BD47F33945822DE /* SwiftyJSON.framework */;
+			productReference = D6D04586B8EE71EA759DCB04C5277CF5 /* SwiftyJSON.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -265,78 +347,63 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 88FD330AF932BE3BD76B014E63107055 /* Products */;
+			productRefGroup = E07F02B25C74ED20F0C8685F4324F2D8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				99A6D667E8428E075DBDA1662A9729DF /* Pods-Frismart */,
-				9FE96312865F645D2345BB89A8E07E00 /* SwiftyJSON */,
+				2FD9B6C5097DFB9364CA81553255555C /* Pods-Frismart */,
+				3CFC2A36AA993A8199F399C4C042D8E6 /* SMPageControl */,
+				EBB0DE76ED5C722CC1176EB5B09B4ABD /* SwiftyJSON */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		789E4929113403A7C1854803E267B02F /* Sources */ = {
+		29A0165D1DE1EAC827498B096B44A9C2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB3873DFD8A9DC5E8A69A22BB3D28086 /* SwiftyJSON-dummy.m in Sources */,
-				28A6C0CDC126E3E6E45904A3E1673E8A /* SwiftyJSON.swift in Sources */,
+				4246516CC1FC8E5285DFAD2C0364D2D6 /* Pods-Frismart-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7DC445BACBC48C1E4C46C04A68AB47A0 /* Sources */ = {
+		6B3C511AAE812D15E82D9EE456068DBE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				619ACAC0069A1EA3A7F878FE18280BE5 /* Pods-Frismart-dummy.m in Sources */,
+				9D3A5460C503B0CC025AD8BE39F18923 /* SMPageControl-dummy.m in Sources */,
+				76A9947BA311862DA09651C75BF8F5CC /* SMPageControl.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB4A6F384173BAD9BB84E187564FDCC6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60FACBE60265148E96A233A7931D67B2 /* SwiftyJSON-dummy.m in Sources */,
+				D0889794FDCF9C43D8CE7255F27F15E6 /* SwiftyJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		7A954E58A8CC4022DD55850A0CB389FA /* PBXTargetDependency */ = {
+		72CF5436008A8AA220E3B8A3D069803F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SwiftyJSON;
-			target = 9FE96312865F645D2345BB89A8E07E00 /* SwiftyJSON */;
-			targetProxy = D57B5F89CF2779EE60E00C5D5F9B63A2 /* PBXContainerItemProxy */;
+			target = EBB0DE76ED5C722CC1176EB5B09B4ABD /* SwiftyJSON */;
+			targetProxy = DFA2459A8E77CD7869E826EE98D0981F /* PBXContainerItemProxy */;
+		};
+		C3A748A50BE6800BD23379BB9C30F7ED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SMPageControl;
+			target = 3CFC2A36AA993A8199F399C4C042D8E6 /* SMPageControl */;
+			targetProxy = 09B5C73738C4D07C15734803D2F401A9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1719216FB596A99FF051E814B4F0F590 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8D04D0715B54EF997472CDE43C6D8E32 /* Pods-Frismart.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-Frismart/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Frismart/Pods-Frismart.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_Frismart;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		3E6E146BD262C1F414EE15B958CD8D28 /* Release */ = {
+		0A247EC09EB15C32946D08D3CE8CF3FB /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AA713FC7EED6F76DD6D4A92EB5D2EE63 /* Pods-Frismart.release.xcconfig */;
 			buildSettings = {
@@ -366,9 +433,36 @@
 			};
 			name = Release;
 		};
-		89CB040F3F6B6FACD6FA4888E1744241 /* Release */ = {
+		0BA19F347BBCBC5054C1D33BCDD206C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 631B4DD9A19919E769BDECE26ECDFA0A /* SwiftyJSON.xcconfig */;
+			baseConfigurationReference = CF7E6EFD7D6D3BB7BD8E6348BE5D60E0 /* SMPageControl.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SMPageControl/SMPageControl-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SMPageControl/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SMPageControl/SMPageControl.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SMPageControl;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		0CB19F1B594AF9FE87506E067CAB22CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39AC1370F96581063A4CDAFB062316D8 /* SwiftyJSON.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -432,9 +526,36 @@
 			};
 			name = Debug;
 		};
-		F010852C3C0D37C9AD457FBD0A5713BD /* Debug */ = {
+		BEA4D4702D0FDA39EF409123DFA529CA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 631B4DD9A19919E769BDECE26ECDFA0A /* SwiftyJSON.xcconfig */;
+			baseConfigurationReference = CF7E6EFD7D6D3BB7BD8E6348BE5D60E0 /* SMPageControl.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SMPageControl/SMPageControl-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SMPageControl/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SMPageControl/SMPageControl.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SMPageControl;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C07464B582AF220C23B34207B8FC54B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39AC1370F96581063A4CDAFB062316D8 /* SwiftyJSON.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -451,6 +572,37 @@
 				MODULEMAP_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = SwiftyJSON;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CCE15A0F222BC393324EFA62DD1AB801 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D04D0715B54EF997472CDE43C6D8E32 /* Pods-Frismart.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Frismart/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Frismart/Pods-Frismart.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_Frismart;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -506,20 +658,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E166374CF04FBB7E38AD1949FDAFED47 /* Build configuration list for PBXNativeTarget "Pods-Frismart" */ = {
+		5542BF773D42D98F08462024ADEE58DE /* Build configuration list for PBXNativeTarget "Pods-Frismart" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1719216FB596A99FF051E814B4F0F590 /* Debug */,
-				3E6E146BD262C1F414EE15B958CD8D28 /* Release */,
+				CCE15A0F222BC393324EFA62DD1AB801 /* Debug */,
+				0A247EC09EB15C32946D08D3CE8CF3FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F5D82138E52D3C52233D08ECD88ABE71 /* Build configuration list for PBXNativeTarget "SwiftyJSON" */ = {
+		90ECD4C5193BF168A03309BC29202301 /* Build configuration list for PBXNativeTarget "SMPageControl" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F010852C3C0D37C9AD457FBD0A5713BD /* Debug */,
-				89CB040F3F6B6FACD6FA4888E1744241 /* Release */,
+				0BA19F347BBCBC5054C1D33BCDD206C7 /* Debug */,
+				BEA4D4702D0FDA39EF409123DFA529CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FABFB4BA23BCCE60C7E3049607927CFA /* Build configuration list for PBXNativeTarget "SwiftyJSON" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C07464B582AF220C23B34207B8FC54B0 /* Debug */,
+				0CB19F1B594AF9FE87506E067CAB22CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

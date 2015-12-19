@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0CCEF1441C259193002CEE41 /* SMPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CCEF1411C259193002CEE41 /* SMPageControl.m */; };
 		28002FE91B86007A0077A200 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28002FE81B86007A0077A200 /* UIImage.swift */; };
 		280D7BCA1BB2F94900644BE6 /* STUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280D7BC91BB2F94900644BE6 /* STUITextField.swift */; };
 		2810AC611BD6B11200620779 /* StoreDetailsRatingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2810AC601BD6B11200620779 /* StoreDetailsRatingCell.swift */; };
@@ -141,6 +142,8 @@
 
 /* Begin PBXFileReference section */
 		0C0A28091C07055100B6F3F5 /* Todo.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Todo.txt; sourceTree = "<group>"; };
+		0CCEF1401C259193002CEE41 /* SMPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMPageControl.h; sourceTree = "<group>"; };
+		0CCEF1411C259193002CEE41 /* SMPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMPageControl.m; sourceTree = "<group>"; };
 		28002FE81B86007A0077A200 /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		280D7BC91BB2F94900644BE6 /* STUITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STUITextField.swift; sourceTree = "<group>"; };
 		2810AC601BD6B11200620779 /* StoreDetailsRatingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreDetailsRatingCell.swift; sourceTree = "<group>"; };
@@ -3493,6 +3496,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0CCEF13D1C259193002CEE41 /* SMPageControl */ = {
+			isa = PBXGroup;
+			children = (
+				0CCEF1401C259193002CEE41 /* SMPageControl.h */,
+				0CCEF1411C259193002CEE41 /* SMPageControl.m */,
+			);
+			name = SMPageControl;
+			path = Pods/SMPageControl;
+			sourceTree = SOURCE_ROOT;
+		};
 		282C64C41B84731D00DC3C93 = {
 			isa = PBXGroup;
 			children = (
@@ -3560,6 +3573,7 @@
 		282C64F41B84796100DC3C93 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				0CCEF13D1C259193002CEE41 /* SMPageControl */,
 				287CA1FA1BFF133700FCA8B4 /* PageMenu */,
 				284929BD1BCFF59F004EC2D5 /* FloatRatingView */,
 				282C65371B848D0800DC3C93 /* Frismart-Bridging-Header.h */,
@@ -8361,6 +8375,7 @@
 				2822C0641C06851A00763105 /* StoreDetailsMarkerView.swift in Sources */,
 				289DE5761BA8C1740079CC04 /* STStoreCategory.swift in Sources */,
 				2822C0661C06892F00763105 /* STPlaceMarker.swift in Sources */,
+				0CCEF1441C259193002CEE41 /* SMPageControl.m in Sources */,
 				2862E2D51BBC925300FFA11B /* StoreDetailsInfoCell.swift in Sources */,
 				28C981961BE3859500C509E1 /* CategoryIconView.swift in Sources */,
 				28FB32F31BA17EC800B5E991 /* CategoryCell.swift in Sources */,

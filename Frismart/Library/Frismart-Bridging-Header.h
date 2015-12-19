@@ -3,4 +3,8 @@
 //
 
 #import "SWRevealViewController.h"
+
 #import <GoogleMaps/GoogleMaps.h>
+
+// SMPageControl Library
+#import "SMPageControl.h"
