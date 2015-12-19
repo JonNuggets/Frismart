@@ -23,7 +23,7 @@ enum STMenuScreen : Int {
 }
 
 let stMenuList                  : Array     = ["Menu_Login", "Menu_Home", "Menu_Categories", "Menu_Maps",
-                                            "Menu_Favorites", "Menu_Settings", "Menu_Logout"]
+                                               "Menu_Favorites", "Menu_Settings", "Menu_Logout"]
 let kLoggedHeightForRow         : CGFloat   = 150.0
 let kDefaultHeightForRow        : CGFloat   = 60.0
 let kZeroHeightForRow           : CGFloat   = 0.0
@@ -132,7 +132,6 @@ class MenuViewController : UITableViewController, CLLocationManagerDelegate{
             let favoritesNavigationController = self.storyboard?.instantiateViewControllerWithIdentifier("FavoritesNavigationController") as? UINavigationController
             self.revealViewController().pushFrontViewController(favoritesNavigationController, animated: true)
         }
-        
     }
     
     //MARK : CoreLocation Delegate Methods
