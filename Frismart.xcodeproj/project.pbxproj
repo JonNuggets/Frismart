@@ -10,6 +10,7 @@
 		0C9A79731C4391D70092E7A7 /* Iphone4TopStoreView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C9A79721C4391D70092E7A7 /* Iphone4TopStoreView.xib */; };
 		0C9A79751C4397480092E7A7 /* Iphone5TopStoreView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C9A79741C4397480092E7A7 /* Iphone5TopStoreView.xib */; };
 		0C9A79771C439A400092E7A7 /* Iphone6TopStoreView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C9A79761C439A400092E7A7 /* Iphone6TopStoreView.xib */; };
+		0C9A79791C4425D50092E7A7 /* STUILabelDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9A79781C4425D50092E7A7 /* STUILabelDescription.swift */; };
 		0CCEF1441C259193002CEE41 /* SMPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CCEF1411C259193002CEE41 /* SMPageControl.m */; };
 		28002FE91B86007A0077A200 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28002FE81B86007A0077A200 /* UIImage.swift */; };
 		280D7BCA1BB2F94900644BE6 /* STUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280D7BC91BB2F94900644BE6 /* STUITextField.swift */; };
@@ -148,6 +149,7 @@
 		0C9A79721C4391D70092E7A7 /* Iphone4TopStoreView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Iphone4TopStoreView.xib; sourceTree = "<group>"; };
 		0C9A79741C4397480092E7A7 /* Iphone5TopStoreView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Iphone5TopStoreView.xib; sourceTree = "<group>"; };
 		0C9A79761C439A400092E7A7 /* Iphone6TopStoreView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Iphone6TopStoreView.xib; sourceTree = "<group>"; };
+		0C9A79781C4425D50092E7A7 /* STUILabelDescription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STUILabelDescription.swift; sourceTree = "<group>"; };
 		0CCEF1401C259193002CEE41 /* SMPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMPageControl.h; sourceTree = "<group>"; };
 		0CCEF1411C259193002CEE41 /* SMPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMPageControl.m; sourceTree = "<group>"; };
 		28002FE81B86007A0077A200 /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
@@ -3793,6 +3795,7 @@
 				28D569801B8A2AD6002F7C75 /* TopCategoryView.swift */,
 				28D569821B8A2C6C002F7C75 /* TopStoreView.swift */,
 				280D7BC91BB2F94900644BE6 /* STUITextField.swift */,
+				0C9A79781C4425D50092E7A7 /* STUILabelDescription.swift */,
 				2812860A1BD109F30042E3C5 /* StoreDetailsThumbView.swift */,
 				28C981951BE3859500C509E1 /* CategoryIconView.swift */,
 				28F75E101C03B4E100494149 /* STActivityIndicatorView.swift */,
@@ -8384,6 +8387,7 @@
 				286D7ABA1BCE5EBB00C468B0 /* UIFont.swift in Sources */,
 				287F0FCB1BB47EBA0061B81C /* STCategory.swift in Sources */,
 				28699C901B910F44003D8234 /* LoginViewController.swift in Sources */,
+				0C9A79791C4425D50092E7A7 /* STUILabelDescription.swift in Sources */,
 				2822C0641C06851A00763105 /* StoreDetailsMarkerView.swift in Sources */,
 				289DE5761BA8C1740079CC04 /* STStoreCategory.swift in Sources */,
 				2822C0661C06892F00763105 /* STPlaceMarker.swift in Sources */,

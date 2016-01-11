@@ -32,7 +32,6 @@ enum STStoreDetailsScreen : Int {
 }
 
 class StoreDetailsViewController : STBaseTableViewController, GMSMapViewDelegate, CLLocationManagerDelegate, FloatRatingViewDelegate {
-    
     var currentStore: STStore?
     var storePhotos: [STPhoto]?
     var storeDetailsThumbViewList: [StoreDetailsThumbView]?
@@ -82,7 +81,6 @@ class StoreDetailsViewController : STBaseTableViewController, GMSMapViewDelegate
         if (indexPath.row == STStoreDetailsScreen.FullDescriptionIndex.rawValue) && (self.showFullDescription == true) {
             return self.fullDescriptionHeight
         }
-        
         
         if (indexPath.row == STStoreDetailsScreen.MapIndex.rawValue) {
             return kStoreDetailsMapCellHeight
@@ -140,6 +138,7 @@ class StoreDetailsViewController : STBaseTableViewController, GMSMapViewDelegate
             let storeRateCell = tableView.dequeueReusableCellWithIdentifier(kStoreRateTableViewCellIdentifier)
             return storeRateCell!
         }
+        
         return UITableViewCell()
     }
     
@@ -149,7 +148,8 @@ class StoreDetailsViewController : STBaseTableViewController, GMSMapViewDelegate
         if (indexPath.row == STStoreDetailsScreen.FullDescriptionIndex.rawValue) {
             let storeFullDescriptionCell: StoreDetailsFullDescriptionCell = cell as! StoreDetailsFullDescriptionCell
             storeFullDescriptionCell.display(self.currentStore!)
-            
+
+            //++
             let newHeight = storeFullDescriptionCell.storeDescLabel.optimalHeight()
             self.fullDescriptionHeight = newHeight
         }

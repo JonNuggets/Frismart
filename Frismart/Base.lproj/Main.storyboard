@@ -483,21 +483,35 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="186"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="584" translatesAutoresizingMaskIntoConstraints="NO" id="QMm-0c-LYA">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="584" translatesAutoresizingMaskIntoConstraints="NO" id="QMm-0c-LYA" customClass="STUILabelDescription" customModule="Frismart">
                                             <rect key="frame" x="8" y="8" width="584" height="170"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="584" id="E6O-RT-7g0"/>
-                                                <constraint firstAttribute="height" constant="170" id="oeb-eP-ZpX"/>
-                                            </constraints>
                                             <fontDescription key="fontDescription" name="Exo2-Regular" family="Exo 2" pointSize="18"/>
                                             <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="QMm-0c-LYA" firstAttribute="top" secondItem="lKR-4E-VMF" secondAttribute="topMargin" id="S7c-je-Qri"/>
-                                        <constraint firstItem="QMm-0c-LYA" firstAttribute="leading" secondItem="lKR-4E-VMF" secondAttribute="leadingMargin" id="mzV-Va-0j4"/>
+                                        <constraint firstItem="QMm-0c-LYA" firstAttribute="trailing" secondItem="lKR-4E-VMF" secondAttribute="trailingMargin" id="6nI-c9-put"/>
+                                        <constraint firstItem="QMm-0c-LYA" firstAttribute="bottom" secondItem="lKR-4E-VMF" secondAttribute="bottomMargin" id="Pfg-Vr-cBL"/>
+                                        <constraint firstItem="QMm-0c-LYA" firstAttribute="top" secondItem="lKR-4E-VMF" secondAttribute="topMargin" id="iuG-lE-mXF"/>
+                                        <constraint firstItem="QMm-0c-LYA" firstAttribute="leading" secondItem="lKR-4E-VMF" secondAttribute="leadingMargin" id="vn3-k6-ia6"/>
                                     </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="6nI-c9-put"/>
+                                            <exclude reference="Pfg-Vr-cBL"/>
+                                            <exclude reference="iuG-lE-mXF"/>
+                                            <exclude reference="vn3-k6-ia6"/>
+                                        </mask>
+                                    </variation>
+                                    <variation key="heightClass=regular">
+                                        <mask key="constraints">
+                                            <include reference="6nI-c9-put"/>
+                                            <include reference="Pfg-Vr-cBL"/>
+                                            <include reference="iuG-lE-mXF"/>
+                                            <include reference="vn3-k6-ia6"/>
+                                        </mask>
+                                    </variation>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="storeDescLabel" destination="QMm-0c-LYA" id="LZH-JP-2YX"/>

@@ -11,12 +11,13 @@ import UIKit
 extension UILabel {
     func optimalHeight() -> CGFloat {
         let label:UILabel = UILabel(frame: CGRectMake(0, 0, self.frame.width/UIScreen.mainScreen().scale, CGFloat.max))
-        label.numberOfLines = 0
+
+        label.numberOfLines = 20
         label.lineBreakMode = NSLineBreakMode.ByWordWrapping
         label.textAlignment = self.textAlignment
         label.font = self.font
         label.text = self.text
-        
+
         label.sizeToFit()
         
         return label.frame.height + 34.0
