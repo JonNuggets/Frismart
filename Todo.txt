@@ -6,6 +6,7 @@ TODO:
 [] 9. Migration des données : Il faut que les données soient stockées dans Core Data pour que l'appli fonctionne offline
 [] 13. SearchViewController : Ajouter le champ pour la ville. Afficher les résultats en fonction de la position de l'utilisateur : Du plus proche au plus éloigné.
 [] Fix LoginViewController storyboard warnings
+[x] Fix LoginViewController storyboard warnings
 
 ----------------------------------------
 DONE:
