@@ -13,9 +13,9 @@ class TopStoreView: UIView {
     @IBOutlet var storeNameLabel: UILabel!
     @IBOutlet var storeRateLabel: UILabel!
     @IBOutlet var favoriteImageView: UIImageView!
-    @IBOutlet var storeDetailsButton: UIButton!
     @IBOutlet var storeAddressLabel: UILabel!
     @IBOutlet var floatRatingView: FloatRatingView!
+    @IBOutlet var bottomView: UIView!
     var store: STStore?
     
     override func awakeFromNib() {
@@ -25,6 +25,12 @@ class TopStoreView: UIView {
         self.storeRateLabel.text = ""
         self.layer.borderWidth = 1.0
         self.layer.borderColor = UIColor().frismartDefaultBorderColor.CGColor
+
+        if self.bottomView != nil {
+            self.bottomView.layer.borderWidth = 1.0
+            self.bottomView.layer.borderColor = UIColor().frismartDefaultBorderColor.CGColor
+        }
+
         self.floatRatingView.editable = false
         self.floatRatingView.floatRatings = true
     }

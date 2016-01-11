@@ -16,7 +16,6 @@ class STBaseViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        
         if (self.isKindOfClass(MapViewController)) {
             self.setMapsNavigationController()
         }

@@ -6,7 +6,6 @@ use_frameworks!
 def import_pods
     pod 'SwiftyJSON', '2.3.2'
     pod 'GoogleMaps', '1.10.3'
-    pod 'SMPageControl', '~> 1.2'
 end
 
 target 'Frismart' do

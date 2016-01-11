@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -13,44 +13,40 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TopCategoryView" customModule="Frismart" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="257" height="139"/>
+            <rect key="frame" x="0.0" y="0.0" width="239" height="110"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nqK-uH-w5P">
-                    <rect key="frame" x="20" y="20" width="217" height="99"/>
+                    <rect key="frame" x="45" y="0.0" width="195" height="110"/>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H5w-5l-oks">
-                    <rect key="frame" x="20" y="20" width="217" height="99"/>
-                </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l4h-zv-2Nh">
-                    <rect key="frame" x="79" y="21" width="157" height="30"/>
+                <label opaque="NO" userInteractionEnabled="NO" alpha="0.75" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l4h-zv-2Nh">
+                    <rect key="frame" x="110" y="10" width="120" height="30"/>
                     <color key="backgroundColor" red="0.1215686275" green="0.54901960780000003" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="30" id="A4Q-ks-fAF"/>
-                        <constraint firstAttribute="width" constant="157" id="SZa-xf-lOM"/>
+                        <constraint firstAttribute="width" constant="120" id="ove-9i-8Af"/>
+                        <constraint firstAttribute="height" constant="30" id="u8p-kz-T29"/>
                     </constraints>
-                    <fontDescription key="fontDescription" name="Exo2-Bold" family="Exo 2" pointSize="16"/>
+                    <fontDescription key="fontDescription" name="Exo2-Bold" family="Exo 2" pointSize="14"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <color key="backgroundColor" red="0.96862745100000003" green="0.98431372549999996" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="nqK-uH-w5P" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="7E5-Fa-kQD"/>
-                <constraint firstAttribute="trailing" secondItem="l4h-zv-2Nh" secondAttribute="trailing" constant="21" id="Hcn-Wl-9Un"/>
-                <constraint firstItem="nqK-uH-w5P" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="Vj0-Tn-dFA"/>
-                <constraint firstItem="l4h-zv-2Nh" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="21" id="j1R-fx-QZh"/>
-                <constraint firstAttribute="bottom" secondItem="nqK-uH-w5P" secondAttribute="bottom" constant="20" id="lEo-al-LM7"/>
-                <constraint firstAttribute="trailing" secondItem="nqK-uH-w5P" secondAttribute="trailing" constant="20" id="qjO-7G-aZ5"/>
+                <constraint firstItem="l4h-zv-2Nh" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="8eF-Uu-ed1"/>
+                <constraint firstAttribute="trailing" secondItem="nqK-uH-w5P" secondAttribute="trailing" constant="-1" id="KJo-km-kRW"/>
+                <constraint firstAttribute="bottom" secondItem="nqK-uH-w5P" secondAttribute="bottom" id="LXg-5B-ohK"/>
+                <constraint firstItem="nqK-uH-w5P" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="45" id="N2A-sI-kEe"/>
+                <constraint firstItem="nqK-uH-w5P" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="VRH-Nf-fA5"/>
+                <constraint firstAttribute="trailing" secondItem="l4h-zv-2Nh" secondAttribute="trailing" constant="9" id="iUv-HA-Nsp"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="categoryImageView" destination="nqK-uH-w5P" id="Osp-R2-LL4"/>
                 <outlet property="categoryLabel" destination="l4h-zv-2Nh" id="y0J-is-uud"/>
-                <outlet property="storesPerCategoryButton" destination="H5w-5l-oks" id="fWM-Yj-OTh"/>
             </connections>
-            <point key="canvasLocation" x="97.5" y="79.5"/>
+            <point key="canvasLocation" x="118.5" y="78"/>
         </view>
     </objects>
 </document>

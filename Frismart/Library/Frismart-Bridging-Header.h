@@ -4,7 +4,5 @@
 
 #import "SWRevealViewController.h"
 
+// GoogleMaps Framework
 #import <GoogleMaps/GoogleMaps.h>
-
-// SMPageControl Library
-#import "SMPageControl.h"

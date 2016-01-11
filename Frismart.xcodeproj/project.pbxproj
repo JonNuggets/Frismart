@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C9A79731C4391D70092E7A7 /* Iphone4TopStoreView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C9A79721C4391D70092E7A7 /* Iphone4TopStoreView.xib */; };
+		0C9A79751C4397480092E7A7 /* Iphone5TopStoreView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C9A79741C4397480092E7A7 /* Iphone5TopStoreView.xib */; };
+		0C9A79771C439A400092E7A7 /* Iphone6TopStoreView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C9A79761C439A400092E7A7 /* Iphone6TopStoreView.xib */; };
 		0CCEF1441C259193002CEE41 /* SMPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CCEF1411C259193002CEE41 /* SMPageControl.m */; };
 		28002FE91B86007A0077A200 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28002FE81B86007A0077A200 /* UIImage.swift */; };
 		280D7BCA1BB2F94900644BE6 /* STUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280D7BC91BB2F94900644BE6 /* STUITextField.swift */; };
@@ -142,6 +145,9 @@
 
 /* Begin PBXFileReference section */
 		0C0A28091C07055100B6F3F5 /* Todo.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Todo.txt; sourceTree = "<group>"; };
+		0C9A79721C4391D70092E7A7 /* Iphone4TopStoreView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Iphone4TopStoreView.xib; sourceTree = "<group>"; };
+		0C9A79741C4397480092E7A7 /* Iphone5TopStoreView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Iphone5TopStoreView.xib; sourceTree = "<group>"; };
+		0C9A79761C439A400092E7A7 /* Iphone6TopStoreView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Iphone6TopStoreView.xib; sourceTree = "<group>"; };
 		0CCEF1401C259193002CEE41 /* SMPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMPageControl.h; sourceTree = "<group>"; };
 		0CCEF1411C259193002CEE41 /* SMPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMPageControl.m; sourceTree = "<group>"; };
 		28002FE81B86007A0077A200 /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
@@ -3648,6 +3654,9 @@
 			children = (
 				28D5697A1B8A1B1F002F7C75 /* TopCategoryView.xib */,
 				28D5697C1B8A209B002F7C75 /* TopStoreView.xib */,
+				0C9A79721C4391D70092E7A7 /* Iphone4TopStoreView.xib */,
+				0C9A79741C4397480092E7A7 /* Iphone5TopStoreView.xib */,
+				0C9A79761C439A400092E7A7 /* Iphone6TopStoreView.xib */,
 				281286081BD108270042E3C5 /* StoreDetailsThumbView.xib */,
 				28C981931BE380C700C509E1 /* CategoryIconView.xib */,
 				28F72AD51C03A59000494149 /* STActivityIndicatorView.xib */,
@@ -8205,6 +8214,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				28F7518A1C03A5D300494149 /* ActivityIndicator_5.png in Resources */,
+				0C9A79751C4397480092E7A7 /* Iphone5TopStoreView.xib in Resources */,
 				28F751861C03A5D300494149 /* ActivityIndicator_24.png in Resources */,
 				28F72AD61C03A59000494149 /* STActivityIndicatorView.xib in Resources */,
 				286D7AA71BCE592200C468B0 /* Exo2-Black.ttf in Resources */,
@@ -8217,6 +8227,7 @@
 				28F751791C03A5D300494149 /* ActivityIndicator_12.png in Resources */,
 				2822C0621C067EE700763105 /* StoreDetailsMarkerView.xib in Resources */,
 				28F751891C03A5D300494149 /* ActivityIndicator_4.png in Resources */,
+				0C9A79771C439A400092E7A7 /* Iphone6TopStoreView.xib in Resources */,
 				28F7517A1C03A5D300494149 /* ActivityIndicator_13.png in Resources */,
 				286D7AB81BCE592200C468B0 /* Exo2-ThinItalic.ttf in Resources */,
 				282C64D81B84731D00DC3C93 /* Main.storyboard in Resources */,
@@ -8242,6 +8253,7 @@
 				286D7AAF1BCE592200C468B0 /* Exo2-ExtraLightItalic.ttf in Resources */,
 				282C64DA1B84731D00DC3C93 /* Images.xcassets in Resources */,
 				28954E9B1B971983002BC100 /* Podfile in Resources */,
+				0C9A79731C4391D70092E7A7 /* Iphone4TopStoreView.xib in Resources */,
 				28F751771C03A5D300494149 /* ActivityIndicator_10.png in Resources */,
 				28F751831C03A5D300494149 /* ActivityIndicator_21.png in Resources */,
 				28F751851C03A5D300494149 /* ActivityIndicator_23.png in Resources */,
