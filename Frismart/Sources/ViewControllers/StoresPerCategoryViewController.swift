@@ -13,11 +13,7 @@ let kStandardHeightForRow   :CGFloat = 83.0
 class StoresPerCategoryViewController: STBaseTableViewController {
 
     var stores: [STStore]?
-    var store: STStore?
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
+    var store: STStore?  // TODO: Use index instead
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -40,7 +36,6 @@ class StoresPerCategoryViewController: STBaseTableViewController {
         let storeInfoCell : StoreDetailsInfoCell = cell as! StoreDetailsInfoCell
         storeInfoCell.display(stores![indexPath.row])
     }
-    
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         self.store  = stores![indexPath.row]

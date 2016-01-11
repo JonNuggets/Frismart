@@ -11,10 +11,6 @@ import Foundation
 class CategoriesViewController : STBaseTableViewController {
     
     var stores: [STStore]?
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1

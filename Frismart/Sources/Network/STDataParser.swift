@@ -27,6 +27,7 @@ class STDataParser : NSObject {
         
         for photoJSON in photosJSON! as [JSON] {
             let photo: STPhoto = STPhoto(dictionary: photoJSON.dictionaryObject)
+
             if (photo.is_deleted == "0"){
                 photosArray.append(photo)
             }
@@ -41,43 +42,38 @@ class STDataParser : NSObject {
         
         for storeJSON in storesJSON! as [JSON] {
             let store: STStore = STStore(dictionary: storeJSON.dictionaryObject)
+
             if (store.is_deleted == "0") {
-                storesArray.append(STStore(dictionary: storeJSON.dictionaryObject))
+                storesArray.append(store)
                 
                 if (store.featured == "1") {
                     topStoresArray.append(store)
                 }
             }
-            
         }
-        storesArray.sortInPlace({ $0.store_name < $1.store_name })
-        topStoresArray.sortInPlace({ $0.store_name < $1.store_name })
-        
-        AppData.sharedInstance.stores = storesArray
-        AppData.sharedInstance.topStores = topStoresArray
+
+        AppData.sharedInstance.stores = storesArray.sort({ $0.store_name < $1.store_name })
+        AppData.sharedInstance.topStores = topStoresArray.sort({ $0.store_name < $1.store_name })
     }
 
     class func parseCategoriesResponse(data: JSON) -> Void {
-        
         let categoriesJSON = data["categories"].array!
         var categoriesArray = [STCategory]()
         var topCategoriesArray = [STCategory]()
         
         for categoryJSON in categoriesJSON {
             let category: STCategory = STCategory(dictionary: categoryJSON.dictionaryObject)
+            
             categoriesArray.append(category)
             
             if (category.feat == "1") {
                 topCategoriesArray.append(category)
             }
         }
-        categoriesArray.sortInPlace({ $0.category_name < $1.category_name })
-        topCategoriesArray.sortInPlace({ $0.category_name < $1.category_name })
-        
-        AppData.sharedInstance.categories = categoriesArray
-        AppData.sharedInstance.topCategories = topCategoriesArray
+
+        AppData.sharedInstance.categories = categoriesArray.sort({ $0.category_name < $1.category_name })
+        AppData.sharedInstance.topCategories = topCategoriesArray.sort({ $0.category_name < $1.category_name })
     }
-    
     
     class func parseWeatherResponse(data: JSON) -> Void {
         let weather = data["main"]["temp"].floatValue

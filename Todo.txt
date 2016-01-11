@@ -2,11 +2,8 @@
 TODO:
 ----------------------------------------
 
-[-] 8. JSONData : Les données de l’app ne se rafraichissent comme il faut.
-[] 9. Migration des données : Il faut que les données soient stockées dans Core Data pour que l'appli fonctionne offline
+[] 09. Migration des données : Il faut que les données soient stockées dans Core Data pour que l'appli fonctionne offline
 [] 13. SearchViewController : Ajouter le champ pour la ville. Afficher les résultats en fonction de la position de l'utilisateur : Du plus proche au plus éloigné.
-[] Fix LoginViewController storyboard warnings
-[x] Fix LoginViewController storyboard warnings
 
 ----------------------------------------
 DONE:
@@ -25,6 +22,8 @@ Ranger le clavier si on tape hors des champs.
 
 [x] 4. HomeViewController : L’affichage de topStore dans cet écran pose problème. Trouver un moyen de le régler.
 [x] 10. StoreDetailsViewController : Probleme avec le label de la description (Encore :( )
+[] 8. JSONData : Les données de l’app ne se rafraichissent comme il faut.
+[x] Fix LoginViewController storyboard warnings
 
 ---
 NEXT VERSION

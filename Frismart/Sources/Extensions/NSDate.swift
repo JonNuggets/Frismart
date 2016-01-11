@@ -52,13 +52,17 @@ extension NSDate {
         }
     }
 
-    func stringToDate(dateString: String)->NSDate{
+    func stringToDate(dateString: String) -> NSDate {
         let dateFormatter = NSDateFormatter()
         let locale = NSLocale(localeIdentifier: "fr_FR")
 
         dateFormatter.locale = locale
         dateFormatter.dateFormat = "EEE HH:mm"
+
+        if let newData = dateFormatter.dateFromString(dateString) {
+            return newData
+        }
  
-        return dateFormatter.dateFromString(dateString)!
+        return NSDate()
     }
 }
