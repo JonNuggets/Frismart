@@ -3,7 +3,6 @@ TODO:
 ----------------------------------------
 
 [] 09. Migration des données : Il faut que les données soient stockées dans Core Data pour que l'appli fonctionne offline
-[] 13. SearchViewController : Ajouter le champ pour la ville. Afficher les résultats en fonction de la position de l'utilisateur : Du plus proche au plus éloigné.
 
 ----------------------------------------
 DONE:
@@ -19,14 +18,14 @@ Ranger le clavier si on tape hors des champs.
 [x] 3. ProfileViewController : Gérer la mise a jour de la photo.
 [x] 16. MenuViewController : Mise a jour de la photo de profil dans le menu.
 [x] Add Page Control for top stores & top categories in the Home Page
-
 [x] 4. HomeViewController : L’affichage de topStore dans cet écran pose problème. Trouver un moyen de le régler.
 [x] 10. StoreDetailsViewController : Probleme avec le label de la description (Encore :( )
-[] 8. JSONData : Les données de l’app ne se rafraichissent comme il faut.
+[x] 8. JSONData : Les données de l’app ne se rafraichissent comme il faut.
 [x] Fix LoginViewController storyboard warnings
+[x] 13. SearchViewController : Ajouter le champ pour la ville. Afficher les résultats en fonction de la position de l'utilisateur : Du plus proche au plus éloigné.
 
----
+----------------------------------------
 NEXT VERSION
----
+----------------------------------------
 [] 14. CategoriesViewController : Utiliser un UICollectionView avec les icones de catégories
 [] 11. StoreDetailsViewController : Quand on presse l'horloge on doit faire apparaitre les horaires du magazin

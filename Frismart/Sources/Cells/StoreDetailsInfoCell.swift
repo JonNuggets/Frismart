@@ -13,6 +13,7 @@ class StoreDetailsInfoCell : UITableViewCell {
     @IBOutlet var storeRateLabel: UILabel!
     @IBOutlet var storeHoursImageView: UIImageView!
     @IBOutlet var storeAddressLabel: UILabel!
+    @IBOutlet var storeDistanceLabel: UILabel!
     @IBOutlet var favoriteButton: UIButton!
     @IBOutlet var floatRatingView: FloatRatingView!
     
@@ -27,6 +28,13 @@ class StoreDetailsInfoCell : UITableViewCell {
     func display(store: STStore) -> Void{
         self.storeNameLabel.text = store.store_name
         self.storeNameLabel.sizeToFit()
+
+        if let searchDistance = store.geoDistance {
+            self.storeDistanceLabel?.text = String(format:"%.2f KM", searchDistance/1000)
+        }
+        else {
+            self.storeDistanceLabel?.text = ""
+        }
         
         if store.rating_count == "0" {
             self.storeRateLabel.text = "0"

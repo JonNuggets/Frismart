@@ -11,6 +11,7 @@
 		0C9A79751C4397480092E7A7 /* Iphone5TopStoreView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C9A79741C4397480092E7A7 /* Iphone5TopStoreView.xib */; };
 		0C9A79771C439A400092E7A7 /* Iphone6TopStoreView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C9A79761C439A400092E7A7 /* Iphone6TopStoreView.xib */; };
 		0C9A79791C4425D50092E7A7 /* STUILabelDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9A79781C4425D50092E7A7 /* STUILabelDescription.swift */; };
+		0C9A797B1C44778B0092E7A7 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C9A797A1C44778B0092E7A7 /* CoreLocation.framework */; };
 		0CCEF1441C259193002CEE41 /* SMPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CCEF1411C259193002CEE41 /* SMPageControl.m */; };
 		28002FE91B86007A0077A200 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28002FE81B86007A0077A200 /* UIImage.swift */; };
 		280D7BCA1BB2F94900644BE6 /* STUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280D7BC91BB2F94900644BE6 /* STUITextField.swift */; };
@@ -150,6 +151,7 @@
 		0C9A79741C4397480092E7A7 /* Iphone5TopStoreView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Iphone5TopStoreView.xib; sourceTree = "<group>"; };
 		0C9A79761C439A400092E7A7 /* Iphone6TopStoreView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Iphone6TopStoreView.xib; sourceTree = "<group>"; };
 		0C9A79781C4425D50092E7A7 /* STUILabelDescription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STUILabelDescription.swift; sourceTree = "<group>"; };
+		0C9A797A1C44778B0092E7A7 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		0CCEF1401C259193002CEE41 /* SMPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMPageControl.h; sourceTree = "<group>"; };
 		0CCEF1411C259193002CEE41 /* SMPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMPageControl.m; sourceTree = "<group>"; };
 		28002FE81B86007A0077A200 /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
@@ -3489,6 +3491,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C9A797B1C44778B0092E7A7 /* CoreLocation.framework in Frameworks */,
 				2883BF6B1B872715004EAFEE /* iAd.framework in Frameworks */,
 				B90D67E3CF9C818256BDC9CF /* Pods_Frismart.framework in Frameworks */,
 			);
@@ -8114,6 +8117,7 @@
 		44593EF34CAD218FE68AE9DB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0C9A797A1C44778B0092E7A7 /* CoreLocation.framework */,
 				5C8270A81EE0870C1A28A630 /* Pods_Frismart.framework */,
 			);
 			name = Frameworks;

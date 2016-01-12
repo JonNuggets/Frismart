@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreLocation
 
 class STStore : STBaseModel {
     var store_id : String?
@@ -29,6 +30,7 @@ class STStore : STBaseModel {
     var distance : String?
     var is_deleted: String?
     var horaire: String?
+    var geoDistance: CLLocationDistance?
     
     func getPhotos()->[STPhoto]{
         var photoArray = [STPhoto]()

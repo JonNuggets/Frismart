@@ -7,16 +7,25 @@
 //
 
 import Foundation
+import CoreLocation
 
-class SearchViewController : STBaseViewController, UITableViewDelegate, UITextFieldDelegate, UITableViewDataSource {
-    
+class SearchViewController : STBaseViewController, UITableViewDelegate, UITextFieldDelegate, UITableViewDataSource, CLLocationManagerDelegate {
     @IBOutlet var searchBackgroundView: UIView!
     @IBOutlet var textToSearch: STUITextField!
     @IBOutlet var searchTableView: UITableView!
+
     var searchResults = [STStore]()
+    var locationManager: CLLocationManager!
+    var location: CLLocation?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        if CLLocationManager.locationServicesEnabled() {
+            self.locationManager = CLLocationManager()
+            self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            self.locationManager.requestAlwaysAuthorization()
+        }
         
         self.textToSearch.delegate = self
         
@@ -24,10 +33,25 @@ class SearchViewController : STBaseViewController, UITableViewDelegate, UITextFi
         self.searchTableView.scrollEnabled = true
         self.searchTableView.hidden = true
     }
+
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+
+        self.textToSearch.resignFirstResponder()
+
+        if CLLocationManager.locationServicesEnabled() {
+            self.locationManager.delegate = self
+            self.locationManager.startUpdatingLocation()
+        }
+        else {
+            self.locationManager.delegate = nil
+            self.locationManager.stopUpdatingLocation()
+        }
+    }
     
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
         self.searchTableView.hidden = false
-        
+
         let substring = (textField.text! as NSString).stringByReplacingCharactersInRange(range, withString: string)
         
         self.searchStores(substring)
@@ -35,13 +59,29 @@ class SearchViewController : STBaseViewController, UITableViewDelegate, UITextFi
     }
     
     private func searchStores(textToSearch: String){
-        self.searchResults = [STStore]()
         self.searchResults = STHelpers.searchStoresByKeyWord(textToSearch)
-        
+
+        // Calculate distance for all the stores
+        if let location = self.location {
+            for store:STStore in self.searchResults {
+                if let storeLon = store.lon {
+                    if let storeLat = store.lat {
+                        let currentStoreLocation: CLLocation = CLLocation(latitude: Double(storeLat)!, longitude: Double(storeLon)!)
+
+                        if let distance: CLLocationDistance = currentStoreLocation.distanceFromLocation(location) {
+                            store.geoDistance = distance
+                        }
+                    }
+                }
+            }
+
+            // sort distance from min to max
+            self.searchResults = self.searchResults.sort({$0.geoDistance < $1.geoDistance})
+        }
+
         dispatch_async(dispatch_get_main_queue(), { () -> Void in
             self.searchTableView.reloadData()
         })
-        
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -64,5 +104,11 @@ class SearchViewController : STBaseViewController, UITableViewDelegate, UITextFi
     func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
         let storeInfoCell : StoreDetailsInfoCell = cell as! StoreDetailsInfoCell
         storeInfoCell.display(self.searchResults[indexPath.row])
+    }
+
+    //MARK: Closure Methods
+
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        self.location = locations.last!
     }
 }
