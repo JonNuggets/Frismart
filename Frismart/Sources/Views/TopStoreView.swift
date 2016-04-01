@@ -43,7 +43,7 @@ class TopStoreView: UIView {
             self.floatRatingView.rating = 0
         }
         else {
-            let ratingValue : Float = Float( Float(store.rating_total!)! / Float(store.rating_count!)! )
+            let ratingValue: Float = Float(Float(store.rating_total)! / Float(store.rating_count)!)
             self.floatRatingView.rating = ratingValue
             self.storeRateLabel.text = String(ratingValue)
         }
@@ -56,18 +56,16 @@ class TopStoreView: UIView {
         }
         
         var favoriteFound = false
-        
-        for (var index = 0; index < AppData.sharedInstance.favoriteStores.count; index++) {
-            if let favoriteItem:STStore = AppData.sharedInstance.favoriteStores[index] {
-                if favoriteItem.store_id == store.store_id {
-                    self.favoriteImageView?.image = UIImage(named: "StoreDetails_Like_Checked")!.imageWithColor(UIColor.redColor())
-                    favoriteFound = true
-                }
+
+        for favoriteItem in AppData.sharedInstance.favoriteStores {
+            if favoriteItem.store_id == store.store_id {
+                self.favoriteImageView?.image = UIImage(named: "StoreDetails_Like_Checked")?.imageWithColor(UIColor.redColor())
+                favoriteFound = true
             }
         }
-        
+
         if favoriteFound == false {
-            self.favoriteImageView?.image = UIImage(named: "StoreDetails_Like_Unchecked")!.imageWithColor(UIColor.redColor())
+            self.favoriteImageView?.image = UIImage(named: "StoreDetails_Like_Unchecked")?.imageWithColor(UIColor.redColor())
         }
     }
 }

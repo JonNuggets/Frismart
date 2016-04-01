@@ -57,12 +57,12 @@ extension UIViewController {
         
         if withSearch {
             self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
-            let searchButton  = UIBarButtonItem(image: UIImage(named: "NavBar_Search"), style: UIBarButtonItemStyle.Plain, target: self, action: "revealSearch:")
+            let searchButton  = UIBarButtonItem(image: UIImage(named: "NavBar_Search"), style: UIBarButtonItemStyle.Plain, target: self, action: #selector(UIViewController.revealSearch(_:)))
             self.navigationItem.rightBarButtonItem = searchButton
         }
-        
+
         if self.revealViewController() != nil {
-            let menuButton  = UIBarButtonItem(image: UIImage(named: "NavBar_HamburgerMenuButtonImage")?.imageWithColor(UIColor.whiteColor()), style: UIBarButtonItemStyle.Plain, target: self.revealViewController(), action: "revealToggle:")
+            let menuButton  = UIBarButtonItem(image: UIImage(named: "NavBar_HamburgerMenuButtonImage")?.imageWithColor(UIColor.whiteColor()), style: UIBarButtonItemStyle.Plain, target: self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)))
             self.revealViewController().rearViewRevealWidth = self.view.bounds.width * kRevealWithPercentage
             self.navigationItem.leftBarButtonItems = [menuButton]
         }
@@ -81,7 +81,7 @@ extension UIViewController {
             self.navigationItem.titleView = logoImageView
         }
         
-        let searchButton  = UIBarButtonItem(image: UIImage(named: "NavBar_Search"), style: UIBarButtonItemStyle.Plain, target: self, action: "revealSearch:")
+        let searchButton  = UIBarButtonItem(image: UIImage(named: "NavBar_Search"), style: UIBarButtonItemStyle.Plain, target: self, action: #selector(UIViewController.revealSearch(_:)))
         self.navigationItem.rightBarButtonItem = searchButton
     }
     
@@ -95,11 +95,11 @@ extension UIViewController {
         self.navigationItem.titleView = logoImageView
         
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
-        let searchButton  = UIBarButtonItem(image: UIImage(named: "NavBar_Location"), style: UIBarButtonItemStyle.Plain, target: self, action: "revealCurrentLocation:")
+        let searchButton  = UIBarButtonItem(image: UIImage(named: "NavBar_Location"), style: UIBarButtonItemStyle.Plain, target: self, action: #selector(MapViewController.revealCurrentLocation(_:)))
         self.navigationItem.rightBarButtonItem = searchButton
         
         if self.revealViewController() != nil {
-            let menuButton  = UIBarButtonItem(image: UIImage(named: "NavBar_HamburgerMenuButtonImage")?.imageWithColor(UIColor.whiteColor()), style: UIBarButtonItemStyle.Plain, target: self.revealViewController(), action: "revealToggle:")
+            let menuButton  = UIBarButtonItem(image: UIImage(named: "NavBar_HamburgerMenuButtonImage")?.imageWithColor(UIColor.whiteColor()), style: UIBarButtonItemStyle.Plain, target: self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)))
             self.revealViewController().rearViewRevealWidth = self.view.bounds.width * kRevealWithPercentage
             self.navigationItem.leftBarButtonItems = [menuButton]
         }
@@ -114,11 +114,11 @@ extension UIViewController {
         self.navigationItem.titleView = logoImageView
         
         self.navigationController?.navigationBar.tintColor = UIColor().frismartDefaultBackgroundColor
-        let updateProfile  = UIBarButtonItem(image: UIImage(named: "NavBar_Checkmark"), style: UIBarButtonItemStyle.Plain, target: self, action: "updateProfile:")
+        let updateProfile  = UIBarButtonItem(image: UIImage(named: "NavBar_Checkmark"), style: UIBarButtonItemStyle.Plain, target: self, action: #selector(ProfileViewController.updateProfile(_:)))
         self.navigationItem.rightBarButtonItem = updateProfile
         
         if self.revealViewController() != nil {
-            let menuButton  = UIBarButtonItem(image: UIImage(named: "NavBar_HamburgerMenuButtonImage")?.imageWithColor(UIColor().frismartDefaultBackgroundColor), style: UIBarButtonItemStyle.Plain, target: self.revealViewController(), action: "revealToggle:")
+            let menuButton  = UIBarButtonItem(image: UIImage(named: "NavBar_HamburgerMenuButtonImage")?.imageWithColor(UIColor().frismartDefaultBackgroundColor), style: UIBarButtonItemStyle.Plain, target: self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)))
             self.revealViewController().rearViewRevealWidth = self.view.bounds.width * kRevealWithPercentage
             self.navigationItem.leftBarButtonItems = [menuButton]
         }

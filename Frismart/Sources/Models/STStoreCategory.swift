@@ -9,9 +9,9 @@
 import Foundation
 
 class STStoreCategory: STBaseModel {
-    var category_id : String?
-    var updated_at : String?
-    var created_at : String?
-    var category_icon : String?
-    var category : String?
+    var category_id : String = ""
+    var updated_at : String = ""
+    var created_at : String = ""
+    var category_icon : String = ""
+    var category : String = ""
 }

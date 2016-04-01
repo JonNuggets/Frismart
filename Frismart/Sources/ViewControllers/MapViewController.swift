@@ -28,14 +28,12 @@ class MapViewController: STBaseViewController, GMSMapViewDelegate, CLLocationMan
         self.initializeUI()
     }
 
-    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
         self.locationManager.startUpdatingLocation()
     }
-    
-    
+
     private func initializeUI()->Void {
         self.loadCategoriesViews()
         self.loadMarkersOnMap(self.currentCategoryIconView)
@@ -43,21 +41,19 @@ class MapViewController: STBaseViewController, GMSMapViewDelegate, CLLocationMan
     
     func loadCategoriesViews() {
         self.setAllCategoriesIconView()
-        
-        for (var i = 0; i < AppData.sharedInstance.categories?.count; i++){
+
+        for (index, category) in AppData.sharedInstance.categories!.enumerate() {
             let categoryIconView : CategoryIconView = NSBundle.mainBundle().loadNibNamed(kCategoryIconViewNibName, owner: self, options: nil)[0] as! CategoryIconView
             
-            categoryIconView.display((AppData.sharedInstance.categories?[i])!)
+            categoryIconView.display(category)
             
-            categoryIconView.frame.origin = CGPointMake(categoryIconView.frame.width * CGFloat(i + 1) + 15.0 * (CGFloat(i + 1) + 1), 12.0)
-            categoryIconView.categoryIconButton.addTarget(self, action: "displayStoresPerCategory:", forControlEvents: .TouchUpInside)
+            categoryIconView.frame.origin = CGPointMake(categoryIconView.frame.width * CGFloat(index + 1) + 15.0 * (CGFloat(index + 1) + 1), 12.0)
+            categoryIconView.categoryIconButton.addTarget(self, action: #selector(MapViewController.displayStoresPerCategory(_:)), forControlEvents: .TouchUpInside)
             
-            self.categoriesScrollView.contentSize =
-CGSizeMake(categoryIconView.frame.width * CGFloat(((AppData.sharedInstance.categories?.count)! + 1)) + 15.0 * (CGFloat((AppData.sharedInstance.categories?.count)! + 2)), 60)
+            self.categoriesScrollView.contentSize = CGSizeMake(categoryIconView.frame.width * CGFloat(((AppData.sharedInstance.categories?.count)! + 1)) + 15.0 * (CGFloat((AppData.sharedInstance.categories?.count)! + 2)), 60)
             
             self.categoriesScrollView.addSubview(categoryIconView)
             self.categoryIconViewsList.append(categoryIconView)
-            
         }
     }
     
@@ -72,7 +68,7 @@ CGSizeMake(categoryIconView.frame.width * CGFloat(((AppData.sharedInstance.categ
         categoryIconView.categoryIconButton.setTitleColor(UIColor().frismartDefaultBackgroundColor, forState: UIControlState.Selected)
         categoryIconView.categoryIconImageView.image = nil
         
-        categoryIconView.categoryIconButton.addTarget(self, action: "displayStoresPerCategory:", forControlEvents: .TouchUpInside)
+        categoryIconView.categoryIconButton.addTarget(self, action: #selector(MapViewController.displayStoresPerCategory(_:)), forControlEvents: .TouchUpInside)
         categoryIconView.frame.origin = CGPointMake(15.0 , 12.0)
         
         self.categoriesScrollView.contentSize = CGSizeMake(categoryIconView.frame.width + kTopViewHorizontalPadding, 60)
@@ -125,20 +121,15 @@ CGSizeMake(categoryIconView.frame.width * CGFloat(((AppData.sharedInstance.categ
         }
         
         for store in stores! {
-            let target : CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: (store.lat)!.doubleValue, longitude: (store.lon)!.doubleValue)
+            let target : CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: store.lat.doubleValue, longitude: store.lon.doubleValue)
             let camera = GMSCameraPosition(target: target, zoom: 15, bearing: 0, viewingAngle: 0)
             
             let marker = STPlaceMarker(store: store)
             marker.position = camera.target
             marker.map = self.mapView
             
-//            let categoryPin = String(format: "Category_%@Pin", store.getCategory().removePunctuation())
-//            
-//            marker.icon = UIImage(named: categoryPin)?.imageWithColor(UIColor().frismartDefaultBackgroundColor)
-            
             //marker.title = store.store_name
             self.markersList.append(marker)
-            //self.fitAllMarkers()
             
             self.mapView.myLocationEnabled = true
         }
@@ -147,8 +138,7 @@ CGSizeMake(categoryIconView.frame.width * CGFloat(((AppData.sharedInstance.categ
     func revealCurrentLocation(sender: UIBarButtonItem) {
         self.locationManager.startUpdatingLocation()
     }
-    
-    
+
     func fitAllMarkers() {
         var bounds = GMSCoordinateBounds()
         

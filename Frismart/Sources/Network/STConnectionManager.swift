@@ -71,7 +71,7 @@ class STConnectionManager : NSObject {
                     }
                     else {
                         if onFailureHandler != nil {
-                            let responseError = NSError(domain: responseStatus.status_text!, code: Int(responseStatus.status_code!)!, userInfo: [:])
+                            let responseError = NSError(domain: responseStatus.status_text, code: Int(responseStatus.status_code)!, userInfo: [:])
                             onFailureHandler?(responseError)
                         }
                     }
@@ -113,7 +113,7 @@ class STConnectionManager : NSObject {
                     }
                     else {
                         if onFailureHandler != nil {
-                            let responseError = NSError(domain: responseStatus.status_text!, code: Int(responseStatus.status_code!)!, userInfo: [:])
+                            let responseError = NSError(domain: responseStatus.status_text, code: Int(responseStatus.status_code)!, userInfo: [:])
                             onFailureHandler?(responseError)
                         }
                     }
@@ -235,7 +235,7 @@ class STConnectionManager : NSObject {
         let request = NSMutableURLRequest(URL: NSURL(string: getUserRatingURL)!)
         request.HTTPMethod = "POST"
         
-        let bodyString : String = String(format: kUserRating, store.store_id!, (AppData.sharedInstance.user?.user_id)!, (AppData.sharedInstance.user?.login_hash)!, rating)
+        let bodyString : String = String(format: kUserRating, store.store_id, (AppData.sharedInstance.user?.user_id)!, (AppData.sharedInstance.user?.login_hash)!, rating)
         
         print("bodyString \(bodyString)")
         

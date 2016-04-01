@@ -64,14 +64,10 @@ class SearchViewController : STBaseViewController, UITableViewDelegate, UITextFi
         // Calculate distance for all the stores
         if let location = self.location {
             for store:STStore in self.searchResults {
-                if let storeLon = store.lon {
-                    if let storeLat = store.lat {
-                        let currentStoreLocation: CLLocation = CLLocation(latitude: Double(storeLat)!, longitude: Double(storeLon)!)
+                let currentStoreLocation: CLLocation = CLLocation(latitude: Double(store.lat)!, longitude: Double(store.lon)!)
 
-                        if let distance: CLLocationDistance = currentStoreLocation.distanceFromLocation(location) {
-                            store.geoDistance = distance
-                        }
-                    }
+                if let distance: CLLocationDistance = currentStoreLocation.distanceFromLocation(location) {
+                    store.geoDistance = distance
                 }
             }
 

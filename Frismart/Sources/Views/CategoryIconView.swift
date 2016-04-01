@@ -23,14 +23,14 @@ class CategoryIconView: UIView {
     }
     
     func display(category: STCategory) {
-        let categoryIcon = String(format: "Category_%@Icon", category.category_name!)
+        let categoryIcon = String(format: "Category_%@Icon", category.category_name)
         
         self.categoryIconBackgroundView.backgroundColor = UIColor.clearColor()
         self.categoryIconImageView.image = UIImage(named: categoryIcon.removePunctuation())?.imageWithColor(UIColor.whiteColor())
     }
     
     func switchColor(category: STCategory) {
-        let categoryIcon = String(format: "Category_%@Icon", category.category_name!)
+        let categoryIcon = String(format: "Category_%@Icon", category.category_name)
         
         if self.categoryIconButton.selected == true {
             self.categoryIconButton.selected = false
