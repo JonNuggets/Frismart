@@ -59,6 +59,7 @@
                         <viewControllerLayoutGuide type="bottom" id="kvs-HU-uig"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="eaZ-tV-fAb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cvr-OS-hWq">
@@ -106,13 +107,13 @@
                                 <exclude reference="LEd-cd-eLV"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="x69-Hm-KcB"/>
                                 <exclude reference="D5t-ZT-Vvx"/>
                                 <exclude reference="sCg-h8-PCL"/>
                                 <exclude reference="wAr-FI-Qtv"/>
                                 <exclude reference="8mp-ux-LTy"/>
                                 <exclude reference="9Lm-VJ-yan"/>
                                 <exclude reference="YLK-Ef-ZI5"/>
-                                <exclude reference="x69-Hm-KcB"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
@@ -121,13 +122,13 @@
                                 <include reference="LEd-cd-eLV"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="x69-Hm-KcB"/>
                                 <include reference="D5t-ZT-Vvx"/>
                                 <include reference="sCg-h8-PCL"/>
                                 <include reference="wAr-FI-Qtv"/>
                                 <include reference="8mp-ux-LTy"/>
                                 <include reference="9Lm-VJ-yan"/>
                                 <include reference="YLK-Ef-ZI5"/>
-                                <include reference="x69-Hm-KcB"/>
                             </mask>
                         </variation>
                     </view>
@@ -753,7 +754,7 @@
                                                 <constraint firstAttribute="width" constant="568" id="gCT-bU-Kdk"/>
                                             </constraints>
                                         </view>
-                                        <scrollView autoresizesSubviews="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lg2-A0-Dj2">
+                                        <scrollView autoresizesSubviews="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lg2-A0-Dj2">
                                             <rect key="frame" x="0.0" y="8" width="600" height="139"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="139" id="FBt-q0-CUe"/>

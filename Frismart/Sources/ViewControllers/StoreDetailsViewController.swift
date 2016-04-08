@@ -180,10 +180,11 @@ class StoreDetailsViewController : STBaseTableViewController, GMSMapViewDelegate
                 ImageCacheManager.loadImageViewForUrl(photo.thumb_url, placeHolderImage: nil, imageView: storeDetailsThumbView.thumbnailImageView)
 
                 storeDetailsThumbView.thumbnailButton.addTarget(self, action: #selector(StoreDetailsViewController.displayLargeView(_:)), forControlEvents: .TouchUpInside)
-                storeDetailsThumbView.frame.origin = CGPointMake(storeDetailsThumbView.frame.width * CGFloat(index) + kTopViewHorizontalPadding * (CGFloat(index) + 1), 16.0)
+                storeDetailsThumbView.frame.origin = CGPointMake((storeDetailsThumbView.frame.width + kTopViewHorizontalPadding) * CGFloat(index), 16.0)
 
-                storeDetailsPicturesCell.storePhotosScrollView.contentSize = CGSizeMake(storeDetailsThumbView.frame.width * CGFloat((self.storePhotos?.count)!) + kTopViewHorizontalPadding * (CGFloat((self.storePhotos?.count)! + 1)), storeDetailsPicturesCell.storePhotosScrollView.frame.size.height)
+                storeDetailsPicturesCell.storePhotosScrollView.contentSize = CGSizeMake((storeDetailsThumbView.frame.origin.x+storeDetailsThumbView.frame.size.width)*UIScreen.mainScreen().scale, storeDetailsPicturesCell.storePhotosScrollView.frame.size.height)
                 storeDetailsPicturesCell.storePhotosScrollView.addSubview(storeDetailsThumbView)
+                storeDetailsPicturesCell.storePhotosScrollView.pagingEnabled = false
                 storeDetailsThumbViewList?.append(storeDetailsThumbView)
             }
         }
