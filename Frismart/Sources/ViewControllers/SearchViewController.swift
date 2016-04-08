@@ -117,11 +117,6 @@ class SearchViewController : STBaseViewController, UITableViewDelegate, UITextFi
         storeInfoCell.display(self.searchResults[indexPath.row])
     }
 
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        print("didSelectRowAtIndexPath")
-        self.textToSearch?.resignFirstResponder()
-    }
-
     //MARK: Closure Methods
 
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
