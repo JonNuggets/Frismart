@@ -32,7 +32,7 @@ class StoreDetailsMarkerView: UIView {
             self.floatRatingView.rating = 0
         }
         else {
-            let ratingValue : Float = Float( Float(store.rating_total!)! / Float(store.rating_count!)! )
+            let ratingValue : Float = Float(Float(store.rating_total)! / Float(store.rating_count)!)
             self.floatRatingView.rating = ratingValue
         }
     }

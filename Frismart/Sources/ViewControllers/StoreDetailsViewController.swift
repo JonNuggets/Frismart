@@ -173,12 +173,15 @@ class StoreDetailsViewController : STBaseTableViewController, GMSMapViewDelegate
         if (indexPath.row == STStoreDetailsScreen.ImagesIndex.rawValue && self.storePhotos?.count > 0) {
             self.storeDetailsThumbViewList = [StoreDetailsThumbView]()
             let storeDetailsPicturesCell: StoreDetailsPicturesCell = cell as! StoreDetailsPicturesCell
-            
-            for (var i=0; i < self.storePhotos?.count; i++) {
+
+            for (index, photo) in self.storePhotos!.enumerate() {
                 let storeDetailsThumbView : StoreDetailsThumbView = NSBundle.mainBundle().loadNibNamed(kStoreDetailsThumbNibName, owner: self, options: nil)[0] as! StoreDetailsThumbView
-                ImageCacheManager.loadImageViewForUrl(self.storePhotos![i].thumb_url, placeHolderImage: nil, imageView: storeDetailsThumbView.thumbnailImageView)
-                storeDetailsThumbView.thumbnailButton.addTarget(self, action: "displayLargeView:", forControlEvents: .TouchUpInside)
-                storeDetailsThumbView.frame.origin = CGPointMake(storeDetailsThumbView.frame.width * CGFloat(i) + kTopViewHorizontalPadding * (CGFloat(i) + 1), 16.0)
+
+                ImageCacheManager.loadImageViewForUrl(photo.thumb_url, placeHolderImage: nil, imageView: storeDetailsThumbView.thumbnailImageView)
+
+                storeDetailsThumbView.thumbnailButton.addTarget(self, action: #selector(StoreDetailsViewController.displayLargeView(_:)), forControlEvents: .TouchUpInside)
+                storeDetailsThumbView.frame.origin = CGPointMake(storeDetailsThumbView.frame.width * CGFloat(index) + kTopViewHorizontalPadding * (CGFloat(index) + 1), 16.0)
+
                 storeDetailsPicturesCell.storePhotosScrollView.contentSize = CGSizeMake(storeDetailsThumbView.frame.width * CGFloat((self.storePhotos?.count)!) + kTopViewHorizontalPadding * (CGFloat((self.storePhotos?.count)! + 1)), storeDetailsPicturesCell.storePhotosScrollView.frame.size.height)
                 storeDetailsPicturesCell.storePhotosScrollView.addSubview(storeDetailsThumbView)
                 storeDetailsThumbViewList?.append(storeDetailsThumbView)
@@ -191,10 +194,10 @@ class StoreDetailsViewController : STBaseTableViewController, GMSMapViewDelegate
             
             self.checkContactValues(storeDetailsContactsCell)
 
-            storeDetailsContactsCell.storeAppelButton.addTarget(self, action: "callStore:", forControlEvents: .TouchUpInside)
-            storeDetailsContactsCell.storeEmailButton.addTarget(self, action: "emailStore:", forControlEvents: .TouchUpInside)
-            storeDetailsContactsCell.storeWebsiteButton.addTarget(self, action: "visitStoreWebsite:", forControlEvents: .TouchUpInside)
-            storeDetailsContactsCell.storeItineraryButton.addTarget(self, action: "getItineraryToStore:", forControlEvents: .TouchUpInside)
+            storeDetailsContactsCell.storeAppelButton.addTarget(self, action: #selector(StoreDetailsViewController.callStore(_:)), forControlEvents: .TouchUpInside)
+            storeDetailsContactsCell.storeEmailButton.addTarget(self, action: #selector(StoreDetailsViewController.emailStore(_:)), forControlEvents: .TouchUpInside)
+            storeDetailsContactsCell.storeWebsiteButton.addTarget(self, action: #selector(StoreDetailsViewController.visitStoreWebsite(_:)), forControlEvents: .TouchUpInside)
+            storeDetailsContactsCell.storeItineraryButton.addTarget(self, action: #selector(StoreDetailsViewController.getItineraryToStore(_:)), forControlEvents: .TouchUpInside)
             
             self.getItineraryButton = storeDetailsContactsCell.storeItineraryButton
         }
@@ -227,7 +230,7 @@ class StoreDetailsViewController : STBaseTableViewController, GMSMapViewDelegate
     
     //MARK : Action Buttons Methods
     func callStore(sender:UIButton!){
-        let callString: String = String(format: "tel://%@", (self.currentStore?.phone_no?.removePunctuation())!)
+        let callString: String = String(format: "tel://%@", (self.currentStore?.phone_no.removePunctuation())!)
         UIApplication.sharedApplication().openURL(NSURL(string: callString)!)
     }
     
@@ -239,7 +242,7 @@ class StoreDetailsViewController : STBaseTableViewController, GMSMapViewDelegate
     func visitStoreWebsite(sender:UIButton!){
         var websiteWithHTTP: String = String()
         
-        if self.currentStore?.website?.rangeOfString("http://") == nil {
+        if self.currentStore?.website.rangeOfString("http://") == nil {
             websiteWithHTTP = "http://" + (self.currentStore?.website)!
         }
         
@@ -271,7 +274,6 @@ class StoreDetailsViewController : STBaseTableViewController, GMSMapViewDelegate
     
     //MARK : Private Methods
     private func updateFavoriteIconInfo() -> Void {
-        
         var favoriteFound = false
         
         self.favoriteButton!.setImage(UIImage(named: "StoreDetails_Like_Checked")!.imageWithColor(UIColor.redColor()), forState: .Normal)
@@ -279,10 +281,10 @@ class StoreDetailsViewController : STBaseTableViewController, GMSMapViewDelegate
         self.favoriteButton!.enabled = true
         self.favoriteButton!.selected = false
         self.favoriteButton!.highlighted = false
-        
-        for (var index = 0; index < AppData.sharedInstance.favoriteStores.count; index++) {
-            if let favoriteItem:STStore = AppData.sharedInstance.favoriteStores[index] {
-                if favoriteItem.store_id == self.currentStore?.store_id {
+
+        if let currentStore = self.currentStore {
+            for favoriteItem in AppData.sharedInstance.favoriteStores {
+                if favoriteItem.store_id == currentStore.store_id {
                     self.favoriteButton!.setImage(UIImage(named: "StoreDetails_Like_Checked")!.imageWithColor(UIColor.redColor()), forState: .Selected)
                     self.favoriteButton!.selected = true
                     favoriteFound = true
@@ -297,15 +299,15 @@ class StoreDetailsViewController : STBaseTableViewController, GMSMapViewDelegate
     
     
     private func checkContactValues(storeDetailsContactsCell: StoreDetailsContactsCell)->Void {
-        if (self.currentStore?.phone_no?.isEmpty == true) {
+        if (self.currentStore?.phone_no.isEmpty == true) {
             storeDetailsContactsCell.storeAppelButton.enabled = false
         }
         
-        if (currentStore?.email?.isEmpty == true) {
+        if (currentStore?.email.isEmpty == true) {
             storeDetailsContactsCell.storeEmailButton.enabled = false
         }
         
-        if (currentStore?.website?.isEmpty == true) {
+        if (currentStore?.website.isEmpty == true) {
             storeDetailsContactsCell.storeWebsiteButton.enabled = false
         }
         
@@ -369,7 +371,7 @@ class StoreDetailsViewController : STBaseTableViewController, GMSMapViewDelegate
     //MARK: Closure Methods
     func onPostRatingSuccess() {
         let newRatingCount: Int = Int((self.currentStore?.rating_count)!)! + 1
-        let oldTotal: Float = (self.currentStore?.rating_total?.floatValue)! * (self.currentStore?.rating_count?.floatValue)!
+        let oldTotal: Float = (self.currentStore?.rating_total.floatValue)! * (self.currentStore?.rating_count.floatValue)!
         let newRatingTotal: Float = (oldTotal + (self.floatRatingView?.rating)!) / Float(newRatingCount)
         
         self.currentStore?.rating_count = String(newRatingCount)

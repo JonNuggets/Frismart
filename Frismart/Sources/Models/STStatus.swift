@@ -9,6 +9,6 @@
 import Foundation
 
 class STStatus : STBaseModel{
-    var status_text : String?
-    var status_code   : String?
+    var status_text : String = ""
+    var status_code   : String = ""
 }

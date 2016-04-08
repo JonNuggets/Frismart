@@ -40,7 +40,7 @@ class InfosMenuCell : UITableViewCell {
         
         self.userImageView.image = AppData.sharedInstance.user?.profileImageView?.image
         
-        let userNames: [String] = (AppData.sharedInstance.user?.full_name?.componentsSeparatedByString(" "))!
+        let userNames: [String] = (AppData.sharedInstance.user?.full_name.componentsSeparatedByString(" "))!
         
         self.userNameLabel.text = userNames[0] + " "
         if userNames.count > 1 {

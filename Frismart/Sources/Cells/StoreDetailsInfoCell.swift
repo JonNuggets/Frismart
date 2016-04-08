@@ -41,7 +41,7 @@ class StoreDetailsInfoCell : UITableViewCell {
             self.floatRatingView.rating = 0
         }
         else {
-            let ratingValue : Float = Float( Float(store.rating_total!)! / Float(store.rating_count!)! )
+            let ratingValue : Float = Float(Float(store.rating_total)! / Float(store.rating_count)!)
             self.storeRateLabel.text = String(ratingValue)
             self.floatRatingView.rating = ratingValue
         }
@@ -50,19 +50,19 @@ class StoreDetailsInfoCell : UITableViewCell {
         self.storeAddressLabel.text = store.store_address
     
         var isOpen = false
-        let storeHours = store.horaire?.parseHours()
+        let storeHours = store.horaire.parseHours()
         let currentDate = NSDate()
         let calendar: NSCalendar = NSCalendar.currentCalendar()
         let currentDayComponent: NSDateComponents = calendar.components(.Weekday, fromDate: currentDate)
         let currentWeekDay = (currentDayComponent.weekday <= 7 && currentDayComponent.weekday != 0) ? currentDayComponent.weekday - 1 : 1
 
-        for days in (storeHours?.keys)! {
+        for days in storeHours.keys {
             let daysList = days.componentsSeparatedByString("-")
 
             if daysList.count > 1 {
                 for day in daysList {
-                    let dateStartString : String = String(format: "%@ %@", day, storeHours![days]![0]["start"]!)
-                    let dateEndString : String = String(format: "%@ %@", day, storeHours![days]![0]["end"]!)
+                    let dateStartString : String = String(format: "%@ %@", day, storeHours[days]![0]["start"]!)
+                    let dateEndString : String = String(format: "%@ %@", day, storeHours[days]![0]["end"]!)
                     
                     let dateStart = NSDate().stringToDate(dateStartString)
                     let dateEnd = NSDate().stringToDate(dateEndString)

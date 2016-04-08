@@ -9,11 +9,11 @@
 import Foundation
 
 class STPhoto : STBaseModel {
-    var photo_id : String?
-    var photo_url : String?
-    var thumb_url : String?
-    var store_id : String?
-    var created_at : String?
-    var updated_at : String?
-    var is_deleted : String?
+    var photo_id : String = ""
+    var photo_url : String = ""
+    var thumb_url : String = ""
+    var store_id : String = ""
+    var created_at : String = ""
+    var updated_at : String = ""
+    var is_deleted : String = ""
 }

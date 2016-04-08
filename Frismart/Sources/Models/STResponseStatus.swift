@@ -9,6 +9,6 @@
 import Foundation
 
 class STResponseStatus : STBaseModel{
-    var status_text : String?
-    var status_code : String?
+    var status_text : String = ""
+    var status_code : String = ""
 }

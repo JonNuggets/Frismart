@@ -27,17 +27,15 @@ class STHelpers: NSObject {
         favoriteButton.enabled = true
         favoriteButton.selected = false
         favoriteButton.highlighted = false
-        
-        for (var index = 0; index < AppData.sharedInstance.favoriteStores.count; index++) {
-            if let favoriteItem:STStore = AppData.sharedInstance.favoriteStores[index] {
-                if favoriteItem.store_id == currentStore.store_id {
-                    favoriteButton.setImage(UIImage(named: "StoreDetails_Like_Checked")!.imageWithColor(UIColor.redColor()), forState: .Normal)
-                    favoriteButton.selected = true
-                    favoriteFound = true
-                }
+
+        for favoriteItem in AppData.sharedInstance.favoriteStores {
+            if favoriteItem.store_id == currentStore.store_id {
+                favoriteButton.setImage(UIImage(named: "StoreDetails_Like_Checked")!.imageWithColor(UIColor.redColor()), forState: .Normal)
+                favoriteButton.selected = true
+                favoriteFound = true
             }
         }
-        
+
         if favoriteFound == false {
             favoriteButton.setImage(UIImage(named: "StoreDetails_Like_Unchecked")!.imageWithColor(UIColor.redColor()), forState: .Normal)
         }
@@ -51,7 +49,7 @@ class STHelpers: NSObject {
         var nearestStore: STStore = STStore()
         
         for store in AppData.sharedInstance.stores! {
-            let storeLocation: CLLocation = CLLocation(latitude: (store.lat?.doubleValue)!, longitude: (store.lon?.doubleValue)!)
+            let storeLocation: CLLocation = CLLocation(latitude: store.lat.doubleValue, longitude: store.lon.doubleValue)
             newDistance = (AppData.sharedInstance.user?.currentLocation?.distanceFromLocation(storeLocation))!
             
             if newDistance < distance {
@@ -69,11 +67,12 @@ class STHelpers: NSObject {
         if AppData.sharedInstance.loggedIn == true {
             
             for store in stores {
-                let storeLocation: CLLocation = CLLocation(latitude: (store.lat?.doubleValue)!, longitude: (store.lon?.doubleValue)!)
+                let storeLocation: CLLocation = CLLocation(latitude: store.lat.doubleValue, longitude: store.lon.doubleValue)
                 let distanceFromLocation = AppData.sharedInstance.user?.currentLocation?.distanceFromLocation(storeLocation)
-                distancesFromLocation[store.store_id!] = distanceFromLocation
+                distancesFromLocation[store.store_id] = distanceFromLocation
             }
         }
+
         print(distancesFromLocation)
         
         return [STStore]()
@@ -96,13 +95,13 @@ class STHelpers: NSObject {
         var stores = [STStore]()
         
         for category in AppData.sharedInstance.categories! {
-            if category.category_name!.lowercaseString.rangeOfString(text.lowercaseString) != nil {
+            if category.category_name.lowercaseString.rangeOfString(text.lowercaseString) != nil {
                 stores.appendContentsOf(category.getStoresPerCategory())
             }
         }
         
         for store in AppData.sharedInstance.stores! {
-            if store.store_name!.lowercaseString.rangeOfString(text.lowercaseString) != nil {
+            if store.store_name.lowercaseString.rangeOfString(text.lowercaseString) != nil {
                 if !stores.contains(store) {
                     stores.append(store)
                 }
@@ -110,11 +109,7 @@ class STHelpers: NSObject {
         }
         
         STHelpers.sortByDistance(stores)
-        
-//        if AppData.sharedInstance.loggedIn == true  && AppData.sharedInstance.user?.currentLocation != nil{
-//            STHelpers.sortByDistance(stores)
-//        }
-        
+
         return stores
     }
 }

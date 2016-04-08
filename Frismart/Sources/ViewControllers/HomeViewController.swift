@@ -47,7 +47,7 @@ class HomeViewController: STBaseViewController {
     private func loadTopStoresViews()-> Void {
         var totalWidthSize: CGFloat = 0
 
-        for ( var i = 0; i < AppData.sharedInstance.topStores?.count; i++ ) {
+        for (index, store) in AppData.sharedInstance.topStores!.enumerate() {
             let topStoreView : TopStoreView
 
             if DeviceType.IS_IPHONE_4_OR_LESS {
@@ -63,15 +63,15 @@ class HomeViewController: STBaseViewController {
                 topStoreView = NSBundle.mainBundle().loadNibNamed(kTopStoreViewNibName, owner: self, options: nil)[0] as! TopStoreView
             }
             
-            topStoreView.store = (AppData.sharedInstance.topStores?[i])!
-            topStoreView.display((AppData.sharedInstance.topStores?[i])!)
+            topStoreView.store = store
+            topStoreView.display(store)
             
-            topStoreView.frame.origin = CGPointMake((kTopStoresFrontPadding * CGFloat(i+1)) + (topStoreView.frame.size.width * CGFloat(i)),0)
+            topStoreView.frame.origin = CGPointMake((kTopStoresFrontPadding * CGFloat(index+1)) + (topStoreView.frame.size.width * CGFloat(index)),0)
             topStoreView.frame.size = CGSizeMake(topStoreView.frame.size.width, self.topStoresScrollView.frame.height)
 
             totalWidthSize = topStoreView.frame.origin.x + topStoreView.frame.width
 
-            if let pressGestureRecognizer: UILongPressGestureRecognizer = UILongPressGestureRecognizer(target: self, action: "displayStoreDetailsLongPressed:") {
+            if let pressGestureRecognizer: UILongPressGestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(HomeViewController.displayStoreDetailsLongPressed(_:))) {
                 pressGestureRecognizer.minimumPressDuration = kHOMEVIEW_LONG_PRESS_DELAY
 
                 topStoreView.addGestureRecognizer(pressGestureRecognizer)
@@ -86,18 +86,18 @@ class HomeViewController: STBaseViewController {
     private func loadTopCategoriesViews() -> Void {
         var totalWidthSize: CGFloat = 0
 
-        for (var i = 0; i < AppData.sharedInstance.topCategories?.count; i++) {
+        for (index, category) in AppData.sharedInstance.topCategories!.enumerate() {
             let topCategoryView : TopCategoryView = NSBundle.mainBundle().loadNibNamed(kTopCategoryViewNibName, owner: self, options: nil)[0] as! TopCategoryView
 
-            topCategoryView.category = (AppData.sharedInstance.topCategories?[i])!
-            topCategoryView.display((AppData.sharedInstance.topCategories?[i])!)
+            topCategoryView.category = category
+            topCategoryView.display(category)
 
-            topCategoryView.frame.origin = CGPointMake((kTopCategoriesFrontPadding * CGFloat(i+1)) + (topCategoryView.frame.size.width * CGFloat(i)),0)
+            topCategoryView.frame.origin = CGPointMake((kTopCategoriesFrontPadding * CGFloat(index+1)) + (topCategoryView.frame.size.width * CGFloat(index)),0)
             topCategoryView.frame.size = CGSizeMake(topCategoryView.frame.size.width, self.topCategoriesScrollView.frame.height)
 
             totalWidthSize = topCategoryView.frame.origin.x + topCategoryView.frame.width
 
-            if let pressGestureRecognizer: UILongPressGestureRecognizer = UILongPressGestureRecognizer(target: self, action: "displayStoresPerCategoryLongPressed:") {
+            if let pressGestureRecognizer: UILongPressGestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(HomeViewController.displayStoresPerCategoryLongPressed(_:))) {
                 pressGestureRecognizer.minimumPressDuration = kHOMEVIEW_LONG_PRESS_DELAY
 
                 topCategoryView.addGestureRecognizer(pressGestureRecognizer)
