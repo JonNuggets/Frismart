@@ -74,8 +74,10 @@ extension String {
                 var hoursList: [Dictionary<String, String>] = [Dictionary<String, String>]()
                 for hours in hoursRange {
                     let hour = hours.componentsSeparatedByString("-")
-                    let hoursStartEnd: Dictionary<String, String> = ["start":hour[0], "end":hour[1]]
-                    hoursList.append(hoursStartEnd)
+                    if hour.count == 2 {
+                        let hoursStartEnd: Dictionary<String, String> = ["start":hour[0], "end":hour[1]]
+                        hoursList.append(hoursStartEnd)
+                    }
                 }
                 daysDictionary[daysRange] = hoursList
             }
