@@ -12,6 +12,7 @@ import SwiftyJSON
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    var displayModalTimer: NSTimer!
     var window: UIWindow?
     var semaphore: dispatch_semaphore_t?
 
@@ -24,6 +25,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         dispatch_semaphore_wait(self.semaphore!, DISPATCH_TIME_FOREVER)
         
         GMSServices.provideAPIKey(kGOOGLEMAPS_API_KEY)
+
+        self.displayModalTimer = NSTimer.scheduledTimerWithTimeInterval(kDisplayCustomAdTimer, target:self, selector: #selector(AppDelegate.updateDisplayModal), userInfo: nil, repeats: true)
+
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(AppDelegate.hideModalAddViewController), name:kHideModalAddNotification, object: nil)
+
+
         return true
     }
 
@@ -48,10 +55,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+
+    //MARK: custom ads modal Methods
+    func updateDisplayModal() -> Void {
+        guard AppData.sharedInstance.customAdOnDisplay == false else { return }
+
+        NSNotificationCenter.defaultCenter().postNotificationName(kDisplayModalAddNotification, object: nil)
+        self.displayModalTimer?.invalidate()
+        self.displayModalTimer = nil
+    }
+
+    func hideModalAddViewController() {
+        self.displayModalTimer = NSTimer.scheduledTimerWithTimeInterval(kDisplayCustomAdTimer, target:self, selector: #selector(AppDelegate.updateDisplayModal), userInfo: nil, repeats: true)
+    }
     
     //MARK: Closure Methods
     private func onGetDataSuccess(data: JSON){
-        
         print("Data loaded...")
         STDataParser.parseDataResponse(data)
         STConnectionManager.getCategories(onGetCategoriesSuccess, onFailureHandler: onGetCategoriesFailure)

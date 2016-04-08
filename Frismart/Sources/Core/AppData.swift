@@ -38,6 +38,9 @@ let kIphone6TopStoreViewNibName             :String = "Iphone6TopStoreView"
 let kStoreDetailsThumbNibName               :String = "StoreDetailsThumbView"
 let kCategoryIconViewNibName                :String = "CategoryIconView"
 
+let kDisplayModalAddNotification            : String = "DisplayModalAddNotification"
+let kHideModalAddNotification               : String = "HideModalAddNotification"
+
 // Twitter
 let kTWITTER_CONSUMER_KEY               :String = "SKEcWg9QJdpOGjxfPEUrOfrI0"
 let kTWITTER_CONSUMER_SECRET            :String = "Hf1ems23OtoK52rcHbVW46s8oTmoP3t56cQZkw1YhjfR1zFjBP"
@@ -47,6 +50,9 @@ let kGOOGLEMAPS_API_KEY                 :String = "AIzaSyDChwhL4PpNedghpiEZlD_k6
 
 // Frismart Error Code
 let kFrismartErrorAPICode               :String = "-1"
+
+let kAutoHideCustomAdTimer              : NSTimeInterval = 10
+let kDisplayCustomAdTimer               : NSTimeInterval = (3*60)
 
 enum UIUserInterfaceIdiom : Int
 {
@@ -75,6 +81,7 @@ struct DeviceType
 class AppData : NSObject {
     
     var loggedIn: Bool = false
+    var customAdOnDisplay: Bool = false
     var stores: [STStore]?
     var topStores: [STStore]?
     var favoriteStores: [STStore] = [STStore]()
@@ -96,6 +103,7 @@ class AppData : NSObject {
         super.init()
         
         self.loggedIn = false
+        self.customAdOnDisplay = false
         self.stores = [STStore]()
         self.categories = [STCategory]()
         self.topCategories = [STCategory]()

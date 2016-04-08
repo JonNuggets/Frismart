@@ -13,6 +13,7 @@
 		0C9A79791C4425D50092E7A7 /* STUILabelDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9A79781C4425D50092E7A7 /* STUILabelDescription.swift */; };
 		0C9A797B1C44778B0092E7A7 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C9A797A1C44778B0092E7A7 /* CoreLocation.framework */; };
 		0CCEF1441C259193002CEE41 /* SMPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CCEF1411C259193002CEE41 /* SMPageControl.m */; };
+		0CDBA05B1CB7985A004660D0 /* ModalAdsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDBA05A1CB7985A004660D0 /* ModalAdsViewController.swift */; };
 		28002FE91B86007A0077A200 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28002FE81B86007A0077A200 /* UIImage.swift */; };
 		280D7BCA1BB2F94900644BE6 /* STUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280D7BC91BB2F94900644BE6 /* STUITextField.swift */; };
 		2810AC611BD6B11200620779 /* StoreDetailsRatingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2810AC601BD6B11200620779 /* StoreDetailsRatingCell.swift */; };
@@ -154,6 +155,7 @@
 		0C9A797A1C44778B0092E7A7 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		0CCEF1401C259193002CEE41 /* SMPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMPageControl.h; sourceTree = "<group>"; };
 		0CCEF1411C259193002CEE41 /* SMPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMPageControl.m; sourceTree = "<group>"; };
+		0CDBA05A1CB7985A004660D0 /* ModalAdsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalAdsViewController.swift; sourceTree = "<group>"; };
 		28002FE81B86007A0077A200 /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		280D7BC91BB2F94900644BE6 /* STUITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STUITextField.swift; sourceTree = "<group>"; };
 		2810AC601BD6B11200620779 /* StoreDetailsRatingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreDetailsRatingCell.swift; sourceTree = "<group>"; };
@@ -3788,6 +3790,7 @@
 				284929C21BD08D0B004EC2D5 /* StoresPerCategoryViewController.swift */,
 				28D740DD1BFF586600CFAF34 /* RegisterPageViewController.swift */,
 				282979D61C04DCB5003F2F55 /* SearchViewController.swift */,
+				0CDBA05A1CB7985A004660D0 /* ModalAdsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -8403,6 +8406,7 @@
 				28E603711BA9C40100B28CD4 /* Float.swift in Sources */,
 				28D740DE1BFF586600CFAF34 /* RegisterPageViewController.swift in Sources */,
 				289D24571BE2BB4900574BF9 /* UILabel.swift in Sources */,
+				0CDBA05B1CB7985A004660D0 /* ModalAdsViewController.swift in Sources */,
 				28D569871B8A5B00002F7C75 /* String.swift in Sources */,
 				282C65391B848D0900DC3C93 /* SWRevealViewController.m in Sources */,
 				282C653D1B84A1A000DC3C93 /* UIColor.swift in Sources */,
