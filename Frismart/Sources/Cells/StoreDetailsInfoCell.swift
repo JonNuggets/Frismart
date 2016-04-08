@@ -61,8 +61,22 @@ class StoreDetailsInfoCell : UITableViewCell {
 
             if daysList.count > 1 {
                 for day in daysList {
-                    let dateStartString : String = String(format: "%@ %@", day, storeHours[days]![0]["start"]!)
-                    let dateEndString : String = String(format: "%@ %@", day, storeHours[days]![0]["end"]!)
+                    var dateStartString = ""
+                    var dateEndString = ""
+
+                    if storeHours[days]?.count > 0 {
+                        dateStartString = String(format: "%@ %@", day, storeHours[days]![0]["start"]!)
+                    }
+                    else {
+                        dateStartString = String(format: "%@", day)
+                    }
+
+                    if storeHours[days]?.count > 0 {
+                        dateEndString = String(format: "%@ %@", day, storeHours[days]![0]["end"]!)
+                    }
+                    else {
+                        dateEndString = String(format: "%@", day)
+                    }
                     
                     let dateStart = NSDate().stringToDate(dateStartString)
                     let dateEnd = NSDate().stringToDate(dateEndString)
