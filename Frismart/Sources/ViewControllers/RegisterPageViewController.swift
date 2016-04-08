@@ -9,7 +9,7 @@
 import Foundation
 
 
-class RegisterPageViewController: UIViewController, UITextFieldDelegate {
+class RegisterPageViewController: STBaseViewController, UITextFieldDelegate {
     @IBOutlet var passwordTextField: STUITextField!
     @IBOutlet var usernameTextField: STUITextField!
     @IBOutlet var emailTextField: STUITextField!

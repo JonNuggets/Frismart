@@ -8,7 +8,7 @@
 
 import Foundation
 
-class LoginPageViewController: UIViewController, UITextFieldDelegate {
+class LoginPageViewController: STBaseViewController, UITextFieldDelegate {
     @IBOutlet var passwordTextField: STUITextField!
     @IBOutlet var usernameTextField: STUITextField!
     @IBOutlet var loginButton: UIButton!

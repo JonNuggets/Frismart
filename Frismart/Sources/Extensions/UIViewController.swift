@@ -85,7 +85,6 @@ extension UIViewController {
         self.navigationItem.rightBarButtonItem = searchButton
     }
     
-    
     func setMapsNavigationController()-> Void{
         
         self.setNavigationControllerTransparent()
@@ -133,7 +132,6 @@ extension UIViewController {
         self.navigationItem.titleView = logoImageView
     }
     
-    
     func revealSearch(sender: UIBarButtonItem) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let searchViewController = storyboard.instantiateViewControllerWithIdentifier("SearchViewController")
@@ -150,5 +148,4 @@ extension UIViewController {
         self.navigationController?.view.backgroundColor = UIColor.clearColor()
         self.navigationController?.navigationBar.backgroundColor = UIColor.clearColor()
     }
-
 }
