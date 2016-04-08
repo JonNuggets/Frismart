@@ -32,12 +32,15 @@ class SearchViewController : STBaseViewController, UITableViewDelegate, UITextFi
         self.searchTableView.delegate = self
         self.searchTableView.scrollEnabled = true
         self.searchTableView.hidden = true
+
+        let touch = UITapGestureRecognizer(target:self, action:#selector(SearchViewController.removeKeyboardTouch))
+        self.searchTableView.addGestureRecognizer(touch)
     }
 
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
 
-        self.textToSearch.resignFirstResponder()
+        self.textToSearch?.resignFirstResponder()
 
         if CLLocationManager.locationServicesEnabled() {
             self.locationManager.delegate = self
@@ -48,7 +51,19 @@ class SearchViewController : STBaseViewController, UITableViewDelegate, UITextFi
             self.locationManager.stopUpdatingLocation()
         }
     }
-    
+
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        super.touchesBegan(touches, withEvent: event)
+
+        self.textToSearch?.resignFirstResponder()
+        self.view.endEditing(true)
+    }
+
+    func removeKeyboardTouch() {
+        self.textToSearch?.resignFirstResponder()
+        self.view.endEditing(true)
+    }
+
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
         self.searchTableView.hidden = false
 
@@ -100,6 +115,11 @@ class SearchViewController : STBaseViewController, UITableViewDelegate, UITextFi
     func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
         let storeInfoCell : StoreDetailsInfoCell = cell as! StoreDetailsInfoCell
         storeInfoCell.display(self.searchResults[indexPath.row])
+    }
+
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        print("didSelectRowAtIndexPath")
+        self.textToSearch?.resignFirstResponder()
     }
 
     //MARK: Closure Methods
