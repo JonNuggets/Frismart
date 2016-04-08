@@ -1509,7 +1509,7 @@
                                     <constraint firstAttribute="trailing" secondItem="Edu-SX-2WZ" secondAttribute="trailing" constant="8" id="h5N-Sv-k2N"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8ug-Wa-Ffe">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" keyboardDismissMode="interactive" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8ug-Wa-Ffe">
                                 <rect key="frame" x="0.0" y="110" width="600" height="490"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -1568,7 +1568,7 @@
                                                         </mask>
                                                     </variation>
                                                 </label>
-                                                <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Eus-gj-rwF" customClass="FloatRatingView" customModule="Frismart" customModuleProvider="target">
+                                                <view userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Eus-gj-rwF" customClass="FloatRatingView" customModule="Frismart" customModuleProvider="target">
                                                     <rect key="frame" x="74" y="31" width="70" height="20"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
@@ -1642,7 +1642,7 @@
                                                         </mask>
                                                     </variation>
                                                 </label>
-                                                <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5yY-fp-n5d">
+                                                <view userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5yY-fp-n5d">
                                                     <rect key="frame" x="16" y="82" width="568" height="1"/>
                                                     <color key="backgroundColor" red="0.1215686275" green="0.54901960780000003" blue="0.72156862749999995" alpha="0.14846389360000001" colorSpace="calibratedRGB"/>
                                                 </view>
@@ -1781,6 +1781,7 @@
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="VpZ-zJ-bLh" id="zKs-ly-qXA"/>
+                                    <outlet property="delegate" destination="VpZ-zJ-bLh" id="5hU-oy-aE0"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -1800,11 +1801,12 @@
                         <outlet property="searchBackgroundView" destination="bK1-82-y5W" id="fgu-W3-n3V"/>
                         <outlet property="searchTableView" destination="8ug-Wa-Ffe" id="eZl-0f-ida"/>
                         <outlet property="textToSearch" destination="Edu-SX-2WZ" id="uYz-kq-u9F"/>
+                        <segue destination="AWC-O5-SMn" kind="show" identifier="getStoreDetailsSegue" id="lLe-NK-jF1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v5T-QH-rv7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1930" y="2760.75"/>
+            <point key="canvasLocation" x="2012" y="2761"/>
         </scene>
         <!--Favorites View Controller-->
         <scene sceneID="y56-au-397">
@@ -2094,6 +2096,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="HgH-sj-ZHL"/>
-        <segue reference="fwX-39-brj"/>
+        <segue reference="lLe-NK-jF1"/>
     </inferredMetricsTieBreakers>
 </document>

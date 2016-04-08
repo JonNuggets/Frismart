@@ -17,6 +17,8 @@ class SearchViewController : STBaseViewController, UITableViewDelegate, UITextFi
     var searchResults = [STStore]()
     var locationManager: CLLocationManager!
     var location: CLLocation?
+
+    var store: STStore?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,8 +35,8 @@ class SearchViewController : STBaseViewController, UITableViewDelegate, UITextFi
         self.searchTableView.scrollEnabled = true
         self.searchTableView.hidden = true
 
-        let touch = UITapGestureRecognizer(target:self, action:#selector(SearchViewController.removeKeyboardTouch))
-        self.searchTableView.addGestureRecognizer(touch)
+        let touch = UITapGestureRecognizer(target:self, action:#selector(SearchViewController.removeKeyboardTouch(_:)))
+        self.view.addGestureRecognizer(touch)
     }
 
     override func viewWillAppear(animated: Bool) {
@@ -59,9 +61,21 @@ class SearchViewController : STBaseViewController, UITableViewDelegate, UITextFi
         self.view.endEditing(true)
     }
 
-    func removeKeyboardTouch() {
-        self.textToSearch?.resignFirstResponder()
-        self.view.endEditing(true)
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let destinationViewController = segue.destinationViewController as! StoreDetailsViewController
+        destinationViewController.currentStore = self.store
+    }
+
+    func removeKeyboardTouch(tap:UITapGestureRecognizer) {
+        let location = tap.locationInView(self.searchTableView)
+        let path = self.searchTableView.indexPathForRowAtPoint(location)
+        if let indexPathForRow = path {
+            self.tableView(self.searchTableView, didSelectRowAtIndexPath: indexPathForRow)
+        } else {
+            // handle tap on empty space below existing rows however you want
+            self.textToSearch?.resignFirstResponder()
+            self.view.endEditing(true)
+        }
     }
 
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
@@ -115,6 +129,13 @@ class SearchViewController : STBaseViewController, UITableViewDelegate, UITextFi
     func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
         let storeInfoCell : StoreDetailsInfoCell = cell as! StoreDetailsInfoCell
         storeInfoCell.display(self.searchResults[indexPath.row])
+    }
+
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.store  = self.searchResults[indexPath.row]
+        performSegueWithIdentifier(kGetStoreDetailsSegue, sender: self)
+        self.textToSearch?.resignFirstResponder()
+        self.view.endEditing(true)
     }
 
     //MARK: Closure Methods
