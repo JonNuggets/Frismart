@@ -754,7 +754,7 @@
                                                 <constraint firstAttribute="width" constant="568" id="gCT-bU-Kdk"/>
                                             </constraints>
                                         </view>
-                                        <scrollView autoresizesSubviews="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lg2-A0-Dj2">
+                                        <scrollView autoresizesSubviews="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lg2-A0-Dj2">
                                             <rect key="frame" x="0.0" y="8" width="600" height="139"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="139" id="FBt-q0-CUe"/>
@@ -1512,6 +1512,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundborder" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" red="0.1215686275" green="0.54901960780000003" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>

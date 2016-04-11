@@ -12,7 +12,9 @@ let kUITEXTFIELD_BORDER_SIZE_NORMAL         = CGFloat(1.0)
 let kUITEXTFIELD_BORDER_SIZE_HIGHLIGHTED    = CGFloat(2.0)
 let kUITEXTFIELD_DEFAULT_PADDING_SIZE       = CGFloat(20.0)
 
-class STUITextField: UITextField {
+@IBDesignable class STUITextField: UITextField {
+    @IBInspectable var roundborder: Bool = false
+
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
         self.paddingLeft()
@@ -28,18 +30,20 @@ class STUITextField: UITextField {
     override func awakeFromNib() {
         super.awakeFromNib()
 
-        self.layer.cornerRadius = 10
-        self.layer.masksToBounds = true
+        if self.roundborder {
+            self.layer.cornerRadius = 10
+            self.layer.masksToBounds = true
 
-        self.layer.borderColor = UIColor.grayColor().CGColor
-        self.layer.borderWidth = 0.5
+            self.layer.borderColor = UIColor.grayColor().CGColor
+            self.layer.borderWidth = 0.5
 
-        self.layer.contentsScale = UIScreen.mainScreen().scale
-        self.layer.shadowColor = UIColor.blackColor().CGColor
-        self.layer.shadowOffset = CGSizeZero
-        self.layer.shadowRadius = 5.0
-        self.layer.shadowOpacity = 0.5
-        self.layer.masksToBounds = false
-        self.clipsToBounds = false
+            self.layer.contentsScale = UIScreen.mainScreen().scale
+            self.layer.shadowColor = UIColor.blackColor().CGColor
+            self.layer.shadowOffset = CGSizeZero
+            self.layer.shadowRadius = 5.0
+            self.layer.shadowOpacity = 0.5
+            self.layer.masksToBounds = false
+            self.clipsToBounds = false
+        }
     }
 }
