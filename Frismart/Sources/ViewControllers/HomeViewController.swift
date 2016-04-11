@@ -48,7 +48,7 @@ class HomeViewController: STBaseViewController {
         var totalWidthSize: CGFloat = 0
 
         for (index, store) in AppData.sharedInstance.topStores!.enumerate() {
-            let topStoreView : TopStoreView
+            let topStoreView: TopStoreView!
 
             if DeviceType.IS_IPHONE_4_OR_LESS {
                 topStoreView = NSBundle.mainBundle().loadNibNamed(kIphone4TopStoreViewNibName, owner: self, options: nil)[0] as! TopStoreView
@@ -63,11 +63,11 @@ class HomeViewController: STBaseViewController {
                 topStoreView = NSBundle.mainBundle().loadNibNamed(kTopStoreViewNibName, owner: self, options: nil)[0] as! TopStoreView
             }
             
-            topStoreView.store = store
-            topStoreView.display(store)
+            topStoreView?.store = store
+            topStoreView?.display(store)
             
-            topStoreView.frame.origin = CGPointMake((kTopStoresFrontPadding * CGFloat(index+1)) + (topStoreView.frame.size.width * CGFloat(index)),0)
-            topStoreView.frame.size = CGSizeMake(topStoreView.frame.size.width, self.topStoresScrollView.frame.height)
+            topStoreView?.frame.origin = CGPointMake((kTopStoresFrontPadding * CGFloat(index+1)) + (topStoreView.frame.size.width * CGFloat(index)),0)
+            topStoreView?.frame.size = CGSizeMake(topStoreView.frame.size.width, self.topStoresScrollView.frame.height)
 
             totalWidthSize = topStoreView.frame.origin.x + topStoreView.frame.width
 
@@ -112,14 +112,14 @@ class HomeViewController: STBaseViewController {
     //MARK: UIGestureRecognizer Selector Methods
 
     func displayStoreDetailsLongPressed(longPress: UIGestureRecognizer) {
-        if (longPress.state == UIGestureRecognizerState.Ended) {  // Began
+        if (longPress.state == UIGestureRecognizerState.Began) {
             self.currentTopStoreView  = (longPress.view as? TopStoreView)!
             performSegueWithIdentifier(kShowTopStoreDetailsSegue, sender: self)
         }
     }
 
     func displayStoresPerCategoryLongPressed(longPress: UIGestureRecognizer) {
-        if (longPress.state == UIGestureRecognizerState.Ended) {  // Began
+        if (longPress.state == UIGestureRecognizerState.Began) {
             self.currentTopCategoryView = (longPress.view as? TopCategoryView)!
             performSegueWithIdentifier(kShowStoresForTopCategorySegue, sender: self)
         }
