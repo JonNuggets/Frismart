@@ -758,16 +758,29 @@
                                             <rect key="frame" x="0.0" y="8" width="600" height="139"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="139" id="FBt-q0-CUe"/>
-                                                <constraint firstAttribute="width" constant="600" id="FfP-2m-ReB"/>
                                             </constraints>
                                         </scrollView>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="Lg2-A0-Dj2" secondAttribute="trailing" id="bSg-se-fZb"/>
+                                        <constraint firstItem="Lg2-A0-Dj2" firstAttribute="leading" secondItem="UHG-nV-Elp" secondAttribute="leading" id="dtt-pr-Aw4"/>
                                         <constraint firstItem="Lg2-A0-Dj2" firstAttribute="top" secondItem="UHG-nV-Elp" secondAttribute="top" constant="8" id="eZQ-pm-2GC"/>
                                         <constraint firstItem="Lg2-A0-Dj2" firstAttribute="leading" secondItem="UHG-nV-Elp" secondAttribute="leading" id="f45-ed-qTf"/>
                                         <constraint firstItem="V2m-wg-FLY" firstAttribute="top" secondItem="Lg2-A0-Dj2" secondAttribute="bottom" constant="7" id="fFN-hn-TD2"/>
                                         <constraint firstItem="V2m-wg-FLY" firstAttribute="leading" secondItem="UHG-nV-Elp" secondAttribute="leading" constant="16" id="www-Lv-qYz"/>
                                     </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="bSg-se-fZb"/>
+                                            <exclude reference="dtt-pr-Aw4"/>
+                                        </mask>
+                                    </variation>
+                                    <variation key="heightClass=regular">
+                                        <mask key="constraints">
+                                            <include reference="bSg-se-fZb"/>
+                                            <include reference="dtt-pr-Aw4"/>
+                                        </mask>
+                                    </variation>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="storePhotosScrollView" destination="Lg2-A0-Dj2" id="ulc-ch-T0W"/>

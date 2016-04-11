@@ -16,7 +16,7 @@ let kStoreDetailsContactCellHeight                      :CGFloat = CGFloat(60)
 let kStoreDetailsImagesCellHeight                       :CGFloat = CGFloat(155)
 let kStoreDetailsRateCellHeight                         :CGFloat = CGFloat(130)
 
-let kStoreDetailsViewHorizontalPadding                  :CGFloat = 40.0
+let kStoreDetailsViewHorizontalPadding                  :CGFloat = 34.0
 
 let kLaunchPlansWithItinerary   :String = "http://maps.apple.com/?saddr=%@,%@&daddr=%@,%@"
 
@@ -182,9 +182,10 @@ class StoreDetailsViewController : STBaseTableViewController, GMSMapViewDelegate
                 ImageCacheManager.loadImageViewForUrl(photo.thumb_url, placeHolderImage: nil, imageView: storeDetailsThumbView.thumbnailImageView)
 
                 storeDetailsThumbView.thumbnailButton.addTarget(self, action: #selector(StoreDetailsViewController.displayLargeView(_:)), forControlEvents: .TouchUpInside)
-                storeDetailsThumbView.frame.origin = CGPointMake((storeDetailsThumbView.frame.width + kStoreDetailsViewHorizontalPadding) * CGFloat(index), 16.0)
+                storeDetailsThumbView.frame.origin = CGPointMake(((storeDetailsThumbView.frame.width)*CGFloat(index))+(kStoreDetailsViewHorizontalPadding*CGFloat(index+1)), 16.0)
+//                storeDetailsThumbView.backgroundColor = UIColor.blackColor()
 
-                storeDetailsPicturesCell.storePhotosScrollView?.contentSize = CGSizeMake((storeDetailsThumbView.frame.origin.x+storeDetailsThumbView.frame.size.width), storeDetailsPicturesCell.storePhotosScrollView.frame.size.height)
+                storeDetailsPicturesCell.storePhotosScrollView?.contentSize = CGSizeMake((storeDetailsThumbView.frame.origin.x+storeDetailsThumbView.frame.size.width)+kStoreDetailsViewHorizontalPadding, storeDetailsPicturesCell.storePhotosScrollView.frame.size.height)
                 storeDetailsPicturesCell.storePhotosScrollView?.addSubview(storeDetailsThumbView)
                 storeDetailsPicturesCell.storePhotosScrollView?.pagingEnabled = false
                 storeDetailsPicturesCell.storePhotosScrollView?.scrollEnabled = true
