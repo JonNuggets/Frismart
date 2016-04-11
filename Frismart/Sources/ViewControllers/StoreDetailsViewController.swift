@@ -16,6 +16,8 @@ let kStoreDetailsContactCellHeight                      :CGFloat = CGFloat(60)
 let kStoreDetailsImagesCellHeight                       :CGFloat = CGFloat(155)
 let kStoreDetailsRateCellHeight                         :CGFloat = CGFloat(130)
 
+let kStoreDetailsViewHorizontalPadding                  :CGFloat = 40.0
+
 let kLaunchPlansWithItinerary   :String = "http://maps.apple.com/?saddr=%@,%@&daddr=%@,%@"
 
 enum STStoreDetailsScreen : Int {
@@ -180,11 +182,12 @@ class StoreDetailsViewController : STBaseTableViewController, GMSMapViewDelegate
                 ImageCacheManager.loadImageViewForUrl(photo.thumb_url, placeHolderImage: nil, imageView: storeDetailsThumbView.thumbnailImageView)
 
                 storeDetailsThumbView.thumbnailButton.addTarget(self, action: #selector(StoreDetailsViewController.displayLargeView(_:)), forControlEvents: .TouchUpInside)
-                storeDetailsThumbView.frame.origin = CGPointMake((storeDetailsThumbView.frame.width + kTopViewHorizontalPadding) * CGFloat(index), 16.0)
+                storeDetailsThumbView.frame.origin = CGPointMake((storeDetailsThumbView.frame.width + kStoreDetailsViewHorizontalPadding) * CGFloat(index), 16.0)
 
-                storeDetailsPicturesCell.storePhotosScrollView.contentSize = CGSizeMake((storeDetailsThumbView.frame.origin.x+storeDetailsThumbView.frame.size.width)*UIScreen.mainScreen().scale, storeDetailsPicturesCell.storePhotosScrollView.frame.size.height)
-                storeDetailsPicturesCell.storePhotosScrollView.addSubview(storeDetailsThumbView)
-                storeDetailsPicturesCell.storePhotosScrollView.pagingEnabled = false
+                storeDetailsPicturesCell.storePhotosScrollView?.contentSize = CGSizeMake((storeDetailsThumbView.frame.origin.x+storeDetailsThumbView.frame.size.width), storeDetailsPicturesCell.storePhotosScrollView.frame.size.height)
+                storeDetailsPicturesCell.storePhotosScrollView?.addSubview(storeDetailsThumbView)
+                storeDetailsPicturesCell.storePhotosScrollView?.pagingEnabled = false
+                storeDetailsPicturesCell.storePhotosScrollView?.scrollEnabled = true
                 storeDetailsThumbViewList?.append(storeDetailsThumbView)
             }
         }
