@@ -51,8 +51,8 @@ let kGOOGLEMAPS_API_KEY                 :String = "AIzaSyDChwhL4PpNedghpiEZlD_k6
 // Frismart Error Code
 let kFrismartErrorAPICode               :String = "-1"
 
-let kAutoHideCustomAdTimer              : NSTimeInterval = 10
-let kDisplayCustomAdTimer               : NSTimeInterval = (3*60)
+let kAutoHideCustomAdTimer              : NSTimeInterval = 10               // Auto hide = 10 secs
+let kDisplayCustomAdTimer               : NSTimeInterval = (3*60)           // Auto display ad = 3 mins.
 
 enum UIUserInterfaceIdiom : Int
 {
