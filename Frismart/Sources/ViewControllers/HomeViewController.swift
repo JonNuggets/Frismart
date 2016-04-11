@@ -30,7 +30,7 @@ class HomeViewController: STBaseViewController {
         self.initializeUI()
     }
 
-    private func initializeUI()->Void {
+    private func initializeUI() {
         self.storesSectionLabel.text = NSLocalizedString("HomeScreen_StoresSectionTitle", comment:"")
         self.categoriesSectionLabel.text = NSLocalizedString("HomeScreen_CategoriesSectionTitle", comment:"")
 
@@ -112,14 +112,14 @@ class HomeViewController: STBaseViewController {
     //MARK: UIGestureRecognizer Selector Methods
 
     func displayStoreDetailsLongPressed(longPress: UIGestureRecognizer) {
-        if (longPress.state == UIGestureRecognizerState.Began) {
+        if (longPress.state == UIGestureRecognizerState.Began || longPress.state == UIGestureRecognizerState.Ended) {
             self.currentTopStoreView  = (longPress.view as? TopStoreView)!
             performSegueWithIdentifier(kShowTopStoreDetailsSegue, sender: self)
         }
     }
 
     func displayStoresPerCategoryLongPressed(longPress: UIGestureRecognizer) {
-        if (longPress.state == UIGestureRecognizerState.Began) {
+        if (longPress.state == UIGestureRecognizerState.Began || longPress.state == UIGestureRecognizerState.Ended ) {
             self.currentTopCategoryView = (longPress.view as? TopCategoryView)!
             performSegueWithIdentifier(kShowStoresForTopCategorySegue, sender: self)
         }
