@@ -24,4 +24,22 @@ class STUITextField: UITextField {
         self.leftViewMode = UITextFieldViewMode.Always
         self.leftView = paddingView
     }
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
+
+        self.layer.cornerRadius = 10
+        self.layer.masksToBounds = true
+
+        self.layer.borderColor = UIColor.grayColor().CGColor
+        self.layer.borderWidth = 0.5
+
+        self.layer.contentsScale = UIScreen.mainScreen().scale
+        self.layer.shadowColor = UIColor.blackColor().CGColor
+        self.layer.shadowOffset = CGSizeZero
+        self.layer.shadowRadius = 5.0
+        self.layer.shadowOpacity = 0.5
+        self.layer.masksToBounds = false
+        self.clipsToBounds = false
+    }
 }
