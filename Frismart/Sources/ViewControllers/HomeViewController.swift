@@ -23,11 +23,18 @@ class HomeViewController: STBaseViewController {
 
     var currentTopCategoryView: TopCategoryView?
     var currentTopStoreView: TopStoreView?
+    var transitionToSegue:Bool = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.initializeUI()
+    }
+
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+
+        self.transitionToSegue = false
     }
 
     private func initializeUI() {
@@ -112,16 +119,20 @@ class HomeViewController: STBaseViewController {
     //MARK: UIGestureRecognizer Selector Methods
 
     func displayStoreDetailsLongPressed(longPress: UIGestureRecognizer) {
-        if (longPress.state == UIGestureRecognizerState.Began || longPress.state == UIGestureRecognizerState.Ended) {
+//        if (longPress.state == UIGestureRecognizerState.Began || longPress.state == UIGestureRecognizerState.Ended) {
+        if !self.transitionToSegue {
             self.currentTopStoreView  = (longPress.view as? TopStoreView)!
             performSegueWithIdentifier(kShowTopStoreDetailsSegue, sender: self)
+            self.transitionToSegue = true
         }
     }
 
     func displayStoresPerCategoryLongPressed(longPress: UIGestureRecognizer) {
-        if (longPress.state == UIGestureRecognizerState.Began || longPress.state == UIGestureRecognizerState.Ended ) {
+//        if (longPress.state == UIGestureRecognizerState.Began || longPress.state == UIGestureRecognizerState.Ended ) {
+        if !self.transitionToSegue {
             self.currentTopCategoryView = (longPress.view as? TopCategoryView)!
             performSegueWithIdentifier(kShowStoresForTopCategorySegue, sender: self)
+            self.transitionToSegue = true
         }
     }
 
