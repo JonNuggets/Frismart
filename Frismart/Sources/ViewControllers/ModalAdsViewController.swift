@@ -37,10 +37,12 @@ class ModalAdsViewController: STBaseViewController {
     }
 
     @IBAction func clickDone(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
         NSNotificationCenter.defaultCenter().postNotificationName(kHideModalAddNotification, object: nil)
     }
 
     func autoHideLeave() {
+        self.dismissViewControllerAnimated(true, completion: nil)
         NSNotificationCenter.defaultCenter().postNotificationName(kHideModalAddNotification, object: nil)
     }
 }

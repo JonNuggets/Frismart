@@ -11,15 +11,12 @@ import iAd
 
 class STBaseViewController: UIViewController {
 
-    var modalAdsViewController: ModalAdsViewController!
-    
     // MARK: UIViewcontroller Life cycle
 
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
 
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(STBaseViewController.showModalAddViewController), name:kDisplayModalAddNotification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(STBaseViewController.hideModalAddViewController), name:kHideModalAddNotification, object: nil)
 
         if (self.isKindOfClass(MapViewController)) {
             self.setMapsNavigationController()
@@ -46,15 +43,12 @@ class STBaseViewController: UIViewController {
 
     func showModalAddViewController() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        self.modalAdsViewController = storyboard.instantiateViewControllerWithIdentifier("ModalAdsViewController") as? ModalAdsViewController
+        let modalAdsViewController: ModalAdsViewController!
+        modalAdsViewController = storyboard.instantiateViewControllerWithIdentifier("ModalAdsViewController") as? ModalAdsViewController
 
-        if let modalAdsViewController = self.modalAdsViewController {
+        if let modalAdsViewController = modalAdsViewController {
             modalAdsViewController.modalPresentationStyle = .OverFullScreen
             self.presentViewController(modalAdsViewController, animated: true, completion: nil)
         }
-    }
-
-    func hideModalAddViewController () {
-        self.modalAdsViewController?.dismissViewControllerAnimated(true, completion: nil)
     }
 }
