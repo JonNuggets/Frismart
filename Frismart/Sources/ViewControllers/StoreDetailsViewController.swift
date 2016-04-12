@@ -183,12 +183,13 @@ class StoreDetailsViewController : STBaseTableViewController, GMSMapViewDelegate
 
                 storeDetailsThumbView.thumbnailButton.addTarget(self, action: #selector(StoreDetailsViewController.displayLargeView(_:)), forControlEvents: .TouchUpInside)
                 storeDetailsThumbView.frame.origin = CGPointMake(((storeDetailsThumbView.frame.width)*CGFloat(index))+(kStoreDetailsViewHorizontalPadding*CGFloat(index+1)), 16.0)
-//                storeDetailsThumbView.backgroundColor = UIColor.blackColor()
 
                 storeDetailsPicturesCell.storePhotosScrollView?.contentSize = CGSizeMake((storeDetailsThumbView.frame.origin.x+storeDetailsThumbView.frame.size.width)+kStoreDetailsViewHorizontalPadding, storeDetailsPicturesCell.storePhotosScrollView.frame.size.height)
                 storeDetailsPicturesCell.storePhotosScrollView?.addSubview(storeDetailsThumbView)
                 storeDetailsPicturesCell.storePhotosScrollView?.pagingEnabled = false
-                storeDetailsPicturesCell.storePhotosScrollView?.scrollEnabled = true
+                storeDetailsPicturesCell.storePhotosScrollView?.showsHorizontalScrollIndicator = false
+                storeDetailsPicturesCell.storePhotosScrollView?.showsVerticalScrollIndicator = false
+                
                 storeDetailsThumbViewList?.append(storeDetailsThumbView)
             }
         }
