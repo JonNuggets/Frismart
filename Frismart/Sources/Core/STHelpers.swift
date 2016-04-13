@@ -115,11 +115,12 @@ class STHelpers: NSObject {
 
     // MARK:- JSON helpers
 
-    // Helper function to Generate JSON string from NSDictionary/NSArray
+    // Helper function to Generate JSON string from Dictionary -> [String : AnyObject]! SwiftyJSON
     class func nsobjectToJSON(dicObject: [String : AnyObject]!) {
         do {
             let jsonData = try NSJSONSerialization.dataWithJSONObject(dicObject, options: NSJSONWritingOptions.PrettyPrinted)
             let strJSON : NSString = NSString(data: jsonData, encoding: NSUTF8StringEncoding)!
+
             print("\(strJSON)")
 
         } catch let error as NSError {

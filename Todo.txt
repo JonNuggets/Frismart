@@ -49,10 +49,13 @@ Apr-11-2016
 -----------------------------
 [x] Add round corners to search textfield (STUITextField)
 [x] Dans l’écran home quand je clique sur un element parfois ca ne fonctionne plus pour aller sur la page de detail. Le bouton devrait couvrir toute la zone comme avan
+[x] Small/various bug fixes
 
 -----------------------------
 Apr-12-2016
 -----------------------------
+[x] Add ReachabilitySwift framework to detect internet connectivity
+[] 5) Passer en CoreData.
 
 
 TODO:
@@ -62,9 +65,9 @@ TODO:
 [x] 4) Dans l’écran de detail, la scrollview des images ne fonctionne plus correctement.
 [x] Ajouter la feature pour le custom modal
 [x] 3) Dans l’écran home quand je clique sur un element parfois ca ne fonctionne plus pour aller sur la page de detail. Le bouton devrait couvrir toute la zone comme avant
-
-
 [] 5) Passer en CoreData.
+
+
 
 DEPENDENCY:
 1) Il me faut le place holder image (ca fait 2 mois que j'ai demandé). Pareil ca fait 2 mois que je n'ai pas de retour la dessus

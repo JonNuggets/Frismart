@@ -142,7 +142,7 @@ class STConnectionManager : NSObject {
                     var parseError = NSError?()
                     let dataJSON : JSON = JSON(data: data!, options: NSJSONReadingOptions.AllowFragments, error: &parseError)
 
-                    STHelpers.nsobjectToJSON(dataJSON.dictionaryObject!)
+//                    STHelpers.nsobjectToJSON(dataJSON.dictionaryObject!)
 
                     if dataJSON != nil {
                         if onSuccessHandler != nil {
