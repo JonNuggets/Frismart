@@ -29,3 +29,56 @@ NEXT VERSION
 ----------------------------------------
 [] 14. CategoriesViewController : Utiliser un UICollectionView avec les icones de catégories
 [] 11. StoreDetailsViewController : Quand on presse l'horloge on doit faire apparaitre les horaires du magazin
+
+-----------------------------
+Apr-01-2016
+-----------------------------
+[x] XCode 7.3 (Swift 3) code update
+
+-----------------------------
+Apr-08-2016
+-----------------------------
+[x] Ajouter la feature pour le custom modal
+[x] 4) Dans l’écran de detail, la scrollview des images ne fonctionne plus correctement.
+[x] Fix out of bounds crash in String’s parseHours()
+[x] 2) Faire disparaitre le clavier dans la recherche une fois que l'on sort de la saisie
+[x] 1) Mettre les liens vers les pages de details lorsque l'on clique sur un element de la recherche
+
+-----------------------------
+Apr-11-2016
+-----------------------------
+[x] Add round corners to search textfield (STUITextField)
+[x] Dans l’écran home quand je clique sur un element parfois ca ne fonctionne plus pour aller sur la page de detail. Le bouton devrait couvrir toute la zone comme avan
+
+-----------------------------
+Apr-12-2016
+-----------------------------
+
+
+TODO:
+[x] XCode 7.3 (Swift 3) code update
+[x] 1) Mettre les liens vers les pages de details lorsque l'on clique sur un element de la recherche + arrondir les les coins du textfield stp
+[x] 2) Faire disparaitre le clavier dans la recherche une fois que l'on sort de la saisie
+[x] 4) Dans l’écran de detail, la scrollview des images ne fonctionne plus correctement.
+[x] Ajouter la feature pour le custom modal
+[x] 3) Dans l’écran home quand je clique sur un element parfois ca ne fonctionne plus pour aller sur la page de detail. Le bouton devrait couvrir toute la zone comme avant
+
+
+[] 5) Passer en CoreData.
+
+DEPENDENCY:
+1) Il me faut le place holder image (ca fait 2 mois que j'ai demandé). Pareil ca fait 2 mois que je n'ai pas de retour la dessus
+
+2) J'avais fixé ceci: "JSONData : Les données de l’app ne se rafraichissent comme il faut."
+Il faut tester histoire de savoir si c'est fixe. Tu me dis que t'as accès, non? Oui j'ai accès. Je t'avais dit de me faire signe pour qu'on le teste ensemble. Comme c'est la prod je peux pas trop jouer dedans donc il faudra qu'on trouve un temps ensemble.
+
+3) Il me faut le URL pour la pub (la page modal) Elle existe pas encore mais prend juste l'image d'une url sur le net (http://frismart.com/img/photo/larg_142583702483.PNG). La pub doit s'afficher toutes les 3 min avoir un bouton pour être fermée et disparaitre seule au bout de 10 secondes si pas fermée manuellement.
+
+http://justabeech.com/2014/10/22/using-uivisualeffectview-in-a-modal-view-controller/
+
+Core Data Tuto:
+http://jamesonquave.com/blog/core-data-in-swift-tutorial-part-1/
+http://code.tutsplus.com/tutorials/core-data-and-swift-managed-objects-and-fetch-requests--cms-25068
+
+https://www.youtube.com/watch?v=xMopqy22alE
+

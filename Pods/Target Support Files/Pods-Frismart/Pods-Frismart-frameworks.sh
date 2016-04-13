@@ -84,10 +84,10 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "Pods-Frismart/SMPageControl.framework"
+  install_framework "Pods-Frismart/ReachabilitySwift.framework"
   install_framework "Pods-Frismart/SwiftyJSON.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "Pods-Frismart/SMPageControl.framework"
+  install_framework "Pods-Frismart/ReachabilitySwift.framework"
   install_framework "Pods-Frismart/SwiftyJSON.framework"
 fi

@@ -8,6 +8,7 @@
 
 import Foundation
 import SwiftyJSON
+import ReachabilitySwift
 
 let kMenuTableViewCellIdentifier            :String = "defaultMenuCell"
 let kInfosMenuTableViewCellIdentifier       :String = "infosUserMenuCell"
@@ -79,7 +80,8 @@ struct DeviceType
 }
 
 class AppData : NSObject {
-    
+
+    var reachability: Reachability!
     var loggedIn: Bool = false
     var customAdOnDisplay: Bool = false
     var stores: [STStore]?
@@ -110,6 +112,14 @@ class AppData : NSObject {
         self.topStores = [STStore]()
         self.photos = [STPhoto]()
         self.user = STUser()
+
+        do {
+            self.reachability = try Reachability.reachabilityForInternetConnection()
+        } catch {
+            #if DEBUG
+                print("Unable to create Reachability")
+            #endif
+        }
     }
     
     func clearPersonnalData() -> Void {

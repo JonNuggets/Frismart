@@ -1,16 +1,16 @@
 PODS:
   - GoogleMaps (1.10.3)
-  - SMPageControl (1.2)
+  - ReachabilitySwift (2.3.3)
   - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
   - GoogleMaps (= 1.10.3)
-  - SMPageControl (~> 1.2)
+  - ReachabilitySwift (~> 2.3.3)
   - SwiftyJSON (= 2.3.2)
 
 SPEC CHECKSUMS:
   GoogleMaps: 945e4ac3b74bcca3ddada51df256eb7beddb474d
-  SMPageControl: 922892813001cfaf059e86e6801f46a967e9ee29
+  ReachabilitySwift: e0f6b6f280effb47731acfaaa2d5ffe223703793
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
 COCOAPODS: 0.39.0

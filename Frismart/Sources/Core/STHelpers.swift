@@ -112,4 +112,18 @@ class STHelpers: NSObject {
 
         return stores
     }
+
+    // MARK:- JSON helpers
+
+    // Helper function to Generate JSON string from NSDictionary/NSArray
+    class func nsobjectToJSON(dicObject: [String : AnyObject]!) {
+        do {
+            let jsonData = try NSJSONSerialization.dataWithJSONObject(dicObject, options: NSJSONWritingOptions.PrettyPrinted)
+            let strJSON : NSString = NSString(data: jsonData, encoding: NSUTF8StringEncoding)!
+            print("\(strJSON)")
+
+        } catch let error as NSError {
+            print(error)
+        }
+    }
 }
