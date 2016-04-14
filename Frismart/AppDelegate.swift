@@ -19,6 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         AppData.sharedInstance.activityIndicatorView = STActivityIndicatorView(frame: UIScreen.mainScreen().bounds)
 
+        self.setupCacheStorages ()
+
         GMSServices.provideAPIKey(kGOOGLEMAPS_API_KEY)
 
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(AppDelegate.hideModalAddViewController), name:kHideModalAddNotification, object: nil)
@@ -462,4 +464,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("Detele all data in \(entity) error : \(error) \(error.userInfo)")
         }
     }
+
+    // MARK: - Private methods
+
+    private func setupCacheStorages() -> Void {
+        // Enable disk caching for NSURLConnection & NSURLSession
+        let cacheSizeMemory : Int = Int(4 * 1024 * 1024)    // 4 MB
+        let diskCapacity : Int = Int(256 * 1024 * 1024)     // 256 MB
+        let cache : NSURLCache = NSURLCache(memoryCapacity: cacheSizeMemory, diskCapacity: diskCapacity, diskPath: "Frismart_256_Cache.db")
+        NSURLCache.setSharedURLCache(cache)
+
+        // NOTE: perform sleep() to allow big cache file to be created (as seen in a discussion in stackoverflow)
+        sleep(1)
+    }
+
 }
