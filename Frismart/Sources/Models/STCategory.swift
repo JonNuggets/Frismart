@@ -24,7 +24,7 @@ class STCategory: STBaseModel {
     func getStoresPerCategory()->[STStore]{
         var stores = [STStore]()
         
-        for store in AppData.sharedInstance.stores! {
+        for store in AppData.sharedInstance.stores {
             if self.category_id == store.category_id {
                 stores.append(store)
             }

@@ -2,14 +2,13 @@
 //  Store.swift
 //  
 //
-//  Created by James Laurenstin on 2016-04-13.
+//  Created by James Laurenstin on 2016-04-14.
 //
 //
 
 import Foundation
 import CoreData
 
-@objc(Store)
 
 class Store: NSManagedObject {
 

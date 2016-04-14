@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C2D30891CBFBF9300A406C4 /* TopStore+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2D30851CBFBF9300A406C4 /* TopStore+CoreDataProperties.swift */; };
+		0C2D308A1CBFBF9300A406C4 /* TopStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2D30861CBFBF9300A406C4 /* TopStore.swift */; };
+		0C2D30971CBFDD0100A406C4 /* TopCategory+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2D30931CBFDD0100A406C4 /* TopCategory+CoreDataProperties.swift */; };
+		0C2D30981CBFDD0100A406C4 /* TopCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2D30941CBFDD0100A406C4 /* TopCategory.swift */; };
+		0C2D30991CBFDD0100A406C4 /* Category+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2D30951CBFDD0100A406C4 /* Category+CoreDataProperties.swift */; };
+		0C2D309A1CBFDD0100A406C4 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2D30961CBFDD0100A406C4 /* Category.swift */; };
+		0C2D309C1CBFE69E00A406C4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C2D309B1CBFE69E00A406C4 /* Default-568h@2x.png */; };
 		0C9A79731C4391D70092E7A7 /* Iphone4TopStoreView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C9A79721C4391D70092E7A7 /* Iphone4TopStoreView.xib */; };
 		0C9A79751C4397480092E7A7 /* Iphone5TopStoreView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C9A79741C4397480092E7A7 /* Iphone5TopStoreView.xib */; };
 		0C9A79771C439A400092E7A7 /* Iphone6TopStoreView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C9A79761C439A400092E7A7 /* Iphone6TopStoreView.xib */; };
@@ -15,12 +22,11 @@
 		0CDBA05B1CB7985A004660D0 /* ModalAdsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDBA05A1CB7985A004660D0 /* ModalAdsViewController.swift */; };
 		0CDBA05E1CBE1F14004660D0 /* FrismartModels.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0CDBA05C1CBE1F14004660D0 /* FrismartModels.xcdatamodeld */; };
 		0CDBA0601CBE1FC6004660D0 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CDBA05F1CBE1FC6004660D0 /* CoreData.framework */; };
-		0CDBA0681CBE2218004660D0 /* Store+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDBA0621CBE2218004660D0 /* Store+CoreDataProperties.swift */; };
-		0CDBA0691CBE2218004660D0 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDBA0631CBE2218004660D0 /* Store.swift */; };
 		0CDBA06A1CBE2218004660D0 /* Photo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDBA0641CBE2218004660D0 /* Photo+CoreDataProperties.swift */; };
 		0CDBA06B1CBE2218004660D0 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDBA0651CBE2218004660D0 /* Photo.swift */; };
-		0CDBA06C1CBE2218004660D0 /* Category+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDBA0661CBE2218004660D0 /* Category+CoreDataProperties.swift */; };
-		0CDBA06D1CBE2218004660D0 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDBA0671CBE2218004660D0 /* Category.swift */; };
+		0CDBA0921CBF8955004660D0 /* Store+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDBA0901CBF8955004660D0 /* Store+CoreDataProperties.swift */; };
+		0CDBA0931CBF8955004660D0 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDBA0911CBF8955004660D0 /* Store.swift */; };
+		0CDBA0951CBF9F9B004660D0 /* LoadingScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDBA0941CBF9F9B004660D0 /* LoadingScreenViewController.swift */; };
 		28002FE91B86007A0077A200 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28002FE81B86007A0077A200 /* UIImage.swift */; };
 		280D7BCA1BB2F94900644BE6 /* STUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280D7BC91BB2F94900644BE6 /* STUITextField.swift */; };
 		2810AC611BD6B11200620779 /* StoreDetailsRatingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2810AC601BD6B11200620779 /* StoreDetailsRatingCell.swift */; };
@@ -155,6 +161,14 @@
 
 /* Begin PBXFileReference section */
 		0C0A28091C07055100B6F3F5 /* Todo.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Todo.txt; sourceTree = "<group>"; };
+		0C2D30821CBFBEBD00A406C4 /* FrismartModels2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FrismartModels2.xcdatamodel; sourceTree = "<group>"; };
+		0C2D30851CBFBF9300A406C4 /* TopStore+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "TopStore+CoreDataProperties.swift"; path = "../../CoreData/TopStore+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		0C2D30861CBFBF9300A406C4 /* TopStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TopStore.swift; path = ../../CoreData/TopStore.swift; sourceTree = "<group>"; };
+		0C2D30931CBFDD0100A406C4 /* TopCategory+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "TopCategory+CoreDataProperties.swift"; path = "../../CoreData/TopCategory+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		0C2D30941CBFDD0100A406C4 /* TopCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TopCategory.swift; path = ../../CoreData/TopCategory.swift; sourceTree = "<group>"; };
+		0C2D30951CBFDD0100A406C4 /* Category+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Category+CoreDataProperties.swift"; path = "../../CoreData/Category+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		0C2D30961CBFDD0100A406C4 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Category.swift; path = ../../CoreData/Category.swift; sourceTree = "<group>"; };
+		0C2D309B1CBFE69E00A406C4 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		0C9A79721C4391D70092E7A7 /* Iphone4TopStoreView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Iphone4TopStoreView.xib; sourceTree = "<group>"; };
 		0C9A79741C4397480092E7A7 /* Iphone5TopStoreView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Iphone5TopStoreView.xib; sourceTree = "<group>"; };
 		0C9A79761C439A400092E7A7 /* Iphone6TopStoreView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Iphone6TopStoreView.xib; sourceTree = "<group>"; };
@@ -163,12 +177,11 @@
 		0CDBA05A1CB7985A004660D0 /* ModalAdsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalAdsViewController.swift; sourceTree = "<group>"; };
 		0CDBA05D1CBE1F14004660D0 /* FrismartModels.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FrismartModels.xcdatamodel; sourceTree = "<group>"; };
 		0CDBA05F1CBE1FC6004660D0 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		0CDBA0621CBE2218004660D0 /* Store+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Store+CoreDataProperties.swift"; path = "../../CoreData/Store+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		0CDBA0631CBE2218004660D0 /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Store.swift; path = ../../CoreData/Store.swift; sourceTree = "<group>"; };
 		0CDBA0641CBE2218004660D0 /* Photo+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Photo+CoreDataProperties.swift"; path = "../../CoreData/Photo+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		0CDBA0651CBE2218004660D0 /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Photo.swift; path = ../../CoreData/Photo.swift; sourceTree = "<group>"; };
-		0CDBA0661CBE2218004660D0 /* Category+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Category+CoreDataProperties.swift"; path = "../../CoreData/Category+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		0CDBA0671CBE2218004660D0 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Category.swift; path = ../../CoreData/Category.swift; sourceTree = "<group>"; };
+		0CDBA0901CBF8955004660D0 /* Store+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Store+CoreDataProperties.swift"; path = "../../CoreData/Store+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		0CDBA0911CBF8955004660D0 /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Store.swift; path = ../../CoreData/Store.swift; sourceTree = "<group>"; };
+		0CDBA0941CBF9F9B004660D0 /* LoadingScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingScreenViewController.swift; sourceTree = "<group>"; };
 		28002FE81B86007A0077A200 /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		280D7BC91BB2F94900644BE6 /* STUITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STUITextField.swift; sourceTree = "<group>"; };
 		2810AC601BD6B11200620779 /* StoreDetailsRatingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreDetailsRatingCell.swift; sourceTree = "<group>"; };
@@ -3526,12 +3539,16 @@
 		0CDBA0611CBE2204004660D0 /* Database */ = {
 			isa = PBXGroup;
 			children = (
-				0CDBA0621CBE2218004660D0 /* Store+CoreDataProperties.swift */,
-				0CDBA0631CBE2218004660D0 /* Store.swift */,
+				0C2D30931CBFDD0100A406C4 /* TopCategory+CoreDataProperties.swift */,
+				0C2D30941CBFDD0100A406C4 /* TopCategory.swift */,
+				0C2D30951CBFDD0100A406C4 /* Category+CoreDataProperties.swift */,
+				0C2D30961CBFDD0100A406C4 /* Category.swift */,
+				0C2D30851CBFBF9300A406C4 /* TopStore+CoreDataProperties.swift */,
+				0C2D30861CBFBF9300A406C4 /* TopStore.swift */,
+				0CDBA0901CBF8955004660D0 /* Store+CoreDataProperties.swift */,
+				0CDBA0911CBF8955004660D0 /* Store.swift */,
 				0CDBA0641CBE2218004660D0 /* Photo+CoreDataProperties.swift */,
 				0CDBA0651CBE2218004660D0 /* Photo.swift */,
-				0CDBA0661CBE2218004660D0 /* Category+CoreDataProperties.swift */,
-				0CDBA0671CBE2218004660D0 /* Category.swift */,
 			);
 			name = Database;
 			sourceTree = "<group>";
@@ -3539,7 +3556,7 @@
 		282C64C41B84731D00DC3C93 = {
 			isa = PBXGroup;
 			children = (
-				0CDBA05C1CBE1F14004660D0 /* FrismartModels.xcdatamodeld */,
+				0C2D309B1CBFE69E00A406C4 /* Default-568h@2x.png */,
 				0C0A28091C07055100B6F3F5 /* Todo.txt */,
 				282C64CF1B84731D00DC3C93 /* Frismart */,
 				282C64E51B84731D00DC3C93 /* FrismartTests */,
@@ -3615,6 +3632,7 @@
 		282C64F51B84797000DC3C93 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0CDBA05C1CBE1F14004660D0 /* FrismartModels.xcdatamodeld */,
 				28D740D81BFF4ABA00CFAF34 /* ViewControllers */,
 				282C64F61B84797000DC3C93 /* Firebase */,
 				282C64F71B84797000DC3C93 /* Font */,
@@ -3796,19 +3814,20 @@
 				28FB32EE1BA1796E00B5E991 /* CategoriesViewController.swift */,
 				28CACE871BA1B5EC00629AB4 /* FavoritesViewController.swift */,
 				28CCE5761B84CDAB004D5F1D /* HomeViewController.swift */,
+				0CDBA0941CBF9F9B004660D0 /* LoadingScreenViewController.swift */,
 				287CA1F81BFE715C00FCA8B4 /* LoginPageViewController.swift */,
 				28699C8F1B910F44003D8234 /* LoginViewController.swift */,
 				28FA05001BE10741005C7BCE /* MapViewController.swift */,
 				282C653E1B84A37A00DC3C93 /* MenuViewController.swift */,
+				0CDBA05A1CB7985A004660D0 /* ModalAdsViewController.swift */,
 				28699C911B91169A003D8234 /* ProfileViewController.swift */,
+				28D740DD1BFF586600CFAF34 /* RegisterPageViewController.swift */,
+				282979D61C04DCB5003F2F55 /* SearchViewController.swift */,
 				28CACE891BA1B64600629AB4 /* SettingsViewController.swift */,
 				28FB32F01BA179C700B5E991 /* STBaseTableViewController.swift */,
 				28CCE57A1B84CF2B004D5F1D /* STBaseViewController.swift */,
 				2862E2D61BBC9A2300FFA11B /* StoreDetailsViewController.swift */,
 				284929C21BD08D0B004EC2D5 /* StoresPerCategoryViewController.swift */,
-				28D740DD1BFF586600CFAF34 /* RegisterPageViewController.swift */,
-				282979D61C04DCB5003F2F55 /* SearchViewController.swift */,
-				0CDBA05A1CB7985A004660D0 /* ModalAdsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -8275,6 +8294,7 @@
 				286D7AAD1BCE592200C468B0 /* Exo2-SemiBoldItalic.ttf in Resources */,
 				28D740DC1BFF506200CFAF34 /* RegisterPageViewController.xib in Resources */,
 				28F751811C03A5D300494149 /* ActivityIndicator_2.png in Resources */,
+				0C2D309C1CBFE69E00A406C4 /* Default-568h@2x.png in Resources */,
 				28F7517F1C03A5D300494149 /* ActivityIndicator_18.png in Resources */,
 				286D7AAC1BCE592200C468B0 /* Exo2-ExtraBoldItalic.ttf in Resources */,
 				28422F071B84BFF000CD7768 /* Localizable.strings in Resources */,
@@ -8380,6 +8400,7 @@
 				280D7BCA1BB2F94900644BE6 /* STUITextField.swift in Sources */,
 				28FB32F11BA179C700B5E991 /* STBaseTableViewController.swift in Sources */,
 				282C65411B84B9E700DC3C93 /* InfosMenuCell.swift in Sources */,
+				0C2D30981CBFDD0100A406C4 /* TopCategory.swift in Sources */,
 				2854264C1B8E564F00A99E63 /* STConnectionManager.swift in Sources */,
 				2862E2D71BBC9A2300FFA11B /* StoreDetailsViewController.swift in Sources */,
 				28CACE881BA1B5EC00629AB4 /* FavoritesViewController.swift in Sources */,
@@ -8387,35 +8408,37 @@
 				284C67281BFCF3D6001C4CA0 /* UIImageView.swift in Sources */,
 				287CA1F91BFE715C00FCA8B4 /* LoginPageViewController.swift in Sources */,
 				0CDBA05E1CBE1F14004660D0 /* FrismartModels.xcdatamodeld in Sources */,
+				0CDBA0951CBF9F9B004660D0 /* LoadingScreenViewController.swift in Sources */,
 				289DE5741BA8C1240079CC04 /* STPhoto.swift in Sources */,
-				0CDBA06C1CBE2218004660D0 /* Category+CoreDataProperties.swift in Sources */,
 				28CCE5791B84CEB6004D5F1D /* UIViewController.swift in Sources */,
 				28699C921B91169A003D8234 /* ProfileViewController.swift in Sources */,
 				282CC7191BAB6A2000E51441 /* NSObject.swift in Sources */,
 				283B15FF1C087AAB00D00383 /* STResponseStatus.swift in Sources */,
+				0C2D30971CBFDD0100A406C4 /* TopCategory+CoreDataProperties.swift in Sources */,
 				28D569811B8A2AD6002F7C75 /* TopCategoryView.swift in Sources */,
 				282C64D31B84731D00DC3C93 /* AppDelegate.swift in Sources */,
 				289DE5701BA8B9F10079CC04 /* STStatus.swift in Sources */,
 				28D569831B8A2C6C002F7C75 /* TopStoreView.swift in Sources */,
 				282979D71C04DCB5003F2F55 /* SearchViewController.swift in Sources */,
+				0C2D308A1CBFBF9300A406C4 /* TopStore.swift in Sources */,
 				2812860B1BD109F30042E3C5 /* StoreDetailsThumbView.swift in Sources */,
 				28D569851B8A5A6D002F7C75 /* ImageCacheManager.swift in Sources */,
 				28E603751BAA107000B28CD4 /* STHelpers.swift in Sources */,
+				0CDBA0931CBF8955004660D0 /* Store.swift in Sources */,
 				28CCE5771B84CDAB004D5F1D /* HomeViewController.swift in Sources */,
 				28E6036F1BA9B93500B28CD4 /* STDataParser.swift in Sources */,
+				0C2D309A1CBFDD0100A406C4 /* Category.swift in Sources */,
 				284929C31BD08D0B004EC2D5 /* StoresPerCategoryViewController.swift in Sources */,
 				2850D8EC1BBDD5B100E16857 /* StoreDetailsMapCell.swift in Sources */,
 				2832F42E1BF4D0720005CA98 /* NSDate.swift in Sources */,
-				0CDBA0691CBE2218004660D0 /* Store.swift in Sources */,
-				0CDBA06D1CBE2218004660D0 /* Category.swift in Sources */,
 				28FA05011BE10741005C7BCE /* MapViewController.swift in Sources */,
 				2850D8EA1BBDD55400E16857 /* StoreDetailsPicturesCell.swift in Sources */,
+				0CDBA0921CBF8955004660D0 /* Store+CoreDataProperties.swift in Sources */,
 				28F75E131C03B58500494149 /* UIView.swift in Sources */,
 				28CACE8A1BA1B64600629AB4 /* SettingsViewController.swift in Sources */,
 				0CDBA06B1CBE2218004660D0 /* Photo.swift in Sources */,
 				282C653B1B849C9600DC3C93 /* MenuCell.swift in Sources */,
 				28CCE57B1B84CF2B004D5F1D /* STBaseViewController.swift in Sources */,
-				0CDBA0681CBE2218004660D0 /* Store+CoreDataProperties.swift in Sources */,
 				0CDBA06A1CBE2218004660D0 /* Photo+CoreDataProperties.swift in Sources */,
 				286D7ABA1BCE5EBB00C468B0 /* UIFont.swift in Sources */,
 				287F0FCB1BB47EBA0061B81C /* STCategory.swift in Sources */,
@@ -8431,9 +8454,11 @@
 				28E603711BA9C40100B28CD4 /* Float.swift in Sources */,
 				28D740DE1BFF586600CFAF34 /* RegisterPageViewController.swift in Sources */,
 				289D24571BE2BB4900574BF9 /* UILabel.swift in Sources */,
+				0C2D30991CBFDD0100A406C4 /* Category+CoreDataProperties.swift in Sources */,
 				0CDBA05B1CB7985A004660D0 /* ModalAdsViewController.swift in Sources */,
 				28D569871B8A5B00002F7C75 /* String.swift in Sources */,
 				282C65391B848D0900DC3C93 /* SWRevealViewController.m in Sources */,
+				0C2D30891CBFBF9300A406C4 /* TopStore+CoreDataProperties.swift in Sources */,
 				282C653D1B84A1A000DC3C93 /* UIColor.swift in Sources */,
 				282CC7171BAB699300E51441 /* STBaseModel.swift in Sources */,
 			);
@@ -8578,7 +8603,6 @@
 			baseConfigurationReference = 8294E8C7EA3CD5CA5558AD01 /* Pods-Frismart.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -8598,7 +8622,6 @@
 			baseConfigurationReference = ED607534C18E0E0C934A41E3 /* Pods-Frismart.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -8690,10 +8713,12 @@
 		0CDBA05C1CBE1F14004660D0 /* FrismartModels.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				0C2D30821CBFBEBD00A406C4 /* FrismartModels2.xcdatamodel */,
 				0CDBA05D1CBE1F14004660D0 /* FrismartModels.xcdatamodel */,
 			);
 			currentVersion = 0CDBA05D1CBE1F14004660D0 /* FrismartModels.xcdatamodel */;
-			path = FrismartModels.xcdatamodeld;
+			name = FrismartModels.xcdatamodeld;
+			path = ../../FrismartModels.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

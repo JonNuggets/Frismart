@@ -35,8 +35,8 @@ class STStore : STBaseModel {
     func getPhotos()->[STPhoto]{
         var photoArray = [STPhoto]()
         
-        if AppData.sharedInstance.photos?.count > 0 {
-            for photo in AppData.sharedInstance.photos!{
+        if AppData.sharedInstance.photos.count > 0 {
+            for photo in AppData.sharedInstance.photos {
                 if photo.store_id == self.store_id {
                     photoArray.append(photo)
                 }
@@ -46,7 +46,7 @@ class STStore : STBaseModel {
     }
     
     func getCategory()->String{
-        for category in AppData.sharedInstance.categories! {
+        for category in AppData.sharedInstance.categories {
             if self.category_id == category.category_id {
                 return category.category_name
             }

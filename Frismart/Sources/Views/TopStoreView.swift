@@ -52,7 +52,7 @@ class TopStoreView: UIView {
         
         let photoArray = store.getPhotos()
         if photoArray.count > 0 {
-            ImageCacheManager.loadImageViewForUrl(photoArray[0].photo_url, placeHolderImage: nil, imageView: self.storeImageView)
+            ImageCacheManager.loadImageViewForUrl(photoArray[0].photo_url, placeHolderImage: "loadPlaceholderImage", imageView: self.storeImageView)
         }
         
         var favoriteFound = false

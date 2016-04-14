@@ -2,7 +2,7 @@
 //  Store+CoreDataProperties.swift
 //  
 //
-//  Created by James Laurenstin on 2016-04-13.
+//  Created by James Laurenstin on 2016-04-14.
 //
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -32,5 +32,7 @@ extension Store {
     @NSManaged var email: String?
     @NSManaged var rating_total: String?
     @NSManaged var store_desc: String?
+    @NSManaged var icon_id: String?
+    @NSManaged var distance: String?
 
 }

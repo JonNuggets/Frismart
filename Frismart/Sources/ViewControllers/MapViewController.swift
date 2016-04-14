@@ -42,7 +42,7 @@ class MapViewController: STBaseViewController, GMSMapViewDelegate, CLLocationMan
     func loadCategoriesViews() {
         self.setAllCategoriesIconView()
 
-        for (index, category) in AppData.sharedInstance.categories!.enumerate() {
+        for (index, category) in AppData.sharedInstance.categories.enumerate() {
             let categoryIconView : CategoryIconView = NSBundle.mainBundle().loadNibNamed(kCategoryIconViewNibName, owner: self, options: nil)[0] as! CategoryIconView
             
             categoryIconView.display(category)
@@ -50,7 +50,7 @@ class MapViewController: STBaseViewController, GMSMapViewDelegate, CLLocationMan
             categoryIconView.frame.origin = CGPointMake(categoryIconView.frame.width * CGFloat(index + 1) + 15.0 * (CGFloat(index + 1) + 1), 12.0)
             categoryIconView.categoryIconButton.addTarget(self, action: #selector(MapViewController.displayStoresPerCategory(_:)), forControlEvents: .TouchUpInside)
             
-            self.categoriesScrollView.contentSize = CGSizeMake(categoryIconView.frame.width * CGFloat(((AppData.sharedInstance.categories?.count)! + 1)) + 15.0 * (CGFloat((AppData.sharedInstance.categories?.count)! + 2)), 60)
+            self.categoriesScrollView.contentSize = CGSizeMake(categoryIconView.frame.width * CGFloat(((AppData.sharedInstance.categories.count) + 1)) + 15.0 * (CGFloat((AppData.sharedInstance.categories.count) + 2)), 60)
             
             self.categoriesScrollView.addSubview(categoryIconView)
             self.categoryIconViewsList.append(categoryIconView)
@@ -116,7 +116,7 @@ class MapViewController: STBaseViewController, GMSMapViewDelegate, CLLocationMan
             stores = AppData.sharedInstance.stores
         }
         else {
-            category = (AppData.sharedInstance.categories?[self.categoryIconViewsList.indexOf(categoryIconView)! - 1])!
+            category = (AppData.sharedInstance.categories[self.categoryIconViewsList.indexOf(categoryIconView)! - 1])
             stores = category!.getStoresPerCategory()
         }
         

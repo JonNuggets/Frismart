@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Nkf-Yb-SUi">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -139,12 +139,93 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Dx-Bs-Zmc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="419" y="-795"/>
+            <point key="canvasLocation" x="513" y="-805.5"/>
+        </scene>
+        <!--Loading Screen View Controller-->
+        <scene sceneID="aoO-yO-Tdn">
+            <objects>
+                <viewController storyboardIdentifier="LoadingScreenViewController" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Nkf-Yb-SUi" customClass="LoadingScreenViewController" customModule="Frismart" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="L8d-zL-g6q"/>
+                        <viewControllerLayoutGuide type="bottom" id="bOD-ar-gcc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sCa-br-66J">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LoadingScreenBackgroundImage" translatesAutoresizingMaskIntoConstraints="NO" id="77u-91-nre">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="sbN-2K-fPC">
+                                <rect key="frame" x="-10" y="-10" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="FJc-lz-9Hf"/>
+                                    <constraint firstAttribute="width" constant="20" id="dXb-GR-F6r"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="FJc-lz-9Hf"/>
+                                        <exclude reference="dXb-GR-F6r"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="FJc-lz-9Hf"/>
+                                        <include reference="dXb-GR-F6r"/>
+                                    </mask>
+                                </variation>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="77u-91-nre" firstAttribute="top" secondItem="sCa-br-66J" secondAttribute="top" id="2uC-4j-iDn"/>
+                            <constraint firstItem="bOD-ar-gcc" firstAttribute="top" secondItem="sbN-2K-fPC" secondAttribute="bottom" constant="300" id="4sv-JV-V4E">
+                                <variation key="heightClass=regular" constant="80"/>
+                            </constraint>
+                            <constraint firstItem="77u-91-nre" firstAttribute="leading" secondItem="sCa-br-66J" secondAttribute="leading" id="Bzo-c1-A0q"/>
+                            <constraint firstItem="bOD-ar-gcc" firstAttribute="top" secondItem="77u-91-nre" secondAttribute="bottom" id="ZXX-nl-44I"/>
+                            <constraint firstAttribute="trailing" secondItem="77u-91-nre" secondAttribute="trailing" id="ZtA-yO-Hr9"/>
+                            <constraint firstItem="sbN-2K-fPC" firstAttribute="centerX" secondItem="sCa-br-66J" secondAttribute="centerX" id="xk0-7d-Rqe"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="77u-91-nre"/>
+                                <exclude reference="sbN-2K-fPC"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="4sv-JV-V4E"/>
+                                <exclude reference="ZXX-nl-44I"/>
+                                <exclude reference="xk0-7d-Rqe"/>
+                                <exclude reference="2uC-4j-iDn"/>
+                                <exclude reference="Bzo-c1-A0q"/>
+                                <exclude reference="ZtA-yO-Hr9"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="subviews">
+                                <include reference="77u-91-nre"/>
+                                <include reference="sbN-2K-fPC"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="4sv-JV-V4E"/>
+                                <include reference="ZXX-nl-44I"/>
+                                <include reference="xk0-7d-Rqe"/>
+                                <include reference="2uC-4j-iDn"/>
+                                <include reference="Bzo-c1-A0q"/>
+                                <include reference="ZtA-yO-Hr9"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cve-QG-uPz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-232" y="-146.25"/>
         </scene>
         <!--Reveal View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController title="SWRevealViewController" id="vXZ-lx-hvc" userLabel="Reveal View Controller" customClass="SWRevealViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SWRevealViewController" title="SWRevealViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vXZ-lx-hvc" userLabel="Reveal View Controller" customClass="SWRevealViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -161,7 +242,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="463" y="-131.25"/>
+            <point key="canvasLocation" x="513" y="-146"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="0b2-XO-gsK">
@@ -361,7 +442,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="An2-jv-Va2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2243" y="-131.25"/>
+            <point key="canvasLocation" x="2235" y="-216"/>
         </scene>
         <!--Categories View Controller-->
         <scene sceneID="vYq-X2-XYL">
@@ -1621,7 +1702,7 @@
                                                         <constraint firstAttribute="height" constant="16" id="Eiq-ya-K98"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="Exo2-Light" family="Exo 2" pointSize="14"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="default">
                                                         <mask key="constraints">
@@ -2098,6 +2179,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="LoadingScreenBackgroundImage" width="640" height="1136"/>
         <image name="LoginPage_Banner" width="2048" height="682"/>
         <image name="Logo" width="110" height="130"/>
         <image name="StoreDetails_Clock" width="25" height="25"/>
@@ -2112,6 +2194,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="HgH-sj-ZHL"/>
-        <segue reference="lLe-NK-jF1"/>
+        <segue reference="qtZ-6u-apP"/>
     </inferredMetricsTieBreakers>
 </document>

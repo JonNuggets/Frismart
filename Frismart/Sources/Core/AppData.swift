@@ -43,17 +43,17 @@ let kDisplayModalAddNotification            : String = "DisplayModalAddNotificat
 let kHideModalAddNotification               : String = "HideModalAddNotification"
 
 // Twitter
-let kTWITTER_CONSUMER_KEY               :String = "SKEcWg9QJdpOGjxfPEUrOfrI0"
-let kTWITTER_CONSUMER_SECRET            :String = "Hf1ems23OtoK52rcHbVW46s8oTmoP3t56cQZkw1YhjfR1zFjBP"
+let kTWITTER_CONSUMER_KEY                   :String = "SKEcWg9QJdpOGjxfPEUrOfrI0"
+let kTWITTER_CONSUMER_SECRET                :String = "Hf1ems23OtoK52rcHbVW46s8oTmoP3t56cQZkw1YhjfR1zFjBP"
 
 // Google Maps
-let kGOOGLEMAPS_API_KEY                 :String = "AIzaSyDChwhL4PpNedghpiEZlD_k6HQfup_PLc4"
+let kGOOGLEMAPS_API_KEY                     :String = "AIzaSyDChwhL4PpNedghpiEZlD_k6HQfup_PLc4"
 
 // Frismart Error Code
-let kFrismartErrorAPICode               :String = "-1"
+let kFrismartErrorAPICode                   :String = "-1"
 
-let kAutoHideCustomAdTimer              : NSTimeInterval = 10               // Auto hide = 10 secs
-let kDisplayCustomAdTimer               : NSTimeInterval = (3*60)           // Auto display ad = 3 mins.
+let kAutoHideCustomAdTimer                  : NSTimeInterval = 10               // Auto hide = 10 secs
+let kDisplayCustomAdTimer                   : NSTimeInterval = (3*60)           // Auto display ad = 3 mins.
 
 enum UIUserInterfaceIdiom : Int
 {
@@ -84,12 +84,12 @@ class AppData : NSObject {
     var reachability: Reachability!
     var loggedIn: Bool = false
     var customAdOnDisplay: Bool = false
-    var stores: [STStore]?
-    var topStores: [STStore]?
+    var stores: [STStore] = []
+    var topStores: [STStore] = []
+    var categories: [STCategory] = []
     var favoriteStores: [STStore] = [STStore]()
-    var categories: [STCategory]?
-    var topCategories: [STCategory]?
-    var photos: [STPhoto]?
+    var topCategories: [STCategory] = []
+    var photos: [STPhoto] = []
     var user: STUser?
     var weather: Int?
     var activityIndicatorView: STActivityIndicatorView?
@@ -122,7 +122,7 @@ class AppData : NSObject {
         }
     }
     
-    func clearPersonnalData() -> Void {
+    func clearPersonnalData() {
         self.loggedIn = false
         self.user = STUser()
     }

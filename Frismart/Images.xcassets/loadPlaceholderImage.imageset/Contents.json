@@ -2,13 +2,13 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x",
-      "filename" : "Logo_Frismart.png"
+      "filename" : "placeholder_image-1.png",
+      "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "scale" : "2x",
-      "filename" : "Logo_Frismart@2.png"
+      "filename" : "placeholder_image.png",
+      "scale" : "2x"
     },
     {
       "idiom" : "universal",

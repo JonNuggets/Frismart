@@ -17,7 +17,7 @@ class CategoriesViewController : STBaseTableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return AppData.sharedInstance.categories!.count
+        return AppData.sharedInstance.categories.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -27,11 +27,11 @@ class CategoriesViewController : STBaseTableViewController {
     
     override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
         let categoryCell : CategoryCell = cell as! CategoryCell
-        categoryCell.display(AppData.sharedInstance.categories![indexPath.row])
+        categoryCell.display(AppData.sharedInstance.categories[indexPath.row])
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        self.stores  = AppData.sharedInstance.categories![indexPath.row].getStoresPerCategory() as [STStore]
+        self.stores  = AppData.sharedInstance.categories[indexPath.row].getStoresPerCategory() as [STStore]
         performSegueWithIdentifier(kGetStoresPerCategorySegue, sender: self)
     }
     

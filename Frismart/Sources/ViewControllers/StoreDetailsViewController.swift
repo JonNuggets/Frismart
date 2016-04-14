@@ -179,7 +179,7 @@ class StoreDetailsViewController : STBaseTableViewController, GMSMapViewDelegate
             for (index, photo) in self.storePhotos!.enumerate() {
                 let storeDetailsThumbView : StoreDetailsThumbView = NSBundle.mainBundle().loadNibNamed(kStoreDetailsThumbNibName, owner: self, options: nil)[0] as! StoreDetailsThumbView
 
-                ImageCacheManager.loadImageViewForUrl(photo.thumb_url, placeHolderImage: nil, imageView: storeDetailsThumbView.thumbnailImageView)
+                ImageCacheManager.loadImageViewForUrl(photo.thumb_url, placeHolderImage: "loadPlaceholderImage", imageView: storeDetailsThumbView.thumbnailImageView)
 
                 storeDetailsThumbView.thumbnailButton.addTarget(self, action: #selector(StoreDetailsViewController.displayLargeView(_:)), forControlEvents: .TouchUpInside)
                 storeDetailsThumbView.frame.origin = CGPointMake(((storeDetailsThumbView.frame.width)*CGFloat(index))+(kStoreDetailsViewHorizontalPadding*CGFloat(index+1)), 16.0)

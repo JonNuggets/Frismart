@@ -8,9 +8,10 @@
 
 import Foundation
 import SwiftyJSON
+import CoreData
 
 class STDataParser : NSObject {
-    
+
     class func parseLoginResponse(data: JSON) -> Void {
         AppData.sharedInstance.user = STUser(dictionary: data.dictionaryObject)
         AppData.sharedInstance.loggedIn = true

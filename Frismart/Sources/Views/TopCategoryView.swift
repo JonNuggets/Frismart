@@ -20,6 +20,6 @@ class TopCategoryView: UIView {
     
     func display(category: STCategory) ->Void {
         self.categoryLabel.text = category.category_name
-        ImageCacheManager.loadImageViewForUrl(category.og_img, placeHolderImage: nil, imageView: self.categoryImageView)
+        ImageCacheManager.loadImageViewForUrl(category.og_img, placeHolderImage: "loadPlaceholderImage", imageView: self.categoryImageView)
     }
 }

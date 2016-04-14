@@ -1,5 +1,5 @@
 //
-//  Category+CoreDataProperties.swift
+//  TopCategory+CoreDataProperties.swift
 //  
 //
 //  Created by James Laurenstin on 2016-04-14.
@@ -12,7 +12,7 @@
 import Foundation
 import CoreData
 
-extension Category {
+extension TopCategory {
 
     @NSManaged var category_desc: String?
     @NSManaged var category_icon: String?
@@ -23,7 +23,7 @@ extension Category {
     @NSManaged var is_deleted: String?
     @NSManaged var keywords: String?
     @NSManaged var updated_at: String?
-    @NSManaged var category_name: String?
     @NSManaged var og_img: String?
+    @NSManaged var category_name: String?
 
 }

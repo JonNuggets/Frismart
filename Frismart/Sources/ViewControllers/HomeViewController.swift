@@ -25,10 +25,16 @@ class HomeViewController: STBaseViewController {
     var currentTopStoreView: TopStoreView?
     var transitionToSegue:Bool = false
 
+    // MARK: UIViewController life cycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.initializeUI()
+    }
+
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
     }
 
     override func viewWillAppear(animated: Bool) {
@@ -54,7 +60,7 @@ class HomeViewController: STBaseViewController {
     private func loadTopStoresViews()-> Void {
         var totalWidthSize: CGFloat = 0
 
-        for (index, store) in AppData.sharedInstance.topStores!.enumerate() {
+        for (index, store) in AppData.sharedInstance.topStores.enumerate() {
             let topStoreView: TopStoreView!
 
             if DeviceType.IS_IPHONE_4_OR_LESS {
@@ -93,7 +99,7 @@ class HomeViewController: STBaseViewController {
     private func loadTopCategoriesViews() -> Void {
         var totalWidthSize: CGFloat = 0
 
-        for (index, category) in AppData.sharedInstance.topCategories!.enumerate() {
+        for (index, category) in AppData.sharedInstance.topCategories.enumerate() {
             let topCategoryView : TopCategoryView = NSBundle.mainBundle().loadNibNamed(kTopCategoryViewNibName, owner: self, options: nil)[0] as! TopCategoryView
 
             topCategoryView.category = category

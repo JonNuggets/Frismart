@@ -48,7 +48,7 @@ class STHelpers: NSObject {
         var newDistance: Double = Double(0)
         var nearestStore: STStore = STStore()
         
-        for store in AppData.sharedInstance.stores! {
+        for store in AppData.sharedInstance.stores {
             let storeLocation: CLLocation = CLLocation(latitude: store.lat.doubleValue, longitude: store.lon.doubleValue)
             newDistance = (AppData.sharedInstance.user?.currentLocation?.distanceFromLocation(storeLocation))!
             
@@ -94,13 +94,13 @@ class STHelpers: NSObject {
     class func searchStoresByKeyWord(text: String)->[STStore] {
         var stores = [STStore]()
         
-        for category in AppData.sharedInstance.categories! {
+        for category in AppData.sharedInstance.categories {
             if category.category_name.lowercaseString.rangeOfString(text.lowercaseString) != nil {
                 stores.appendContentsOf(category.getStoresPerCategory())
             }
         }
         
-        for store in AppData.sharedInstance.stores! {
+        for store in AppData.sharedInstance.stores {
             if store.store_name.lowercaseString.rangeOfString(text.lowercaseString) != nil {
                 if !stores.contains(store) {
                     stores.append(store)

@@ -6,9 +6,13 @@
   Copyright (c) 2015 Karl Mounguengui. All rights reserved.
 */
 
+"AppTitle" = "Frismart";
+"Alert_TitleOKButton" = "OK";
+
 "Error_EmptyFields" = "Tous les champs sont obligatoires";
 "Error_RegisterFailed" = "Une erreur est survenue lors de l'inscription. Veuillez réessayer plus tard";
 "Error_FrismartLoginfailed" = "Identifiant/Mot de passe invalide(s) ou votre accès a été révoqué. Veuillez réessayer plus tard";
+"Error_NoInternetDetectedMessageNoDataAvailable" = "Aucune connexion internet détectée! Le mode hors ligne est maintenant activé.";
 
 "Menu_Login" = "CONNEXION";
 "Menu_Home" = "ACCUEIL";

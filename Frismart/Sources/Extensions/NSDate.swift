@@ -27,8 +27,8 @@ extension NSDate {
         let dateToCompareHour = Int(dateToCompareTime[0])
         let dateToCompareMinute = Int(dateToCompareTime[1])
         
-        print("dateToCompareString : \(dateToCompareString) - selfToCompareString : \(selfToCompareString)")
-        
+//        print("dateToCompareString : \(dateToCompareString) - selfToCompareString : \(selfToCompareString)")
+
         if selfToCompareHour > dateToCompareHour {
             return .OrderedDescending
         }
