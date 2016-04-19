@@ -437,8 +437,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func deleteLocalAllCoreDataEntries() {
         self.deleteAllData("Store")
         self.deleteAllData("TopStore")
+
         self.deleteAllData("Category")
         self.deleteAllData("TopCategory")
+
         self.deleteAllData("Photo")        
 
         self.saveContext()
@@ -447,21 +449,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // NOTE: There's a better iOS 9+ solution but can't use it for now since this app supports
     //       iOS 8+ still
     private func deleteAllData(entity: String) {
-        let managedContext = self.managedObjectContext
-        let fetchRequest = NSFetchRequest(entityName: entity)
-        fetchRequest.returnsObjectsAsFaults = false
+        self.managedObjectContext.performBlockAndWait{
+            let fetchRequest = NSFetchRequest(entityName: entity)
+            fetchRequest.returnsObjectsAsFaults = false
 
-        do
-        {
-            let results = try managedContext.executeFetchRequest(fetchRequest)
+            do
+            {
+                let results = try self.managedObjectContext.executeFetchRequest(fetchRequest)
 
-            for managedObject in results {
-                if let managedObjectData:NSManagedObject = managedObject as? NSManagedObject {
-                    managedContext.deleteObject(managedObjectData)
+                for managedObject in results {
+                    if let managedObjectData = managedObject as? NSManagedObject {
+                        self.managedObjectContext.deleteObject(managedObjectData)
+                    }
                 }
+            } catch let error as NSError {
+                print("Detele all data in \(entity) error : \(error) \(error.userInfo)")
             }
-        } catch let error as NSError {
-            print("Detele all data in \(entity) error : \(error) \(error.userInfo)")
         }
     }
 
