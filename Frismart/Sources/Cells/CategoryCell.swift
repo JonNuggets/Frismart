@@ -34,6 +34,6 @@ class CategoryCell : UITableViewCell {
         self.categoryLabel.text = category.category_name
         self.categoryLabel.sizeToFit()
         
-        ImageCacheManager.loadImageViewForUrl(category.og_img, placeHolderImage: nil, imageView: self.cellBackgroundImageView)
+        ImageCacheManager.loadImageViewForUrl(category.og_img, placeHolderImage: "loadPlaceholderImage", imageView: self.cellBackgroundImageView)
     }
 }
