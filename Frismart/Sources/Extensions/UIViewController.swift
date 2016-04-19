@@ -145,8 +145,12 @@ extension UIViewController {
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: .Default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.translucent = true
-//        self.navigationController?.navigationBar.hidden = true --> FIX PROPERLY!
+        self.navigationController?.navigationBar.opaque = true
+        self.navigationController?.navigationBar.tintColor = UIColor.clearColor()
+        self.navigationController?.navigationBar.barTintColor = nil
+        self.navigationController?.navigationBar.backgroundColor = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.0)
+        self.navigationController?.navigationBar.alpha = 0
+
         self.navigationController?.view.backgroundColor = UIColor.clearColor()
-        self.navigationController?.navigationBar.backgroundColor = UIColor.clearColor()
     }
 }
