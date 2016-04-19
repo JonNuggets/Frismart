@@ -34,13 +34,14 @@ NEXT VERSION
 Apr-01-2016
 -----------------------------
 [x] XCode 7.3 (Swift 3) code update
+[x] Fix storyboards warnings / issues
 
 -----------------------------
 Apr-08-2016
 -----------------------------
 [x] Ajouter la feature pour le custom modal
 [x] 4) Dans l’écran de detail, la scrollview des images ne fonctionne plus correctement.
-[x] Fix out of bounds crash in String’s parseHours()
+[x] Fix out of bounds crashes in String’s parseHours()
 [x] 2) Faire disparaitre le clavier dans la recherche une fois que l'on sort de la saisie
 [x] 1) Mettre les liens vers les pages de details lorsque l'on clique sur un element de la recherche
 
@@ -55,7 +56,25 @@ Apr-11-2016
 Apr-12-2016
 -----------------------------
 [x] Add ReachabilitySwift framework to detect internet connectivity
-[] 5) Passer en CoreData.
+[x] 5)Commencer Passer en CoreData. (Locally save the requests data by using core data - part 1)
+
+-----------------------------
+Apr-14-2016
+-----------------------------
+[x] 5)Commencer Passer en CoreData. (Locally save the requests data by using core data - part 1)
+[x] Add LoadingScreenViewcontroller to manage the initial loading of the data properly (in inline and offline mode)
+[x] Force app to be in portrait mode + Handles orientation change properly. as the UI is not designed for landscape
+[x] Setup async image loaded cache size (for offline mode)
+
+-----------------------------
+Apr-18-2016
+-----------------------------
+[x] Faire textfield de la recherche un peu moins rond et sans l'ombre.
+
+-----------------------------
+Apr-19-2016
+-----------------------------
+[x] Fix Crash dans Core Data
 
 
 TODO:
@@ -65,7 +84,12 @@ TODO:
 [x] 4) Dans l’écran de detail, la scrollview des images ne fonctionne plus correctement.
 [x] Ajouter la feature pour le custom modal
 [x] 3) Dans l’écran home quand je clique sur un element parfois ca ne fonctionne plus pour aller sur la page de detail. Le bouton devrait couvrir toute la zone comme avant
-[] 5) Passer en CoreData.
+[x] 5) Passer en CoreData pour le mode mode hors-ligne
+	- Add LoadingScreenViewcontroller to manage the initial loading of the data properly (in inline and offline mode)
+
+
+
+ move the initial app data loading there. Semaphore was blocking core data’s threads from running properly. And you shouldn’t ever block the app from running.
 
 
 
